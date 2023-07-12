@@ -1,5 +1,5 @@
 //here we will load file on display
-//creatin files html for home,about and contact to display them using file system and server on web browser
+//creating files html for home,about and contact to display them using file system and server on web browser
 
 const http = require("http");
 const fs=require("fs");
@@ -12,7 +12,7 @@ const about=fs.readFileSync('./HtmlPages/about.html',"utf-8");
 const contact=fs.readFileSync('./HtmlPages/contact.html',"utf-8");
 
 const server = http.createServer((req, res) => {
-  if (req.url === "/") {
+  if (req.url === "/" || req.url === "/home") {
     return res.end(home);
   }
   if (req.url === "/about") {

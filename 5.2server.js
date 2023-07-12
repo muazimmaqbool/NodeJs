@@ -20,7 +20,7 @@ const server = http.createServer((req, res) => {
     return res.end("<h1>Contact Page</h1>");
   }
   if (req.url === "/services") {
-    returnres.end("<h1>Services Page</h1>");
+    return res.end("<h1>Services Page</h1>");
   } else{
     return res.end("<h1>404 Page Not Found!</h1>");
     //for other urls this will be shown
