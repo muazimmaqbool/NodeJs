@@ -10,9 +10,9 @@ console.log(a);
 //to initilize npm  type: npm init then type app-name description etc others are optional
 //now after completing it you will see package.js file in your folder
 
-//why thi file?
+//why this file?
  // this file is used to tracks records, like whenever we download new package it will be added inside
- // this file to keep tack of our files/packages/depdenciesclea in our project
+ // this file to keep track of our files/packages/depdenciesclea in our project
 
  //now downloading a package: npm intall or i packagename
  //for now we will download express : its framework of nodejs  with the help of express we can do our work quickly

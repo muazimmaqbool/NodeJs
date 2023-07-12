@@ -9,6 +9,10 @@ fs.writeFile("./newText.txt",a,()=>{
     //new file will be created with newText.txt name and text of a is added in it
     console.log("Written");
 })
+//making another file
+fs.writeFile("./newText2.txt","New Text Added",()=>{
+    console.log("New File Added")
+})
 console.log("i am printed first")
 //this was asynchronous 
 
@@ -25,9 +29,9 @@ const path=require("path");
 const val=path.extname("/NODEJS/1index.js") // try /test.txt
 console.log(val); // o/p: js 
 
-//returns basename of basefolder in whih=ch you are currently
+//returns basename of basefolder in which you are currently
 const b=path.basename("E:/Web Development/NodeJs>");
-console.log(b); //o/p: base folde name, here NodeJs>
+console.log(b); //o/p: base folder name, here NodeJs>
 
 //joind two url/strings
 const str="Hello";
@@ -43,7 +47,6 @@ console.log(os.uptime());
 console.log(os.userInfo());
 console.log(os.totalmem()); //8GB
 console.log(os.networkInterfaces()); 
-//....
 
 //another important builtin module is
 console.log(__dirname); // prints directory name in which you are working
