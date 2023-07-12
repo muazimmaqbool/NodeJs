@@ -1,0 +1,15 @@
+{
+  "name": "basic-app",
+  "version": "1.0.0",
+  "description": "this is sample app using nodejs",
+  "main": "1 index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.22",
+    "pokemon": "^2.3.5"
+  }
+}
