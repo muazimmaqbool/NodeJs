@@ -1,4 +1,4 @@
-const b=require("./4.0modules"); //importing b form 4.0modules.js file
+const b=require("./4.0modules"); //importing b from 4.0modules.js file
 const name=require("./4.0modules");
 const obj=require("./4.0modules");
 
