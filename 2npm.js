@@ -18,7 +18,7 @@ console.log(a);
  //for now we will download express : its framework of nodejs  with the help of express we can do our work quickly
  // we don't use it now but later for now lets download it as example: npm install or i express
 
- // now you will se we got two more files in our folder package-lock.json and node-modules
+ // now you will see we got two more files in our folder package-lock.json and node-modules
  // -> package-lock.json : contains dependencies of dependency (i.e express is an dependencies it contains
  // many dependencies and those are mentioned inside this folder package-lock.json)
  // -> node_modules: contains all of our dependencies (this file is important)
