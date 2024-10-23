@@ -13,8 +13,8 @@ console.log(a);
 //now after completing it you will see package.js file in your folder
 
 //why this file?
- // this file is used to tracks records, like whenever we download new package it will be added inside
- // this file to keep track of our files/packages/depdenciesclea in our project
+ // this file is used to keep track of records, like whenever we download new package it will be added inside package.js
+ // this file is used to keep track of our files/packages/depdencies in our project
 
  //now downloading a package: npm intall or i packagename
  //for now we will download express : its framework of nodejs  with the help of express we can do our work quickly
