@@ -30,14 +30,15 @@ console.log(a);
 
  //A dependency is any external resource a program needs to work.
 
- //A framework is a foundation over which programmers can build their software. In a similar way,
-    // a JavaScript framework provides a base for the convenience of the programmers. 
-    //It helps by providing a set of pre-written codes so the programmers would not need to 
-    //start from scratch.
+ /*A framework is a foundation over which programmers can build their software. In a similar way,
+     a JavaScript framework provides a base for the convenience of the programmers. 
+    It helps by providing a set of pre-written codes so the programmers would not need to start from scratch.
+    */
 
-//Javascript libraries include pre-written JavaScript code that simplifies the completion of common 
-    //and complicated tasks. For example, DOM manipulation, framework setup, and AJAX handling 
-    //are all common targets for JavaScript libraries.
+/*Javascript libraries include pre-written JavaScript code that simplifies the completion of common 
+    and complicated tasks. For example, DOM manipulation, framework setup, and AJAX handling 
+    are all common targets for JavaScript libraries.
+    */
 
 
 
