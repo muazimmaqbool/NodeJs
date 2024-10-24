@@ -7,7 +7,7 @@ console.log("Hello Nodejs");
 //console.log(window); //will work on browser now here it will show error
 
 /*
-    //therefore this js file is same for both 
+    therefore this js file is same for both 
     but when you type console.log(window); -> this will be seen in inspect in browser
     (window object contains everything inside javacript like onchange,onclick etc)
     ->but here window will not work (ReferenceError: window is not defined)
