@@ -1,17 +1,17 @@
 /*
-Build In: those modules which didn't need to download to use them, they are already builtin by default
+Build In: those modules which didn't need to be download to use them, they are already builtin by default
       example. const fs=require("fs");
                console.log(fs); // see its o/p 
      
      To check more buildin modules: https://nodejs.org/api/ : there is list of buildin modules
      
-        //the above code is fs i.e file system, its used to read any file   
-        //to learn more about fs or any module go to nodejs website : https://nodejs.org/api/fs.html then search fs.read
+        the above code is fs i.e file system, its used to read any file   
+        to learn more about fs or any module go to nodejs website : https://nodejs.org/api/fs.html then search fs.read
 */
 const fs=require("fs"); //fs module is used to read any file
 //or import like this const {readFile,...} from = require("fs");
    // the we can write like this const a= readFile("path","utf-8",callbackfunction)  
-//console.log(fs); // long o/p
+console.log(fs); // long o/p
 
 //to check lets read a sample file test.txt from this
 
