@@ -9,20 +9,19 @@ console.log(b);
         }; is module
         functions, variables, objects they are all modules
 
-  ->Module in Nodejs: its a simple or complex functionality organized in single or multiple javascript 
-                     files which can be resued throughout the code
-   ->Node modules provide a way to re-use code in your Node application. In some ways, they're similar
-              to a class in other languages
+->Module in Nodejs: its a simple or complex functionality organized in single or multiple javascript files 
+  which can be resued throughout the code.
+
+->Node modules provide a way to re-use code in your Node application. In some ways, they're similar to a class in other languages
 
 ->Types of Modules:
-   1) File based module: which can be transferred from one file to another
-      eg above we have b=10; 
-     To print it in different file just add module.exports = b;
-     to import do this const b= require('./filename');
+   1) File based module: which can be transferred from one file to another. Eg above we have b=10; 
+      ->To print it in different file just add module.exports = b;
+      ->To import this in other file where you want to print its value:
+              do this const b= require('./filename');
 
-   2) Built In: those modules which didn't need to download to use them, they are already
-       builtin inside nodejs by default
-       see in code 4.1builtin.js
+   2) Built In: those modules which we don't need to download to use them.
+       ->They are alreadybuiltin inside nodejs by default see in code 4.1builtin.js
     
    3) Third Party Modules: these modules are written by someone else but we can download them and use them in our project
         these modules can be installed in the project folder or globally
