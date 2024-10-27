@@ -47,6 +47,7 @@ const obj={
 }
 const name="VScode is cool";
 console.log("name inside 4.0module file:",name)
+obj.average(40,76)
 
 module.exports = b; 
 module.exports=name;
@@ -57,7 +58,6 @@ they can be imported like this:
 const b=require("./4.0modules"); 
 const name=require("./4.0modules");
 const obj=require("./4.0modules");
-
 */
 
 
