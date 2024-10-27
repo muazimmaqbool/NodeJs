@@ -24,15 +24,14 @@ console.log(b);
        ->They are alreadybuiltin inside nodejs by default see in code 4.1builtin.js
     
    3) Third Party Modules: these modules are written by someone else but we can download them and use them in our project
-        these modules can be installed in the project folder or globally
-        example of best thrid party modules: express, gulp, lodash, async, scoket.io, mongoose, underscore, pm2, bower, q, debug, react, mocha etc
+         ->These modules can be installed in the project folder or globally
+         ->Example of best thrid party modules: 
+                express, gulp, lodash, async, scoket.io, mongoose, underscore, pm2, bower, q, debug, react, mocha etc
         
         see example in 4.3ThirdPar tyModules.js
-     
+    
 */
 
-
- 
 //object example in file based module
 //using it in app.js
 const obj={
@@ -47,11 +46,18 @@ const obj={
     }
 }
 const name="VScode is cool";
-console.log(name)
+console.log("name inside 4.0module file:",name)
 
 module.exports = b; 
 module.exports=name;
 module.exports=obj;
-// now it can be used in any file just import it there say inside app.js
+//now it can be used in any file just import it there say inside app.js
+/*
+they can be imported like this:
+const b=require("./4.0modules"); 
+const name=require("./4.0modules");
+const obj=require("./4.0modules");
+
+*/
 
 
