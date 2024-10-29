@@ -10,6 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "nodemon": "^2.0.22",
-    "pokemon": "^2.3.5"
+    "pokemon": "^2.3.6"
   }
 }

@@ -12,6 +12,7 @@ console.log(pokemon.random()); //generates any random pokemon name
 
 //at 44:00
 //there is one more package nodemon: it restarts code everytime we save the code
-//so, to run our code everytime we have to enter node ./4.3ThirdPartyModules.js in terminal with the
-//help of nodemon just once we have to type nodemon 'filename' then whenevery we make changes/save 
+//so, to run our code everytime we have to enter c in terminal with the
+//help of nodemon just once we have to type nodemon 'filename'
+// then whenevery we make changes/save 
 //the code it will automatic runit/restart it 
