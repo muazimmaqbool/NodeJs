@@ -1,7 +1,7 @@
 //we can also use writeFile to make new file at 34:00
 const fs=require("fs");
 
-const a="This text is added via writeFile and synchronous";
+const a="This text is added via writeFile and Asynchronous";
 
 //making file
 //first argument is file name, data("hello ndoejs" or varibale, and callback function)

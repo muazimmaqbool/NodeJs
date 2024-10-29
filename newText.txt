@@ -1,1 +1,1 @@
-This text is added via writeFile and synchronous
+This text is added via writeFile and Asynchronous
