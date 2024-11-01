@@ -2,8 +2,9 @@
 
 const http = require("http");
 
-//or
-/* http.createServer((request,response,next)=>{
+
+/* 
+  http.createServer((request,response,next)=>{...}
 
   -> 'request' is  looking for something like search data in google i.e request and google gives o/p
   thats 'response' and next is callback function for now we don't need it its generally required
