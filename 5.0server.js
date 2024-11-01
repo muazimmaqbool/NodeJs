@@ -12,7 +12,7 @@ const http = require("http");
   these names can be anything like : r,a,n-> i.e first paramter is always request, then response, then next
   */
 const server=http.createServer((request, response) => {
-    response.end("working") //will be shown on screen
+    response.end("sever is working") //will be shown on screen
 });
 
 //important
