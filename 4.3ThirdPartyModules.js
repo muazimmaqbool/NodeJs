@@ -10,6 +10,7 @@ const pokemon=require("pokemon");
 console.log(pokemon.random()); //generates any random pokemon name
 //console.log(pokemon.all()); //prints all pokemon names
 
+
 //at 44:00
 //there is one more package nodemon: it restarts code everytime we save the code
 //so, to run our code everytime we have to enter c in terminal with the
