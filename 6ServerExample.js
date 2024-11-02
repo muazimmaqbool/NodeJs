@@ -11,6 +11,7 @@ const hostname = "localhost";
 const home=fs.readFileSync('./HtmlPages/home.html',"utf-8");
 const about=fs.readFileSync('./HtmlPages/about.html',"utf-8");
 const contact=fs.readFileSync('./HtmlPages/contact.html',"utf-8");
+const work=fs.readFileSync("./HtmlPages/work.html","utf-8");
 
 const server = http.createServer((req, res) => {
   if (req.url === "/" || req.url === "/home") {
@@ -21,11 +22,15 @@ const server = http.createServer((req, res) => {
   }
   if (req.url === "/contact") {
     return res.end(contact);
-  } else {
+  }
+  if(req.url==="/work"){
+    return res.end(work)
+  }
+  else {
     return res.end("<h1>404 Page Not Found!</h1>");
   }
 });
 
 server.listen(port,hostname,()=>{
-    console.log(`Your server is: http://${hostname}:${port}`);
+    console.log(`Running server is: http://${hostname}:${port}`);
 })
