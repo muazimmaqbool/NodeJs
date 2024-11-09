@@ -8,7 +8,7 @@ const hostname = "localhost";
 
 const server = http.createServer((req, res) => {
   //console.log(req.url)
-   //will print url like localhost:4000/anyname here (this anyname is printed in terminal)
+    //will print url like localhost:4000/anyname here (this anyname is printed in terminal)
 
   if (req.url === "/") {
     //by default
