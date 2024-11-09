@@ -7,18 +7,15 @@ Node.Js Intro
 	Node.js uses asynchronous programming!
 	
 {basically nodejs is runtime environment, it provids the v8 engine of chrome now we don't 
- need any browser to run javascript we can use javascript in terminal/command prompt
+ need any browser to run javascript we can use javascript in terminal/command prompt }
   ->after downloading nodejs open command prompt and type : node -> o/p current version
   ->now we can type javascript code here
-  example: const a=20
-           type a o/p is 10. etc
-		   console.log("hello");
-		-> now we don't need browser to run javascript we can do it in terminal/command
-	that's why nodejs is server side "taki hum apna code backend main chala paye
-	        bina browser ke"
- ->now we will write nodejs inside vscode
-   -> at 5:45
- }
+    example: const a=20
+             type a :o/p is 20 etc
+		     console.log("hello");
+
+	-> now we don't need browser to run javascript we can do it in terminal/command that's why nodejs is server side 
+	"taki hum apna code backend main chala paye bina browser ke"
 	
 A common task for a web server can be to open a file on the server and return
 the content to the client.
