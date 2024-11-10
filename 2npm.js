@@ -21,13 +21,13 @@ console.log(a);
 
  // now you will see we got two more files in our folder package-lock.json and node-modules
  // -> package-lock.json : contains dependencies of dependency (i.e express is an dependencies it contains
- // many dependencies and those are mentioned inside this folder package-lock.json)
+ //    many dependencies and those are mentioned inside this folder package-lock.json)
  // -> node_modules: contains all of our dependencies (this file is important)
 
  //Note-> Here we don't need express so we will uninstall it -> npm uninstall express (or delete its files)
          //now package-lock.json is empty
 
- //A dependency is any external resource a program needs to work.
+ // -> A dependency is any external resource a program needs to work.
 
  /*A framework is a foundation over which programmers can build their software. In a similar way,
      a JavaScript framework provides a base for the convenience of the programmers. 
