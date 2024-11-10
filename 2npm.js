@@ -1,12 +1,11 @@
 const a=6655;
 console.log(a);
-// node .\2npm.js : type this to run this in terminal
+// node .\2npm.js  or node 2npm.js: type this to run this in terminal
 
 /*
   npm : node package manager -> used to install and download packages
   package -> ready to use code / package is a bundle of code
-  nodejs has indefinite number of packages but we only need to know few
-  search on goole best packages of npm/nodejs
+  nodejs has indefinite number of packages but we only need to know few search on google: best packages of npm/nodejs
   */
 
 //to initilize npm  type: npm init then type app-name description etc others are optional
