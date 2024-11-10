@@ -12,12 +12,12 @@ console.log(a);
 //now after completing it you will see package.js file in your folder
 
 //why this file?
- // this file is used to keep track of records, like whenever we download new package it will be added inside package.js
+ // this file is used to keep track of records, like whenever we download any new package it will be added inside package.js
  // this file is used to keep track of our files/packages/depdencies in our project
 
- //now downloading a package: npm intall or i packagename
+ //now downloading a package: npm intall packagename or npm i packagename
  //for now we will download express : its framework of nodejs  with the help of express we can do our work quickly
- // we don't use it now but later for now lets download it as example: npm install or i express
+ // we don't use it now but later for now lets download it as an example: npm install or i express
 
  // now you will see we got two more files in our folder package-lock.json and node-modules
  // -> package-lock.json : contains dependencies of dependency (i.e express is an dependencies it contains
