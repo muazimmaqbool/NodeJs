@@ -14,3 +14,14 @@ const subtract=sub(9,5);
 const sub2=sub(5,20)
 console.log(subtract)
 console.log(sub2)
+
+//Note: 3_batman.js and 4_superman.js are used to understand scope of the module
+require('./Local Modules/3_batman')
+require('./Local Modules/4_superman')
+//In the two codes same const "superHero" is used so if we run this what will be printed which superHero variable will be printed?
+// o/p: both Batman and Superman will be printed, this is because each module in node js has its own scope
+/*
+
+
+*/
+
