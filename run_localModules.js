@@ -30,7 +30,7 @@ Basically: before a module's code is executed, nodejs wrapps it with a function 
   IIFE: Immediately Invoked Function Expressions (IIFE) are JavaScript functions that are executed immediately after they are defined.
   -> (function(){
     module code actually lives in here
-  })
+  })()
 
 */
 
