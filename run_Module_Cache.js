@@ -41,3 +41,16 @@ delete require.cache[require.resolve("./Local Modules/moduleCache")]
 
 console.log("Fourth require()");
 require("./Local Modules/moduleCache"); //o/p: Module Cache file is loaded
+
+/*
+->Benefits of module caching:
+    Module caching provides significant performance benefits by reducing the time spent on code execution and disk I/O. 
+    Once a module is cached, subsequent require() calls for the same module are faster, as the module is already loaded in memory.
+    This can greatly improve the response time of your application, especially when dealing with large or commonly used modules.
+
+->Conclusion:
+    Understanding how module caching works in Node.js is crucial for optimizing the performance of your applications. 
+    By effectively utilizing the require() method and being aware of the caching mechanism, you can minimize redundant module 
+    loading and enhance the overall efficiency of your Node.js projects.
+
+*/
