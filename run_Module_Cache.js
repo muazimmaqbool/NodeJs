@@ -3,7 +3,7 @@
 
 /*
 -> Module Caching: Module caching is a mechanism in Node.js that allows modules to be loaded and stored in memory after
-    the first time they are required. When a module is required using the require() method,
+    the first time they are required. When a module is required using the "require()" method,
     Node.js checks if the module has already been loaded. If it has, it returns the cached module instance instead 
     of loading it again.
 
@@ -22,3 +22,22 @@ require("./Local Modules/moduleCache"); // 0/p: nothing
 In the above example, when moduleCache file is required for the first time, it logs a message indicating it is loaded.
 However, when it is required the second time, there is no log message because the module is already cached.
 */
+
+/*
+->Caching limitations and clearing the cache:
+    It’s important to note that module caching in Node.js is limited to the current session. 
+    If the server is restarted or the application is redeployed, the module cache is cleared, and modules are reloaded.
+
+    However, in some cases, you may want to clear the module cache manually during the execution of your application. 
+    Node.js provides a method called "delete require.cache[moduleName]" to remove a specific module from the cache. 
+    You can use this method to force a module to be reloaded if required.
+*/
+//Example:
+console.log("Third require()");
+require("./Local Modules/moduleCache") // o/p: nothing
+
+console.log("Clearing Cache!");
+delete require.cache[require.resolve("./Local Modules/moduleCache")]
+
+console.log("Fourth require()");
+require("./Local Modules/moduleCache"); //o/p: Module Cache file is loaded
