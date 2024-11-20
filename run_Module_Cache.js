@@ -12,4 +12,13 @@
     The require.cache object is a key-value pair where the key represents the absolute path of the module, 
     and the value is the cached module instance.
 */ 
-// Example:
+// Example:  (using a file called moduleCache.js its inside Local Modules folder)
+console.log("First require()");
+require("./Local Modules/moduleCache") // o/p: Module Cache file is loaded
+
+console.log("Second require()");
+require("./Local Modules/moduleCache"); // 0/p: nothing
+/*
+In the above example, when moduleCache file is required for the first time, it logs a message indicating it is loaded.
+However, when it is required the second time, there is no log message because the module is already cached.
+*/
