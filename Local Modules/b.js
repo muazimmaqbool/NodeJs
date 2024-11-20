@@ -1,1 +1,0 @@
-console.log("B file is loaded")
