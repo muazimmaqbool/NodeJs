@@ -58,3 +58,18 @@ import it like this: in index.js file:
     console.log(add(5,6))
     console.log(sub(5,6))
 */
+//? or use module.exports on both the functions:
+/*
+module.exports.add=(a,b)=>{
+    return(a+b);
+}
+module.exports.sub=(a,b)=>{
+    return(a-b);
+}
+->the import remains the same:
+ const math=require('./Local Modules/math');
+    const{add,sub}=math; 
+    console.log(add(5,6))
+    console.log(sub(5,6))
+
+*/
