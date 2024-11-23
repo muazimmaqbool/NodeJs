@@ -90,3 +90,31 @@ exports.add=(a,b)=>{
 
 */
 //! its better to use module.exports instead of just exports (watch video #15)
+//from video #15
+/*
+if we export two functions like this:
+    -> exports.add=(a,b)=>{return(a+b)} : it will work fine
+        .exports.sub=(a,b)=>a-b} : it will work fine
+
+    ->module.exports={add,sub}  : it will work fine
+
+    ->: if you remove exports
+        const add=(..)=>{...}
+        const sub=(..)=>{...}
+        ->exports={add,sub} : it will not work
+       
+        Because from a module nodejs only returns module.exports and not the export object.
+        exports is just the reference to the module.exports 
+        Now if you assign a new object to export like in line 104 (exports={add,sub}) the reference is broken and exports will be
+        any empty object that is exported so while importint : const math=require('./filename); 
+        math will be an empty object.
+        (So reference was lost(between exports and module.exports) when you assign a new object to export instead of attaching a pointer on the export object)
+        To understand this better checkout: object-reference.js file and also watch video #15 of codevolution
+
+        Now you will say how exports.add(a,b)=>{..} is working
+        because here exports and module.exports point to the same location so changing exports will also change exports
+        (see video #15 at 6:10 - debugging)
+
+        ->so always use module.exports when exporting from a module
+
+*/
