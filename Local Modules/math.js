@@ -89,3 +89,4 @@ exports.add=(a,b)=>{
     console.log(sub(5,6))
 
 */
+//! its better to use module.exports instead of just exports (watch video #15)
