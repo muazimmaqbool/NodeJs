@@ -74,6 +74,7 @@ module.exports.sub=(a,b)=>{
 
 */
 //? 5: Or just use exports instead of module.exports:
+//Note: exports is the refrence to module.exports
 /*
 exports.add=(a,b)=>{
     return(a+b);
