@@ -7,7 +7,7 @@ const add=(a,b)=>{
 
 //->importing/exporting one variable or function:
 
-//? Ist pattern ( when we have to export and import a single variable of function)
+//? 1: Ist pattern ( when we have to export and import a single variable of function)
 //module.exports=add;
 
     //use it in index.js like this:
@@ -16,7 +16,7 @@ const add=(a,b)=>{
     console.log(add(5,6))
     */
 
-//? If their is only function/variable you want to export you can directly use like this:
+//? 2: If their is only function/variable you want to export you can directly use like this:
 /*
 module.exports =(a,b)=>{
     return a+b
@@ -34,7 +34,7 @@ const sub=(a,b)=>{
     return(a-b);
 }
 
-//?Now to export both add and sub function do this:
+//? 3: Now to export both add and sub function do this:
 // module.exports={
 //     add:add,
 //     sub:sub,
@@ -58,12 +58,27 @@ import it like this: in index.js file:
     console.log(add(5,6))
     console.log(sub(5,6))
 */
-//? or use module.exports on both the functions:
+//? 4: or use module.exports on both the functions:
 /*
 module.exports.add=(a,b)=>{
     return(a+b);
 }
 module.exports.sub=(a,b)=>{
+    return(a-b);
+}
+->the import remains the same:
+ const math=require('./Local Modules/math');
+    const{add,sub}=math; 
+    console.log(add(5,6))
+    console.log(sub(5,6))
+
+*/
+//? 5: Or just use exports instead of module.exports:
+/*
+exports.add=(a,b)=>{
+    return(a+b);
+}
+.exports.sub=(a,b)=>{
     return(a-b);
 }
 ->the import remains the same:
