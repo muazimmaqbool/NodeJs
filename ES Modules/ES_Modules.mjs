@@ -1,5 +1,6 @@
 /*
-ES Modules:
+ES Modules: (introduced with ES2015)
+    ->Note: Node.js 14 and above versions support ES Modules
     
     ->Common JS (CommonJS is a highly functional and effective module system that is used for server-side development in Node. js)
      So far, we have learned commonjs module formatt used in Node.js
@@ -17,6 +18,16 @@ ES Modules:
     ->But as of ES2015, JavaScript does gace a standard module system i.e Excmascript Modules or ES Modules or ESM
 
     ->Note: the file extension for ES modules is .mjs and not .js
+
+    Es Module summary:
+        ->introduced with ES2015
+        ->Note: Node.js 14 and above versions support ES Modules
+        ->instead of modules.exports we use exports keyword
+        ->the epxort can be default or named
+        ->we import the exported variable or function using the import keyword
+        ->for default export, we can assign any name to it while importing
+        ->if its a named export, the import name must be same
+
 
 ->File used to explain is : math.mjs
 */
