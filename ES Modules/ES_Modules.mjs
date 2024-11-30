@@ -28,6 +28,8 @@ ES Modules: (introduced with ES2015)
         ->for default export, we can assign any name to it while importing
         ->if its a named export, the import name must be same
 
+    Note: For now we will use common js (which is for the most used a least for next 2-3 years)
+
 
 ->File used to explain is : math.mjs
 */
