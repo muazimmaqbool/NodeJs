@@ -1,0 +1,11 @@
+Built-In modules in nodejs
+ ->These are the modules that come with the node.js by default
+ ->No need to download these modules
+ ->These modules are referred as Core modules
+ ->You need to import these modules before you can use them
+ ->There are lots of built-in modules in nodejs but we are mainly going to focus on 5 built-in modules
+    1) path
+    2) events
+    3) fs
+    4) stream
+    5) http
