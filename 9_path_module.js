@@ -54,6 +54,17 @@ console.log(path.parse(__filename).name) //o/p: 9_path_module
 */
 
 /*
-4)
-
+4)format method: it returns a path string given in object:
+    basically it take an object of path as input and gives back it in a string format
+    here in exmaple we will give it obejct of path which we get by path.parse 
+example:
 */
+console.log("path.format():")
+console.log(path.format(path.parse(__filename))) // o/p: C:\Users\Muazim\Documents\NodeJs\9_path_module.js
+
+/*
+5) isAbsolute method; returns whether the path is absolute or not
+example:
+*/
+console.log("path.parse():")
+console.log(path.parse(__filename))
