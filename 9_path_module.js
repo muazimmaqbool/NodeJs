@@ -31,3 +31,20 @@ example:
 console.log("path.extname():")
 console.log(path.extname(__filename)) // o/p: .js
 console.log(path.extname(__dirname)) // o/p: no output i.e empty string since it dosn't have . character in its path
+
+/*
+3) parse method: it returns an object whose properties represent significant elements of the path:
+   like root, dir,base, ext, name  of the path
+*/
+console.log("path.parse():")
+console.log(path.parse(__filename))
+/*
+o/p:
+{
+  root: 'C:\\',
+  dir: 'C:\\Users\\Muazim\\Documents\\NodeJs',
+  base: '9_path_module.js',
+  ext: '.js',
+  name: '9_path_module'
+}
+*/
