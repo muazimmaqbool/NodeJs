@@ -4,6 +4,14 @@
 const path=require("node:path"); //here we prefix it with node: to indicate that its a built-in module
 //or const path = require("path"); 
 // the node: prefix is optional
+/*
+->although using node: prefix has some benefits:
+    1)indicates its an built-in module
+    2)makes the import identifier a valid absolute URL
+    3)avoid conflicts for futuren node.js built-in modules
+
+    Note: node: prefix was added to node recently
+*/
 
 //now after importing the path module we can access its various methods and properties
 //Note: the path module have 14 different methods but we will focus on 7 which are regularly used
