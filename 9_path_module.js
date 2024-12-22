@@ -38,6 +38,7 @@ console.log(path.extname(__dirname)) // o/p: no output i.e empty string since it
 */
 console.log("path.parse():")
 console.log(path.parse(__filename))
+
 /*
 o/p:
 {
@@ -47,4 +48,12 @@ o/p:
   ext: '.js',
   name: '9_path_module'
 }
+
+-> we can access these properties individually also:
+console.log(path.parse(__filename).name) //o/p: 9_path_module
+*/
+
+/*
+4)
+
 */
