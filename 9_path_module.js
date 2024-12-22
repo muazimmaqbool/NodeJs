@@ -66,5 +66,7 @@ console.log(path.format(path.parse(__filename))) // o/p: C:\Users\Muazim\Documen
 5) isAbsolute method; returns whether the path is absolute or not
 example:
 */
-console.log("path.parse():")
-console.log(path.parse(__filename))
+console.log("path.isAbsolute():")
+console.log(path.isAbsolute(__filename)) // o/p: true (because __filename is an absolute path)
+console.log(path.isAbsolute("./data.json")) // o/p: false (because ./ is relative path)
+console.log(path.isAbsolute("/data.json"))  // o/p: true (because ./ is not an relative path)
