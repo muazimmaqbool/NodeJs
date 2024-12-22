@@ -70,3 +70,26 @@ console.log("path.isAbsolute():")
 console.log(path.isAbsolute(__filename)) // o/p: true (because __filename is an absolute path)
 console.log(path.isAbsolute("./data.json")) // o/p: false (because ./ is relative path)
 console.log(path.isAbsolute("/data.json"))  // o/p: true (because ./ is not an relative path)
+
+/*
+6)join method: this method joins all give path segments together using the platform specific seperator as a delimiter and 
+                then normalizes the resulting path
+        ->platform specific seperator means / for mac and \ for windows
+        -> path.join(): accepts one or more strings as arguments
+
+example:
+*/
+console.log("path.join():")
+console.log(path.join("folder1","folder2","index.html"))//o/p: folder1\folder2\index.html
+
+//Note: it will convert / to \ as i'am using windows)
+console.log(path.join("/folder1","folder2","index.html"))//o/p: \folder1\folder2\index.html 
+console.log(path.join("/folder1","//folder2","index.html")) 
+//o/p: \folder1\folder2\index.html (here it removes one \ on folder2 to normalize it)
+console.log(path.join("/folder1","//folder2","../index.html")) 
+//o/p: \folder1\index.html (means ../ means we are saying from folder2 jump one folder1 up and then concatenate index.html)
+
+console.log(path.join(__dirname,"test.html")) 
+//o/p:C:\Users\Muazim\Documents\NodeJs\test.html
+
+//->Note path.join() might be confusing and also its not used regularly
