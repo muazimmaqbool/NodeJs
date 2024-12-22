@@ -2,6 +2,8 @@
 
 //importing path module:
 const path=require("node:path"); //here we prefix it with node: to indicate that its a built-in module
+//or const path = require("path"); 
+// the node: prefix is optional
 
 //now after importing the path module we can access its various methods and properties
 //Note: the path module have 14 different methods but we will focus on 7 which are regularly used
@@ -93,3 +95,28 @@ console.log(path.join(__dirname,"test.html"))
 //o/p:C:\Users\Muazim\Documents\NodeJs\test.html
 
 //->Note path.join() might be confusing and also its not used regularly
+
+/*
+7) resolve: this method resolves a sequence of paths of path segments into an absolute path
+example:
+*/
+console.log("path.resolve():")
+console.log(path.resolve("folder1","folder2","index.html"))
+//o/p1: C:\Users\Muazim\Documents\NodeJs\folder1\folder2\index.html
+console.log(path.resolve("/folder1","folder2","index.html"))
+//o/p2: C:\folder1\folder2\index.html
+console.log(path.resolve("/folder1","//folder2","index.html")) 
+// o/p3: C:\folder2\index.html
+console.log(path.resolve("/folder1","//folder2","../index.html")) 
+//o/p4: C:\index.html
+console.log(path.resolve(__dirname,"test.html")) 
+//o/p5: C:\Users\Muazim\Documents\NodeJs\test.html
+/*
+Explanation:
+->every o/p starts with \ or / indicating an an absolute path
+o/p1:its folder1 doesn't have an absolute path / so resolve will add it with the current absolute path
+o/p2: here /folder1 have forward slash, the resolve will return absolute path from that / which you added
+o/p3:if you add double // resolve consider that as a root and ignore the previous part
+o/p4: if you add .../index.html here // folder2 is the root but we go up one folder so it directly prints index.html
+o/p5: its already an absolute path
+*/
