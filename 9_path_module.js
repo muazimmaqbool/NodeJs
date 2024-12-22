@@ -23,3 +23,11 @@ example:
 console.log("path.basename():")
 console.log(path.basename(__filename)) // o/p: 9_path_module.js
 console.log(path.basename(__dirname)) // o/p: NodeJs
+
+/*
+2)extname: returns the extension of the path
+example:
+*/
+console.log("path.extname():")
+console.log(path.extname(__filename)) // o/p: .js
+console.log(path.extname(__dirname)) // o/p: no output i.e empty string since it dosn't have . character in its path
