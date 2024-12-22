@@ -1,9 +1,0 @@
-1)Path built-in module:
- (check code 9_path_module.js)
-
-The Path module provides a way of working with directories and file paths.
-
-Syntax
-The syntax for including the Path module in your application:
-
-var path = require('path');
