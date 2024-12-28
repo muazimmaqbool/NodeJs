@@ -15,4 +15,32 @@ Event Module in Node.js:
             ->the cook making the pizza is the response to the event
         }
 
+    ->to use the built-in module we first import it:
+    const EventEmitter=require("node:events") 
+ {why i used EventEmitter because events module returns a class called EventEmitter which includes functionality to
+  emmit events and respond to events.
+  ALthough we can use any name but "EventEmitter" is mostly used}
+
 */
+const EventEmitter=require("node:events") //import built-in module: events
+
+const emitter=new EventEmitter();
+//using this "emitter" object we can emit events. (to emit and event we use .emit method of emitter)
+//to respond to the event to use .on method of emitter
+/*emitter.on(); accepts two paramters:
+ 1)event name i.e order-pizza here, and 2)listern (callback fuction, gets executed when the event is emitted)
+   and this callback function allows us to delay execution till an event has occurred.
+*/
+//responding to the event
+emitter.on("order-pizza",()=>{
+    console.log("Order received! Baking a pizza")
+})
+//dispatching the event
+emitter.emit("order-pizza",)
+
+//passing data to the listener
+emitter.on("order-juice",(flavour,size)=>{
+    console.log(`Order received: ${flavour} juice of ${size} size`)
+})
+//specify the arguments after the event namer it could be any number of arguments;
+emitter.emit("order-juice","Orange","Small"); //Orange and Small are the arguments
