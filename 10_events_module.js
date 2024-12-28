@@ -38,9 +38,18 @@ emitter.on("order-pizza",()=>{
 //dispatching the event
 emitter.emit("order-pizza",)
 
-//passing data to the listener
+//Note listener/respond should always be written before the dispatch/emit
+
+//Example 2: passing data to the listener and adding multiple listeners
 emitter.on("order-juice",(flavour,size)=>{
     console.log(`Order received: ${flavour} juice of ${size} size`)
 })
+
+//we can have multiple listeners for the same event
+emitter.on("order-juice",(flavour)=>{
+    console.log(`${flavour} Juice is ready!`)
+})
+
 //specify the arguments after the event namer it could be any number of arguments;
 emitter.emit("order-juice","Orange","Small"); //Orange and Small are the arguments
+
