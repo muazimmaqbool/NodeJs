@@ -35,11 +35,16 @@ const emitter=new EventEmitter();
 emitter.on("order-pizza",()=>{
     console.log("Order received! Baking a pizza")
 })
+
+console.log("Do Work Before Event Occurs In The System")
 //dispatching the event
 emitter.emit("order-pizza",)
 
-//Note listener/respond should always be written before the dispatch/emit
-
+//Note: listener/respond should always be written before the dispatch/emit
+/*Note: we are not blocking the execution of the code, example add log statement before event it will be 
+  printed first then logs from emitter.on
+  This is know as event-driven programming and its used a lot in node.js
+*/
 //Example 2: passing data to the listener and adding multiple listeners
 emitter.on("order-juice",(flavour,size)=>{
     console.log(`Order received: ${flavour} juice of ${size} size`)
@@ -49,6 +54,7 @@ emitter.on("order-juice",(flavour,size)=>{
 emitter.on("order-juice",(flavour)=>{
     console.log(`${flavour} Juice is ready!`)
 })
+
 
 //specify the arguments after the event namer it could be any number of arguments;
 emitter.emit("order-juice","Orange","Small"); //Orange and Small are the arguments
