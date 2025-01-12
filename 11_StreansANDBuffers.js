@@ -60,10 +60,32 @@ Buffers:
 //Node.js provides Buffer as a global feature so it's not required to import it
 const bufferValue=new Buffer.from("Muazim"); // or new Buffer.from("Muazim","utf-8"); optional
 
+
+
 console.log("bufferValue:",bufferValue)
-// o/p : bufferValue: <Buffer 4d 75 61 7a 69 6d>
-//
+// o/p : bufferValue: <Buffer 4d 75 61 7a 69 6d> //buffer contains raw binary data
+/* this is the raw binary data, but node.js prints the hexidecimal/base16 notation of the binary number as printing
+  8 bits binary of every character can flood your terminal
+  if you past 4d in hexidecimal to binary converter: you will get 
+  4d to binary is: 01001101 and to decimal numbe is 77 and 77 is the unicode of M
+*/
 
 console.log("bufferValue:",bufferValue.toJSON())
 // o/p: bufferValue: { type: 'Buffer', data: [ 77, 117, 97, 122, 105, 109 ] }
 // each number here is the unicode character code for the character in the string Muazim
+
+
+console.log("bufferValue:",bufferValue.toString())
+//bufferValue: Muazim
+
+//can also write to buffers
+bufferValue.write("CSE") // or "javascript"
+
+console.log("new bufferValue:",bufferValue.toString())
+// o/p: new bufferValue: CSEzim
+/*
+buffers have limited memory the 3 character override 3 characters form Muaizm
+Here only upto 6 characters memory is assigned to buffere as initial Value given to it has 6 characters
+so if you give it new value : javascript only first 6 characters will be printed i.e javasc
+
+*/
