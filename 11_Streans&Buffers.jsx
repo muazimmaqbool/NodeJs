@@ -41,6 +41,18 @@ Buffers:
                 - if there is data already processed or too little data to process. Node puts the arriving data in a buffer
 
             Buffer: is a intentionally small area that Node maintains in the run-time to process a stream of data
-            
+
+        Example:
+            ->Streaming a video online:
+                -if your internet speed is fast enough, the speed of the stream will be fast enough instantly fill up the buffer
+                 and send it out for processing.
+                - that will repeat till the stream is finished
+               
+                - if your internet speed is slow, after processing the first chunk of data that arrived,
+                  the video player will display a loading spinner, which indicates it is waiting for more data to arrive
+                
+                -Once the buffer is filled up and the data is processed the video player shows the video.
+
+                -While video is playing more data will continue to arrive and wait in the buffer
     
  */
