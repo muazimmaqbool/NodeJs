@@ -16,4 +16,31 @@ Streams:
                             (the contents arrive in chunks and you transfer in chunks while the remaining content arrive over time)
         
         ->This (processing data in chunks) prevents unnecessary data downloads and memory usage.
-*/
+
+    ?Note: the question is how exactly is that sequence of data moved ? for that we will have a look at bufferes
+
+Buffers:
+    Lets understand buffers with the example of a bus with 30 seating capacity.
+        - 30 : seating capacity
+        (we don't know the pace at which people come)
+        Scenario 1:
+        - if 100 : people arrive
+        - only 30 : people are accommodated
+        - 70 : people in queue (waiting)
+
+        Scenario 2:
+        - if only 1 : person arrives
+        - then this 1 person has to wait for atleast for 10 people to arrive (as minimum bus can go with is 30 people)
+    
+        ->So we can not control the pace at which people arrive, you can only decide when is the right time to send people on the ride
+
+        ->So the arrive where people wait is "Buffer"
+
+        ->Node.js can control the pace at which data arrives in the stream:
+                - it can only decide when is the right time to send data for processing.
+                - if there is data already processed or too little data to process. Node puts the arriving data in a buffer
+
+            Buffer: is a intentionally small area that Node maintains in the run-time to process a stream of data
+            
+    
+ */
