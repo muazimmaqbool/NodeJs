@@ -54,5 +54,16 @@ Buffers:
                 -Once the buffer is filled up and the data is processed the video player shows the video.
 
                 -While video is playing more data will continue to arrive and wait in the buffer
-    
+  
+                (watch at 5:01 from #24)
  */
+//Node.js provides Buffer as a global feature so it's not required to import it
+const bufferValue=new Buffer.from("Muazim"); // or new Buffer.from("Muazim","utf-8"); optional
+
+console.log("bufferValue:",bufferValue)
+// o/p : bufferValue: <Buffer 4d 75 61 7a 69 6d>
+//
+
+console.log("bufferValue:",bufferValue.toJSON())
+// o/p: bufferValue: { type: 'Buffer', data: [ 77, 117, 97, 122, 105, 109 ] }
+// each number here is the unicode character code for the character in the string Muazim
