@@ -47,9 +47,9 @@ A common task for a web server can be to open a file on the server and return th
 		Node.js files have extension ".js"
 		
 		
-->Running Code in Terminal
-  -create js file say index.js
-  - write js code inside it say: var a=20; console.log(a);
-  - to run this open termial and type node .\filename.js then hit enter
-     - it will show o/p | similar method is used to run this code in command prompt as well
-  (clear command clears termial)
+	->Running Code in Terminal:
+		-create js file say index.js
+		- write js code inside it say: var a=20; console.log(a);
+		- to run this open termial and type node .\filename.js then hit enter
+			- it will show o/p | similar method is used to run this code in command prompt as well
+		(clear command clears termial)
