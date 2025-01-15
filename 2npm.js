@@ -1,6 +1,6 @@
 const a=6655;
 console.log(a);
-// node .\2npm.js  or node 2npm.js: type this to run this in terminal
+// node .\2npm.js  or node 2npm.js or node 2npm: type this to run this in terminal
 
 /*
   npm : node package manager -> used to install and download packages

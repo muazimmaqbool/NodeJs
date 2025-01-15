@@ -2,7 +2,7 @@
 
 console.log("NodeJS Inside VsCode");
 //now to run this file/code inside terminal/cmd 
-//step 1: type node .\filename.js and enter or node ./filename.js or node filename.js and press enter
+//step 1: type node .\filename.js and enter or node ./filename.js or node filename.js and press enter or node filename
 
 const a=6655;
 console.log(a);
