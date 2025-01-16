@@ -35,8 +35,7 @@ console.log(a);
     */
 
 /*Javascript libraries include pre-written JavaScript code that simplifies the completion of common 
-    and complicated tasks. For example, DOM manipulation, framework setup, and AJAX handling 
-    are all common targets for JavaScript libraries.
+and complicated tasks. For example, DOM manipulation, framework setup, and AJAX handling are all common targets for JavaScript libraries.
     */
 
 
