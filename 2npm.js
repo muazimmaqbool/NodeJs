@@ -8,10 +8,10 @@ console.log(a);
   nodejs has indefinite number of packages but we only need to know few search on google: best packages of npm/nodejs
   */
 
-//to initilize npm  type: npm init then type app-name description etc others are optional
-//now after completing it you will see package.js file in your folder
+  //to initilize npm  type: npm init then type app-name description etc others are optional
+  //now after completing it you will see package.js file in your folder
 
-//why this file?
+//why this package.json file?
  // this file is used to keep track of records, like whenever we download any new package it will be added inside package.js
  // this file is used to keep track of our files/packages/depdencies in our project
 
