@@ -10,7 +10,7 @@ console.log(b);
         functions, variables, objects they are all modules
 
 ->Module in Nodejs: its a simple or complex functionality organized in single or multiple javascript files 
-  which can be resued throughout the code.
+                    which can be resued throughout the code.
 
 ->Node modules provide a way to re-use code in your Node application. In some ways, they're similar to a class in other languages
 
