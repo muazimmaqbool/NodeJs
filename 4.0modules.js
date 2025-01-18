@@ -45,7 +45,7 @@ const obj={
         console.log(a+b+c)
     }
 }
-const name="VScode is cool";
+const name="VScode is a cool code editor";
 console.log("name inside 4.0module file:",name)
 obj.average(40,76)
 
