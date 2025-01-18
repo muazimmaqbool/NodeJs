@@ -22,7 +22,7 @@ console.log(b);
               do this const b= require('./filename');
 
    2) Built In: those modules which we don't need to download to use them.
-       ->They are alreadybuiltin inside nodejs by default see in code 4.1builtin.js
+       ->They are already built-in inside nodejs by default see it in code 4.1builtin.js
     
    3) Third Party Modules: these modules are written by someone else but we can download them and use them in our project
          ->These modules can be installed in the project folder or globally
