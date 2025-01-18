@@ -1,10 +1,10 @@
-//we can also use writeFile to make new file at 34:00
+//we can also use writeFile to make new file
 const fs=require("fs");
 
 const a="This text is added via writeFile and Asynchronous";
 
 //making file
-//first argument is file name, data("hello ndoejs" or varibale, and callback function)
+//first argument is file name, data("hello nodejs" or varibale, and callback function)
 fs.writeFile("./newText.txt",a,()=>{  
     //new file will be created with newText.txt name and text of a is added in it
     console.log("Written");
@@ -36,9 +36,9 @@ console.log(b); //o/p: base folder name, here NodeJs>
 //joind two url/strings
 const str="Hello";
 const strJoin=path.join("This is:"+str)
-console.log(strJoin);
+console.log(strJoin); // o/p: This is Hello
 
-//OS: another builtin : gives information about machine
+//OS: another builtin : it gives information about machine
 const os=require("os");
 console.log(os.freemem()); //shows total free memory in your pc i.e RAM
 console.log(os.hostname()); //gives desktop name
@@ -49,8 +49,8 @@ console.log(os.totalmem()); //8GB
 console.log(os.networkInterfaces()); 
 
 //another important builtin module is
-console.log(__dirname); // prints directory name in which you are working
-console.log(__filename); //prints file name in which you are working
+console.log("directory name:",__dirname); // prints directory name in which you are working
+console.log("file name: ",__filename); //prints file name in which you are working
 
 
 //HTTP: another builtin module , will be seen later insha'Allah
