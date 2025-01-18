@@ -15,7 +15,8 @@ console.log(b);
 ->Node modules provide a way to re-use code in your Node application. In some ways, they're similar to a class in other languages
 
 ->Types of Modules:
-   1) File based module: which can be transferred from one file to another. Eg above we have b=10; 
+   1) File based module: which can be transferred from one file to another.
+      Eg above we have b=10; 
       ->To print it in different file just add module.exports = b;
       ->To import this in other file where you want to print its value:
               do this const b= require('./filename');
