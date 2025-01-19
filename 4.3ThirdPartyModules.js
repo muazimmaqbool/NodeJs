@@ -1,7 +1,7 @@
 /*Third Party Modules:
-    ->these modules are written by someone else but we can download them and use them in our project
-    ->these modules can be installed in the project folder or globally
-    ->example of best thrid party modules: express, gulp, lodash, async, scoket.io, mongoose, 
+    ->These modules are written by someone else but we can download them and use them in our project
+    ->These modules can be installed in the project folder or globally
+    ->Example of best thrid party modules: express, gulp, lodash, async, scoket.io, mongoose, 
     pokemon, underscore, pm2, bower, q, debug, react, mocha etc
         */
 //as an example we will use pokemon third paty module:
