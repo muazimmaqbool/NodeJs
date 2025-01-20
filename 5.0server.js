@@ -21,4 +21,4 @@ server.listen(2000,"localhost",()=>{
 })
 //hold and click on localhost:2000 in terminal it will open in browser
 
-//we can write it in better way
+//we can write it in better way see next code 5.1server.js

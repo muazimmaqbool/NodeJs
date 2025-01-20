@@ -13,5 +13,5 @@ const server=http.createServer((req,res)=>{
 server.listen(PORT,hostname,()=>{
     console.log(`Server is: http://${hostname}:${PORT}`);
 })
-//import press ctrl+c to close the server
+//important press ctrl+c to close the server
 //now see in next code 5.2server.js
