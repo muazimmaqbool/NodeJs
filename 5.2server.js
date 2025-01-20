@@ -1,5 +1,4 @@
-//first see previous code
-//important at 56:20
+//first see previous codes
 
 const http = require("http");
 
@@ -8,7 +7,7 @@ const hostname = "localhost";
 
 const server = http.createServer((req, res) => {
   //console.log(req.url)
-    //will print url like localhost:4000/anyname here (this anyname is printed in terminal)
+  //will print url like localhost:4000/anyname here (this anyname is printed in terminal)
 
   if (req.url === "/") {
     //by default
@@ -32,7 +31,7 @@ const server = http.createServer((req, res) => {
   }
   //so when page loads it shows localhost:4000 and o/p: Home page
   // then type manually localhost:4000/about and o/p: About Page
-  //lly for all
+  // lly for all
 });
 
 server.listen(PORT, hostname, () => {
