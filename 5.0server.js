@@ -1,14 +1,13 @@
-//How to make server at 46:45
+//How to make a server
 
 const http = require("http");
-
 
 /* 
   http.createServer((request,response,next)=>{...}
 
   -> 'request' is  looking for something like search data in google i.e request and google gives o/p
-  thats 'response' and next is callback function for now we don't need it its generally required
-  for complex projects where we have multiple routes etc (so we have removed next for now)
+  that's the 'response' and next is callback function for now we don't need it it's generally required
+  for complex projects where we have multiple routes etc (so we have removed 'next' for now)
   these names can be anything like : r,a,n-> i.e first paramter is always request, then response, then next
   */
 const server=http.createServer((request, response) => {
