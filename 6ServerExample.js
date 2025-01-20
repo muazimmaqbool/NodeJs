@@ -1,7 +1,5 @@
 //here we will load file on display
-/* creating files html for home,about and contact to display them using 
-       file system and server on web browser
-*/
+//creating files html for home,about and contact to display them using file system and server on web browser
 const http = require("http");
 const fs=require("fs");
 
