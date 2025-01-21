@@ -3,7 +3,7 @@
 const http=require("http");
 
 const PORT=4000;
-//import if we don't mention port number it will go to PORT 80 i.e by default
+//import if we don't mention the port number it will go to PORT 80 i.e by default
 const hostname="localhost"
 
 const server=http.createServer((req,res)=>{
