@@ -65,8 +65,8 @@ console.log(path.parse(__filename).name) //o/p: 9_path_module
 
 /*
 4)format method: it returns a path string given in object:
-    basically it take an object of path as input and gives back it in a string format
-    here in exmaple we will give it obejct of path which we get by path.parse 
+  basically it takes an object of path as input and gives back it in a string format
+  here in exmaple we will give it obejct of path which we get by path.parse 
 example:
 */
 console.log("path.format():")
@@ -86,7 +86,6 @@ console.log(path.isAbsolute("/data.json"))  // o/p: true (because ./ is not an r
                 then normalizes the resulting path
         ->platform specific seperator means / for mac and \ for windows
         -> path.join(): accepts one or more strings as arguments
-
 example:
 */
 console.log("path.join():")
