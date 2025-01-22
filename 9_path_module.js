@@ -3,7 +3,8 @@
 //importing path module:
 const path=require("node:path"); //here we prefix it with node: to indicate that its a built-in module
 //or const path = require("path"); 
-// the node: prefix is optional
+//here the node: prefix is optional
+
 /*
 ->although using node: prefix has some benefits:
     1)indicates its an built-in module
