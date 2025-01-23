@@ -60,7 +60,7 @@ o/p:
 }
 */
 //-> we can access these properties individually also:
-console.log(path.parse(__filename).name) //o/p: 9_path_module
+console.log("path.parse(__filename).name:",path.parse(__filename).name) //o/p: 9_path_module
 
 
 /*
