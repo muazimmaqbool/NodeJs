@@ -107,6 +107,7 @@ console.log(path.join(__dirname,"test.html"))
 7) resolve: this method resolves a sequence of paths of path segments into an absolute path
 example:
 */
+
 console.log("path.resolve():")
 console.log(path.resolve("folder1","folder2","index.html"))
 //o/p1: C:\Users\Muazim\Documents\NodeJs\folder1\folder2\index.html
