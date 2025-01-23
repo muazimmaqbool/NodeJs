@@ -119,12 +119,13 @@ console.log(path.resolve("/folder1","//folder2","../index.html"))
 //o/p4: C:\index.html
 console.log(path.resolve(__dirname,"test.html")) 
 //o/p5: C:\Users\Muazim\Documents\NodeJs\test.html
+
 /*
 Explanation:
-->every o/p starts with \ or / indicating an an absolute path
-o/p1:its folder1 doesn't have an absolute path / so resolve will add it with the current absolute path
+->every o/p starts with \ or / indicating an absolute path
+o/p1: here folder1 doesn't have an absolute path / so resolve will add it with the current absolute path
 o/p2: here /folder1 have forward slash, the resolve will return absolute path from that / which you added
-o/p3:if you add double // resolve consider that as a root and ignore the previous part
+o/p3: if you add double // resolve consider that as a root and ignore the previous part
 o/p4: if you add .../index.html here // folder2 is the root but we go up one folder so it directly prints index.html
 o/p5: its already an absolute path
 */
