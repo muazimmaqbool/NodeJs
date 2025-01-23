@@ -83,7 +83,7 @@ console.log(path.isAbsolute("/data.json"))  // o/p: true (because ./ is not an r
 
 /*
 6)join method: this method joins all give path segments together using the platform specific seperator as a delimiter and 
-                then normalizes the resulting path
+        then normalizes the resulting path
         ->platform specific seperator means / for mac and \ for windows
         -> path.join(): accepts one or more strings as arguments
 example:
