@@ -66,7 +66,7 @@ console.log("path.parse(__filename).name:",path.parse(__filename).name) //o/p: 9
 /*
 4)format method: it returns a path string given in object:
   basically it takes an object of path as input and gives back it in a string format
-  here in exmaple we will give it obejct of path which we get by path.parse 
+  here in exmaple we will give it obejct of path which we will get by path.parse 
 example:
 */
 console.log("path.format():")
