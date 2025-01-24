@@ -22,9 +22,9 @@ Event Module in Node.js:
   Although we can use any name but "EventEmitter" is mostly used
   }
 */
-const EventEmitter=require("node:events") //import built-in module: events
+const EventEmitter = require("node:events"); //import built-in module: events
 
-const emitter=new EventEmitter();
+const emitter = new EventEmitter();
 //using this "emitter" object we can emit events. (to emit and event we use .emit method of emitter)
 //to respond to the event to use .on method of emitter
 /*emitter.on(); accepts two paramters:
@@ -32,13 +32,13 @@ const emitter=new EventEmitter();
    and this callback function allows us to delay execution till an event has occurred.
 */
 //responding to the event
-emitter.on("order-pizza",()=>{
-    console.log("Order received! Baking a pizza")
-})
+emitter.on("order-pizza", () => {
+  console.log("Order received! Baking a pizza");
+});
 
-console.log("Do Work Before Event Occurs In The System")
+console.log("Do Work Before Event Occurs In The System");
 //dispatching the event
-emitter.emit("order-pizza",)
+emitter.emit("order-pizza");
 
 //Note: listener/respond should always be written before the dispatch/emit
 /*Note: we are not blocking the execution of the code, example add log statement before event it will be 
@@ -47,15 +47,39 @@ emitter.emit("order-pizza",)
 */
 //Example 2: passing data to the listener and adding multiple listeners
 //we can have multiple listeners for the same event
-emitter.on("order-juice",(flavour,size)=>{
-    console.log(`Order received: ${flavour} juice of ${size} size`)
-})
+emitter.on("order-juice", (flavour, size) => {
+  console.log(`Order received: ${flavour} juice of ${size} size`);
+});
 
-emitter.on("order-juice",(flavour)=>{
-    console.log(`${flavour} Juice is ready!`)
-})
-
+emitter.on("order-juice", (flavour) => {
+  console.log(`${flavour} Juice is ready!`);
+});
 
 //specify the arguments after the event namer it could be any number of arguments;
-emitter.emit("order-juice","Orange","Small"); //Orange and Small are the arguments
+emitter.emit("order-juice", "Orange", "Small"); //Orange and Small are the arguments
 
+//conditions inside listener
+emitter.on("getDept", (branch) => {
+  switch (branch) {
+    case "cse":
+      console.log("Cse dept. is of white color");
+      break;
+    case "civil":
+      console.log("Civil dept. is of blue color");
+      break;
+    case "mechanical":
+      console.log("Mechanical dept. is of green color");
+      break;
+    case "electronics":
+      console.log("E&C dept. is of sky-blue color");
+      break;
+    case "Electrical":
+      console.log("Electrical dept. is of Yellow coolor");
+      break;
+    default:
+      console.log("Please enter a valid department name");
+      break;
+  }
+});
+
+emitter.emit("getDept", "cse");
