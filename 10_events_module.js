@@ -46,11 +46,11 @@ emitter.emit("order-pizza",)
   This is know as event-driven programming and its used a lot in node.js
 */
 //Example 2: passing data to the listener and adding multiple listeners
+//we can have multiple listeners for the same event
 emitter.on("order-juice",(flavour,size)=>{
     console.log(`Order received: ${flavour} juice of ${size} size`)
 })
 
-//we can have multiple listeners for the same event
 emitter.on("order-juice",(flavour)=>{
     console.log(`${flavour} Juice is ready!`)
 })
