@@ -1,6 +1,8 @@
 // we will use this file inside index-esm.mjs
 
 //two make 1 and 2 methos work comment code of mehtod 3
+
+//1 -> exporting single a variable/function
 // const add=(a,b)=>{
 //     return a+b;
 // }
@@ -8,7 +10,7 @@
     or do this : export default(a,b)=>{...}
     but then remove this : export default add;
     */
-//1 -> exporting single a variable/function
+
 //export default add;
 
    //import it like this in index-esm.mjs file: import add from "./ES Modules/math-esm.mjs"
@@ -32,7 +34,7 @@ then use like this : math.sub , math.add
 
 */
 
-//Note all the active code above
+//Note: comment all the active code above for checking method 3
 
 /*3-> In es modules we also have what is known as named exports, where the varaible or function name being
 exported must match while importing it.

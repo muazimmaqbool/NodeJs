@@ -24,4 +24,4 @@
 import {add,sub} from "./ES Modules/math-esm.mjs" 
 //here we are basically destructuring while importing
 console.log("add:",add(10,10));
-console.log("sub:",sub(10,10));
+console.log("sub:",sub(50,10));
