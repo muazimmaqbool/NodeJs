@@ -41,6 +41,7 @@ Buffers:
                 - if there is data already processed or too little data to process. Node puts the arriving data in a buffer
 
             Buffer: is a intentionally small area that Node maintains in the run-time to process a stream of data
+            or  Buffer is a way to store/temporary storage space for manipulate binary data in Node.js. 
 
         Example:
             ->Streaming a video online:
