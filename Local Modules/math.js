@@ -26,7 +26,7 @@ module.exports =(a,b)=>{
     const add=require('./Local Modules/math');
     console.log(add(5,6))
 
-    ->to this this comment out first code
+    ->to do this comment out first code
 */
 
 //importing/exporting more than one variable/function
@@ -94,7 +94,7 @@ exports.add=(a,b)=>{
 /*
 if we export two functions like this:
     -> exports.add=(a,b)=>{return(a+b)} : it will work fine
-        .exports.sub=(a,b)=>a-b} : it will work fine
+       exports.sub=(a,b)=>a-b} : it will work fine
 
     ->module.exports={add,sub}  : it will work fine
 
