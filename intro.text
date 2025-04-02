@@ -7,7 +7,7 @@ Node.Js Intro:
 	Node.js uses asynchronous programming!
 	
 {basically nodejs is runtime environment, it provids the v8 engine of chrome now we don't 
-  need any browser to run javascript we can use javascript in terminal/command prompt }
+  need any browser to run javascript we can run javascript in terminal/command prompt }
   ->after downloading nodejs open command prompt and type : node -> o/p current version
   ->now we can type javascript code here
     example: const a=20

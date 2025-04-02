@@ -34,7 +34,7 @@ console.log(a);
     It helps by providing a set of pre-written codes so the programmers would not need to start from scratch.
     */
 
-/*Javascript libraries include pre-written JavaScript code that simplifies the completion of common 
+/*A libraries include pre-written JavaScript code that simplifies the completion of common 
 and complicated tasks. For example, DOM manipulation, framework setup, and AJAX handling are all common targets for JavaScript libraries.
     */
 
