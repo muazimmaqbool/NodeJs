@@ -21,7 +21,7 @@ const fs=require("fs"); //fs module is used to read any file
 //     console.log(data);
 // });
 
-/*means read a file when done then run this call back function is called so if any error accours it will show error
+/*means read a file when done then run this call-back function is called so if any error accours it will show error
 otherwise data and second argument means we want read basic text, otherwise it show strange error
 try without utf-8 and the o/p is like this : <Buffer 48 65 79 20 74 68 69 73 20 69 73 20>
 so always use "utf-8"
