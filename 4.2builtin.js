@@ -4,7 +4,7 @@ const fs=require("fs");
 const a="This text is added via writeFile and Asynchronous";
 
 //making file
-//first argument is file name, data("hello nodejs" or varibale, and callback function)
+//first argument is file name, data("hello nodejs",content/varibale, and callback function)
 fs.writeFile("./newText.txt",a,()=>{  
     //new file will be created with newText.txt name and text of a is added in it
     console.log("Written");
