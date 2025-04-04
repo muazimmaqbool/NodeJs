@@ -41,10 +41,10 @@ console.log(strJoin); // o/p: This is Hello
 //OS: another builtin : it gives information about machine
 const os=require("os");
 console.log(os.freemem()); //shows total free memory in your pc i.e RAM
-console.log(os.hostname()); //gives desktop name
-console.log(os.type()); // type of os
+console.log("Desktop Name:",os.hostname()); //gives desktop name
+console.log("OS Type:",os.type()); // type of os
 console.log(os.uptime());
-console.log(os.userInfo());
+console.log("User Info:",os.userInfo());
 console.log(os.totalmem()); //8GB
 console.log(os.networkInterfaces()); 
 
@@ -54,9 +54,6 @@ console.log("file name: ",__filename); //prints file name in which you are worki
 
 
 //HTTP: another builtin module , will be seen later insha'Allah
-
-
-
 //and much more and there are many more builtin modules mentioned in nodejs website
 
 
