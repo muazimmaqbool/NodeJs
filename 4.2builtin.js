@@ -35,7 +35,7 @@ console.log(b); //o/p: base folder name, here NodeJs>
 
 //joind two url/strings
 const str="Hello";
-const strJoin=path.join("This is:"+str)
+const strJoin=path.join("This is "+str)
 console.log(strJoin); // o/p: This is Hello
 
 //OS: another builtin : it gives information about machine
