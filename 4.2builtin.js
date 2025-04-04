@@ -27,7 +27,7 @@ const path=require("path");
 
 //it returns extension of the file
 const val=path.extname("/NODEJS/1index.js") // try /test.txt
-console.log(val); // o/p: js 
+console.log("extension of current file:",val); // o/p: .js 
 
 //returns basename of basefolder in which you are currently
 const b=path.basename("E:/Web Development/NodeJs>");
