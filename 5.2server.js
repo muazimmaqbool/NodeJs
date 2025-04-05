@@ -1,4 +1,4 @@
-//first see previous codes
+//first see previous codes: 5.0server.js and 5.1server.js
 
 const http = require("http");
 
@@ -6,7 +6,7 @@ const PORT = 4000;
 const hostname = "localhost";
 
 const server = http.createServer((req, res) => {
-  //console.log(req.url)
+  console.log(req.url)
   //will print url like localhost:4000/anyname here (this anyname is printed in terminal)
 
   if (req.url === "/") {
@@ -30,11 +30,11 @@ const server = http.createServer((req, res) => {
     //for other urls this will be shown
   }
   //so when page loads it shows localhost:4000 and o/p: Home page
-  // then type manually localhost:4000/about and o/p: About Page
+  //then type manually localhost:4000/about and o/p: About Page
   // lly for all
 });
 
 server.listen(PORT, hostname, () => {
   console.log(`Server is: http://${hostname}:${PORT}`);
 });
-//see example of server in  : 6ServerExample.js
+//see better example of server in  : 6ServerExample.js
