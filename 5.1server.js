@@ -1,4 +1,4 @@
-//see previous code first
+//see previous code first 5.0server.js file
 
 const http=require("http");
 
@@ -6,12 +6,14 @@ const PORT=4000;
 //import if we don't mention the port number it will go to PORT 80 i.e by default
 const hostname="localhost"
 
-const server=http.createServer((req,res)=>{
+//creating server
+const myServer=http.createServer((req,res)=>{
     res.end("<h1>Hello Node.js</h1>")
 })
 
-server.listen(PORT,hostname,()=>{
-    console.log(`Server is: http://${hostname}:${PORT}`);
+//listening to the server
+myServer.listen(PORT,hostname,()=>{
+    console.log(`Server is on: http://${hostname}:${PORT}`);
 })
 //important press ctrl+c to close the server
 //now see in next code 5.2server.js
