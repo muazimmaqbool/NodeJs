@@ -1,7 +1,7 @@
 console.log("Watch Mode in Node.js")
 /*
 ->Watch mode in Node.js allows you to automatically restart your server whenever you make changes to your code, 
-  it helps streamlining the development process. 
+  it helps in streamlining the development process. 
   This eliminates the need to manually restart the server after every code modification, saving you time and effort. 
   
 ->It was introduced as an experimental feature in Node.js version 18.11.0, 
