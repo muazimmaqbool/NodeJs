@@ -1,5 +1,5 @@
 /*
- #17 importing json and watch mode
+ #17 importing and displaying json data via node
   -> This file is used to run and show json data which is inside 7_Data.json  file
 */
 
@@ -8,7 +8,7 @@
  So, if there is an 7_Data.js file in you folder then node.js will run it and will not run the actual json file so, 
  its better you use name with extension also like this filename.json 
 */
-const data=require("./7_Data.json") // or const data=require("./7_Data")
+const data=require("./7_Data.json")
 console.log(data)
 /*
 o/p: { name: 'Batman', address: { street: 'Wayne Manor', city: 'Gotham' } }
@@ -18,3 +18,4 @@ o/p: { name: 'Batman', address: { street: 'Wayne Manor', city: 'Gotham' } }
 */
 console.log("name:",data.name)
 console.log("address:",data.address)
+console.log("street:",data.address?.street)
