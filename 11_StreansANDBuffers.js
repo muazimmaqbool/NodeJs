@@ -20,7 +20,7 @@ Streams:
     ?Note: the question is how exactly is that sequence of data moved ? for that we will have to look at bufferes
 
 Buffers:
-    Lets understand buffers with the example of a bus with 30 seating capacity.
+    Lets understand buffers with the example of a bus with seating capacity of 30.
         - 30 : seating capacity
         (we don't know the pace at which people come)
         Scenario 1:
@@ -36,20 +36,22 @@ Buffers:
 
         ->So the arrival where people wait is "Buffer"
 
-        ->Node.js can control the pace at which data arrives in the stream:
+        Important:
+        ->Node.js cant control the pace at which data arrives in the stream:
                 - it can only decide when is the right time to send data for processing.
                 - if there is data already processed or too little data to process. Node puts the arriving data in a buffer
 
             Buffer: is a intentionally small area that Node maintains in the run-time to process a stream of data
-            or  Buffer is a way to store/temporary storage space for manipulate binary data in Node.js. 
+                        or  
+            Buffer is a way to store/temporary storage space to manipulate binary data in Node.js. 
 
         Example:
             ->Streaming a video online:
                 -if your internet speed is fast enough, the speed of the stream will be fast enough instantly fill up the buffer
                  and send it out for processing.
-                - that will repeat till the stream is finished
+                -that will repeat till the stream is finished
                
-                - if your internet speed is slow, after processing the first chunk of data that arrived,
+                -if your internet speed is slow, after processing the first chunk of data that has arrived,
                   the video player will display a loading spinner, which indicates it is waiting for more data to arrive
                 
                 -Once the buffer is filled up and the data is processed the video player shows the video.
