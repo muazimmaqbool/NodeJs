@@ -7,9 +7,9 @@ const path=require("node:path"); //here we prefix it with node: to indicate that
 
 /*
 ->although using node: prefix has some benefits:
-    1)indicates its an built-in module
-    2)makes the import identifier a valid absolute URL
-    3)avoid conflicts for futuren node.js built-in modules
+    1)Indicates its an built-in module
+    2)Makes the import identifier a valid absolute URL
+    3)Avoid conflicts for futur node.js built-in modules
 
     Note: node: prefix was added to node recently
 */
