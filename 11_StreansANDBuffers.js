@@ -9,15 +9,15 @@ Streams:
                   entire data to be available before processing.
                   Example:
                     ->Watching a video on youtube:
-                            (you don't wait for the entire video to be downloaded/fetched to watch it, the data arrives in chunks
-                            and you watch in chunks while the rest of the data arrives over time)
+                        (you don't wait for the entire video to be downloaded/fetched to watch it, the data arrives in chunks
+                         and you watch in chunks while the rest of the data arrives over time)
 
                     ->Similarly transferring file contents from A to B
-                            (the contents arrive in chunks and you transfer in chunks while the remaining content arrive over time)
+                        (the contents arrive in chunks and you transfer in chunks while the remaining content arrive over time)
         
-        ->This (processing data in chunks) prevents unnecessary data downloads and memory usage.
+    ->This (processing data in chunks) prevents unnecessary data downloads and memory usage.
 
-    ?Note: the question is how exactly is that sequence of data moved ? for that we will have a look at bufferes
+    ?Note: the question is how exactly is that sequence of data moved ? for that we will have to look at bufferes
 
 Buffers:
     Lets understand buffers with the example of a bus with 30 seating capacity.
