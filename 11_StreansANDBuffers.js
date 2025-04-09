@@ -88,8 +88,7 @@ bufferValue.write("CSE") // or "javascript"
 console.log("new bufferValue:",bufferValue.toString())
 // o/p: new bufferValue: CSEzim
 /*
-buffers have limited memory, here the 3 character overrides 3 characters from Muaizm
+buffers have limited memory, here the 3 character overrides 3 characters of "Muaizm"
 Here only upto 6 characters memory is assigned to buffer as initial Value given to it has 6 characters
 so if you give it new value : javascript only first 6 characters will be printed i.e javasc
-
 */
