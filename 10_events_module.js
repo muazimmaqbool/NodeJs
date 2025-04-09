@@ -15,7 +15,7 @@ Event Module in Node.js:
             ->the cook making the pizza is the response to the event
         }
 
-    ->to use the built-in module we first have to import it:
+    ->to use event built-in module we first have to import it:
     const EventEmitter=require("node:events") 
  {why i used EventEmitter because events module returns a class called EventEmitter which includes functionality to
   emmit events and respond to events.
