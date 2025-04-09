@@ -61,11 +61,11 @@ Buffers:
                 (watch at 5:01 from #24)
  */
 //Node.js provides Buffer as a global feature so it's not required to import it
-const bufferValue=new Buffer.from("Muazim"); // or new Buffer.from("Muazim","utf-8"); optional
+const bufferValue=new Buffer.from("Muazim"); // or new Buffer.from("Muazim","utf-8"); utf-8 is optional
 
 
 
-console.log("bufferValue:",bufferValue)
+console.log("raw bufferValue:",bufferValue)
 // o/p : bufferValue: <Buffer 4d 75 61 7a 69 6d> //buffer contains raw binary data
 
 /* this is the raw binary data, but node.js prints the hexidecimal/base16 notation of the binary number as printing
@@ -75,12 +75,12 @@ console.log("bufferValue:",bufferValue)
 */
 
 console.log("bufferValue to json:",bufferValue.toJSON())
-// o/p: bufferValue: { type: 'Buffer', data: [ 77, 117, 97, 122, 105, 109 ] }
-// each number here is the unicode character code for the characters in the string Muazim
+// o/p: { type: 'Buffer', data: [ 77, 117, 97, 122, 105, 109 ] }
+// each number here is the unicode character code for the characters in the string "Muazim"
 
 
-console.log("bufferValue:",bufferValue.toString())
-//bufferValue: Muazim
+console.log("bufferValue to string:",bufferValue.toString())
+//o/p: Muazim
 
 //can also write to buffers
 bufferValue.write("CSE") // or "javascript"
