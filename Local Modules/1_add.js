@@ -1,4 +1,4 @@
-//this is an exmaple of local module inside this file we write a function which calculates add of two numbers
+//this is an exmaple of local module inside this file we have a function which calculates add of two numbers
 //this function is used in inside run_localModules.js via require function
 //require function: allows us to load module into another file
 
