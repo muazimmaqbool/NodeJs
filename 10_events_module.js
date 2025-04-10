@@ -55,7 +55,7 @@ emitter.on("order-juice", (flavour) => {
   console.log(`${flavour} Juice is ready!`);
 });
 
-//specify the arguments after the event namer it could be any number of arguments;
+//specify the arguments after the event name it could be any number of arguments;
 emitter.emit("order-juice", "Orange", "Small"); //Orange and Small are the arguments
 
 //conditions inside listener
