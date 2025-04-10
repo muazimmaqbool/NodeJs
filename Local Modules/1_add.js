@@ -8,4 +8,4 @@ const add=(a,b)=>{
     return a+b;
 }
 const sum=add(6,6);
-console.log(sum)
+console.log("6+6=",sum)

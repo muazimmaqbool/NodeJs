@@ -18,10 +18,11 @@ console.log("subtract(5,20):",sub2)
 //Note: 3_batman.js and 4_superman.js are used to understand scope of the module
 require('./Local Modules/3_batman')
 require('./Local Modules/4_superman')
-//In the two codes same const "superHero" is used so if we run this what will be printed, but which superHero variable will be printed?
-// o/p: both Batman and Superman will be printed, this is because each module in node js has its own scope
 /*
-Basically: before a module's code is executed, nodejs wrapps it with a function wrapper that provides module scope.
+ In the two codes same const "superHero" is used so if we run this what will be printed, but which superHero variable will be printed?
+ o/p: both Batman and Superman will be printed, this is because each module in node js has its own scope
+
+Basically: before a module's code is executed, nodejs wraps it with a function wrapper that provides module scope.
  ->this saves us from having to worry about confliciting variables and functions
  
  In other words Each loaded module in nodejs is wrapped with an IIFE function that provides private scope of code,
