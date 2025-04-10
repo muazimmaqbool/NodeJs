@@ -28,10 +28,10 @@ Basically: before a module's code is executed, nodejs wraps it with a function w
  In other words Each loaded module in nodejs is wrapped with an IIFE function that provides private scope of code,
   this allows you to repeat the variable and function names wihtout any conflicts
 
-  IIFE: Immediately Invoked Function Expressions (IIFE) are JavaScript functions that are executed immediately after they are defined.
-  -> (function(){
-    module code actually lives in here
-  })()
+->IIFE: Immediately Invoked Function Expressions (IIFE) are JavaScript functions that are executed immediately after they are defined.
+        (function(){
+          module code actually lives in here
+        })()
 
 */
 
