@@ -10,6 +10,11 @@
   console.log(message, superHero);
 })("Hey");
 
+(function(message,name){
+  const superHero=name;
+  console.log(message,name)
+})("Hi","Spiderman")
+
 //here is the module code inside 3_batman and 4_superman:
 /*
 const superHero="Batman";
