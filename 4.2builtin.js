@@ -47,6 +47,10 @@ console.log(os.uptime());
 console.log("User Info:",os.userInfo());
 console.log(os.totalmem()); //8GB
 console.log(os.networkInterfaces()); 
+const user=os.userInfo()
+console.log("User info:",user)
+console.log("user name:",user.username)
+
 
 //another important builtin module is
 console.log("directory name:",__dirname); // prints directory name in which you are working
