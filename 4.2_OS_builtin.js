@@ -63,8 +63,8 @@ fs.appendFile("greeting.txt","Aslamualikum "+user.username+"!\n",()=>{
 
 //Important
 //To see all functionalities of OS and FS just console them or see there documentation
-console.log("os:",os)//long output
-console.log("fs:",fs)//long output
+//console.log("os:",os)//long output
+//console.log("fs:",fs)//long output
 
 
 //another important builtin module is
