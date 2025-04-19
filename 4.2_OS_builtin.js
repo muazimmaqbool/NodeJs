@@ -61,6 +61,10 @@ fs.appendFile("greeting.txt","Aslamualikum "+user.username+"!\n",()=>{
         so we can put \n in order to make new text in next line
 */
 
+//Important
+//To see all functionalities of OS and FS just console them or see there documentation
+console.log("os:",os)//long output
+console.log("fs:",fs)//long output
 
 
 //another important builtin module is
@@ -70,5 +74,3 @@ console.log("file name: ",__filename); //prints file name in which you are worki
 
 //HTTP: another builtin module , will be seen later insha'Allah
 //and much more and there are many more builtin modules mentioned in nodejs website
-
-
