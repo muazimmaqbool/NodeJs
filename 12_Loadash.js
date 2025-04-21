@@ -25,3 +25,9 @@ var data=["Laptop","Hp","Mobile","hp",1,"hp",2,1,1,1,2,"Laptop"]
 console.log("data:",data)
 const filterValues=_.uniq(data)
 console.log("Getting Unique Elements from data:",filterValues)
+
+console.log("isString:",_.isString("Hi"))
+
+console.log("isString:",_.isString(66))
+
+//See more its methods from its docs : https://lodash.com/docs/4.17.15
