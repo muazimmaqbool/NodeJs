@@ -3,6 +3,9 @@
 /*
 ->What is server?
   A server is a computer program that is responsible for preparing and delivering data to other computers (clients)
+  server listens to the client and fulfills the needs of client
+
+  Example: device(mobile/laptop)<------>Internet<------->Server<------>Database
 */
 
 const http = require("http");
