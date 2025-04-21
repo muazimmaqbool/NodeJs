@@ -1,5 +1,10 @@
 //How to make a server
 
+/*
+->What is server?
+  A server is a computer program that is responsible for preparing and delivering data to other computers (clients)
+*/
+
 const http = require("http");
 
 /* 
