@@ -7,6 +7,13 @@
 
   Example: device(mobile/laptop)<------>Internet<------->Server<------>Database
           here we connect to server through internet
+
+  ->The data which is returned by the server is in JSON format (learn json from : https://github.com/muazimmaqbool/Json-tutorials)
+    (json helps to transfer data over the internet easily as it's lightwigth, it's in string format)
+    -to convert json string to js object use parse method of json : JSON.parse(jsonString)
+    -to convert js object to js string use stringify method of json : JSON.stringify(jsObject)
+    -The type of json is string, example: if you take json string like this const json=JSON.stringify(jsObject)
+                                                             then do console.log(typeof json) o/p is string
 */
 
 const http = require("http");
