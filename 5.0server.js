@@ -6,6 +6,7 @@
   server listens to the client and fulfills the needs of client
 
   Example: device(mobile/laptop)<------>Internet<------->Server<------>Database
+          here we connect to server through internet
 */
 
 const http = require("http");
