@@ -5,6 +5,8 @@
   A server is a computer program that is responsible for preparing and delivering data to other computers (clients)
   server listens to the client and fulfills the needs of client
 
+  (think of server as the waiter to listens to the customer in the resturant and then goes to kitchen to get food (kitchen here is database/data))
+
   Example: device(mobile/laptop)<------>Internet<------->Server<------>Database
           here we connect to server through internet
 
