@@ -39,6 +39,16 @@ app.get('/sunday_special',(req,res)=>{
   res.send('Sunday Special is: Chicken Pizza + 2 burgers @499 only')
 })
 
+app.get("/pizza",(req,res)=>{
+  const pizzaInfo={
+    name:"Chick Pizza",
+    size:"large",
+    cheeseTopping:true,
+    extraCheese:false,
+  }
+  res.send(pizzaInfo) //o/p will be json string
+})
+
 //3000 is port, telling that server is active on port 3000
 // after running the code, go to web browser and type localhost:3000/
 //app.listen(3000) 
