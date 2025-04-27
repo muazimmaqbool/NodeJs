@@ -18,7 +18,7 @@ const app = express() //'app' can be any name but generally all developers use '
       1)to which endpoint it needs to be shown  kon se endpoint pei ye show hona chahiye)   
       2)a callback function that handles the request and response (req, res)
 */
-//app.get(path, callback)
+//app.get(path, callback)+
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
