@@ -49,6 +49,8 @@ app.get("/pizza",(req,res)=>{
   res.send(pizzaInfo) //o/p will be json string
 })
 
+
+
 //3000 is port, telling that server is active on port 3000
 // after running the code, go to web browser and type localhost:3000/
 //app.listen(3000) 
