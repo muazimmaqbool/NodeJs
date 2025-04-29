@@ -5,3 +5,7 @@ Nodejs Server and Database Server
       It stores, retrieves and manages data efficiently
     - The database sever stores your application's data, when nodejs sever needs this data, it sends request to the database sever,
       which then retrieves and sends the requested data back to the nodejs server
+
+->Node.js server:
+    - Nodejs server is responsible for handling HTTP requests from clients and returns responses
+    - It processes these requests, communications with the database server and sends data to the clients
