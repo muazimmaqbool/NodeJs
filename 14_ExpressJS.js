@@ -39,6 +39,7 @@ app.get('/sunday_special',(req,res)=>{
   res.send('Sunday Special is: Chicken Pizza + 2 burgers @499 only')
 })
 
+<<<<<<< HEAD
 app.get("/pizza",(req,res)=>{
   const pizzaInfo={
     name:"Chick Pizza",
@@ -58,3 +59,7 @@ app.get("/pizza",(req,res)=>{
 app.listen(3000,()=>{
   console.log("Server is listening on port 3000")
 })
+=======
+//3000 is port
+app.listen(3000) // after running the code, go to web browser and type localhost:3000/
+>>>>>>> 3510f1e1c02b86907778df5d296e665668c7393a
