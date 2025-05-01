@@ -5,4 +5,5 @@
                       https://youtu.be/tC49Nzm6SyM?si=QE07KNpCmxWHLrEc
 
 After installing and setup of MongoDB:
-  lets focus on syntax and queries of MongoDB
+(Note: First learn basic things about SQL it will help a lot - optional )
+  ->Let's focus on syntax and queries of MongoDB
