@@ -1,0 +1,8 @@
+->download: https://www.mongodb.com/try/download/community
+->download mongodb shell: https://www.mongodb.com/try/download/shell
+->Installation guide: https://www.geeksforgeeks.org/how-to-install-mongodb-on-windows/
+                             or
+                      https://youtu.be/tC49Nzm6SyM?si=QE07KNpCmxWHLrEc
+
+After installing and setup of MongoDB:
+  lets focus on syntax and queries of MongoDB
