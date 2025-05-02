@@ -22,4 +22,10 @@
            - show database : (show dbs)
 
 
-
+       ->Show all databases: show dbs
+      
+       ->Create/use a database in mongodb : use myDb (here myDb is name of database, it can be anything )
+            - use myTestDb                 // Switch to or create the database
+            -  db.createCollection("users") // Create a collection named 'users'
+            -  db.users.insertOne({ name: "Muazim", age: 24 }) // Add data
+            -  db.users.find()  
