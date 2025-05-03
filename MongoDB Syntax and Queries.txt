@@ -45,8 +45,8 @@
          Find One User:
         2)db.users.findOne({ name: "Muazim" }) //Returns the first match where name is "Muazim".
         Find with a Condition:
-        3)db.users.find({ age: { $gt: 22 } })  // Users older than 22
-        4)db.users.find({ age: { $lte: 24 } }) // Users age 24 or less
+        3)db.users.find({ age: { $gt: 22 } })  // Users older than 22 (gt = greater-than.)
+        4)db.users.find({ age: { $lte: 24 } }) // Users age 24 or less (lte= less than equal)
         Find Specific Fields Only
         5)db.users.find({ name: "Muazim" }, { _id: 0, name: 1 }) //Returns only the name field (hides _id).
 
@@ -62,4 +62,5 @@
           ->  Delete All Users:
                 (Deletes every document in the users collection)
                   >db.users.deleteMany({})
-               
+
+              
