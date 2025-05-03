@@ -63,7 +63,7 @@
                 (Deletes every document in the users collection)
                   >db.users.deleteMany({})
 
-        ->Updating Data: 
+        ->Updating Data: (it takes two parameters: 1)which to document to update, 2)which field to update )
             1)Update One Document:
                 >db.users.updateOne(
                     { name: "Muazim" },         // Filter (which user to update)
@@ -82,5 +82,8 @@
                   { $set: { city: "Srinagar" } }
                 )
                 //Adds city: "Srinagar" to the user named "Ali".
+
+            4)Add New Field to All Users:
+                >db.users.updateMany({}, { $set: { active: true } })
 
 
