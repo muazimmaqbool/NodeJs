@@ -27,5 +27,9 @@
        ->Create/use a database in mongodb : use myDb (here myDb is name of database, it can be anything )
             - use myTestDb                 // Switch to or create the database
             -  db.createCollection("users") // Create a collection named 'users'
-            -  db.users.insertOne({ name: "Muazim", age: 24 }) // Add data
-            -  db.users.find()  
+            -  db.users.insertOne({ name: "Muazim", age: 25}) // Add data
+            -  db.users.find()  // gives you data inside 'users' collection
+
+        Now to add another user inside users collection:
+          ->first go inside users then > db.users.insertOne({name:"Basit",role:"Support Engineer",age:25})
+          -> now hit db.users.find(); you will see data inside users collection
