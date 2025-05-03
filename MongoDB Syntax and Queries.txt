@@ -50,7 +50,7 @@
         Find Specific Fields Only
         5)db.users.find({ name: "Muazim" }, { _id: 0, name: 1 }) //Returns only the name field (hides _id).
 
-       ->Deleting data in users:
+       ->Deleting data in users collection:
           -> Delete One User:
               (Delete the first user that matches a condition)
                  >db.users.deleteOne({ name: "Alice" })
@@ -63,4 +63,24 @@
                 (Deletes every document in the users collection)
                   >db.users.deleteMany({})
 
-              
+        ->Updating Data: 
+            1)Update One Document:
+                >db.users.updateOne(
+                    { name: "Muazim" },         // Filter (which user to update)
+                    { $set: { age: 26 } }       // Update (what to change)
+                  )
+
+            2)Update Many Documents:
+                >db.users.updateMany(
+                      { age: { $lt: 23 } },       // Filter (users younger than 23)
+                      { $set: { status: "young" } } // Add or update `status` field
+                    )
+
+            3)Add a New Field in existing document:
+              >db.users.updateOne(
+                  { name: "Ali" },
+                  { $set: { city: "Srinagar" } }
+                )
+                //Adds city: "Srinagar" to the user named "Ali".
+
+
