@@ -85,5 +85,10 @@
 
             4)Add New Field to All Users:
                 >db.users.updateMany({}, { $set: { active: true } })
+      
 
+      Important:
+        ->using the above commands via command prompt might be bit hard specially when the data is big
+          so to deal with that and to make it simple we a "MongoDB Compass GUI"
+          link to download:  https://www.mongodb.com/try/download/compass
 
