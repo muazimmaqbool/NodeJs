@@ -92,3 +92,9 @@
           so to deal with that and to make it simple we a "MongoDB Compass GUI"
           link to download:  https://www.mongodb.com/try/download/compass
 
+        ->if you don't want to use mongodb compass you can use "mongodb robo 3t" - download and use them
+          but mostly "mongodb compass is used"
+
+        ->what it does is that: the databases which are present into your system it shows them graphically and you can also
+          interact with that data
+
