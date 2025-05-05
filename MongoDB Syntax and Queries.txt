@@ -98,3 +98,11 @@
         ->what it does is that: the databases which are present into your system it shows them graphically and you can also
           interact with that data
 
+        ->Important:
+           >After downloading and installing mongodb compass > open it
+           >After opening it click on Add New Connection:
+              {
+              ->This compass also needs an server to run, basically what compass will do is that if your database is up it will
+                help you to interact with the data.
+              }
+
