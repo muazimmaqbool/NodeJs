@@ -85,6 +85,8 @@
 
             4)Add New Field to All Users:
                 >db.users.updateMany({}, { $set: { active: true } })
+
+        ->To exit enter this: >exit
       
 
       Important:
