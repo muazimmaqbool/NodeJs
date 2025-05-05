@@ -107,4 +107,11 @@
               ->This compass also needs an server to run, basically what compass will do is that if your database is up it will
                 help you to interact with the data.
               }
+              >how to find this url i mean on which mongodb is running
+                so when type this command > mongosh and press enter you will get the text and also this:
+                  Connecting to: mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.5.0
+                  here this the url: mongodb://127.0.0.1:27017/ on this port its running
+                  -> copy and past this in browser and see what is the response
+
+                  >So past this inside mongodb compass
 
