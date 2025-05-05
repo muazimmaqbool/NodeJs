@@ -116,3 +116,9 @@
                   >So past this inside mongodb compass inside url field and click on save and connect button
                   >Now your data will be shown
 
+                  >Now if you add any new data to mongodb (eg. via command promit) and then inside compass click on refresh that data
+                    will be shown
+
+                  >Now you can easily update the data in compass:
+                      >click on edit icon on right side of the each document click on it to update the data and click on update button
+
