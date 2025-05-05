@@ -122,3 +122,5 @@
                   >Now you can easily update the data in compass:
                       >click on edit icon on right side of the each document click on it to update the data and click on update button
 
+                  >Now you can add new column new data via gui(compass as well) and then can see changes in database via command prompt
+
