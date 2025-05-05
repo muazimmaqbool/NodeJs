@@ -113,5 +113,6 @@
                   here this the url: mongodb://127.0.0.1:27017/ on this port its running
                   -> copy and past this in browser and see what is the response
 
-                  >So past this inside mongodb compass
+                  >So past this inside mongodb compass inside url field and click on save and connect button
+                  >Now your data will be shown
 
