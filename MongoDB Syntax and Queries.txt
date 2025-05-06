@@ -126,5 +126,5 @@
 
    ->Important:
       Example we fill an form in frontend :
-      -Here the frontend is just arranging the data in a particular format and then sends this data to the server and then the server
-        processes the data and send the data to the database
+      -Here the frontend is just arranging the data in a particular format(which is accepted in the backend/server) and then sends 
+        this data to the server and then the server processes the data and send the data to the database
