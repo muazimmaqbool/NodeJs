@@ -58,5 +58,5 @@ app.get("/pizza",(req,res)=>{
 app.listen(3000,()=>{
   console.log("Server is listening on port 3000")
 })
-//3000 is port
-app.listen(3000) // after running the code, go to web browser and type localhost:3000/
+
+//you can also run this inside the postman : http://localhost:3000/ , http://localhost:3000/pizza , http://localhost:3000/menu
