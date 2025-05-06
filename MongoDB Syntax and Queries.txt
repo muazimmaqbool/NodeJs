@@ -124,3 +124,7 @@
 
                   >Now you can add new column new data via gui(compass as well) and then can see changes in database via command prompt
 
+   ->Important:
+      Example we fill an form in frontend :
+      -Here the frontend is just arranging the data in a particular format and then sends this data to the server and then the server
+        processes the data and send the data to the database
