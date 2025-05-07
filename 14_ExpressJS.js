@@ -60,3 +60,10 @@ app.listen(3000,()=>{
 })
 
 //you can also run this inside the postman : http://localhost:3000/ , http://localhost:3000/pizza , http://localhost:3000/menu
+
+//sample POST Request
+app.post('/order',(req,res)=>{
+  res.send("Order Received!")
+})
+//Now it this endpoint : http://localhost:3000/order but with POST Request and for now send any json data or empty data
+//it will give "Order Received!" as o/p in postman
