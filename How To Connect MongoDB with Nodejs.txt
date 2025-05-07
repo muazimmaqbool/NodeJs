@@ -1,0 +1,16 @@
+//Before Checking This File First See: MongoDB Syntax and Queries.txt
+
+->Connect MongoDB with Node.js:
+    - To connect mongodb with Node.js we need a mongodb driver (a set of programs)
+    - A mongodb driver is essential when connecting Node.js with mongodb because it acts as a bridge between Node.js application
+      and the mongodb database
+    - MongoDB speaks its own language(protocol) to interact with the database server
+    - Node.js communication in javascript.
+    - So, the driver translates the js code from Node.js into format that MongoDB can understand and vice versa.
+    - The driver provides a set of functions and methods that make it easier to perform common database operations from your
+       Node.js code
+    - The driver helps you handle errors that might cause during databse interactions. It provides error codes, descriptions, and other
+       details to help you fix issues quickly
+
+    - The most popular driver is the "official mongodb Node.js driver" as known as mongodb package.
+      to install > npm install mongodb
