@@ -16,3 +16,13 @@
       to install > npm install mongodb
 
     - Note: but we won't be using this, we will be using "Mongoose"
+
+    ->Mongoose:
+      - Mongoose is an Object Data Modelling (ODM) library for mongodb and node.js
+      - It does the same thing connect node.js and mongodb
+      - Why we are using Mongoose?
+        1)It makes working with the database smoother and easier (Very less code then mongodb's official driver).
+        2)With Mongoose, you can define how your data should look
+        3)Mongoose helps you to make sure the data you put into the database is correct
+        4)Very easy to query from the database
+
