@@ -22,7 +22,8 @@
       - It does the same thing connect node.js and mongodb
       - Why we are using Mongoose?
         1)It makes working with the database smoother and easier (Very less code then mongodb's official driver).
-        2)With Mongoose, you can define how your data should look
+        2)With Mongoose, you can define how your data should look (like making blueprint for your database)
         3)Mongoose helps you to make sure the data you put into the database is correct
         4)Very easy to query from the database
+        5)Without Mongoose your code mught get messy and harder to understand
 
