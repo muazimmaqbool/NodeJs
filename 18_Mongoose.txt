@@ -1,0 +1,4 @@
+Note: check these two files before reading this file:
+    1)16_MongoDB Syntax and Queries.txt
+    2)17_How To Connect MongoDB with Nodejs.txt
+
