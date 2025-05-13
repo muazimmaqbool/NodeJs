@@ -13,7 +13,7 @@ const mongoDbURL='mongodb://localhost:27017/hotels' //here myhotels can be any n
 //at 6:25 of mongoose schema video
 //these two paramters are passed because otherwise you will get some warning, they make sure that you are working with latest versions
 mongoose.connect(mongoDbURL,{
-    useNewUrlPraser:true, 
+   // useNewUrlPraser:true, 
     useUnifiedTopology:true,
 })
 
@@ -21,6 +21,7 @@ mongoose.connect(mongoDbURL,{
 /* mongoose maintains a default connection object representing the mongodb connection
 ->this object is what you'll use to handle events and interact with the database
 its inside db and we got this via mongoose.connection */
+//this 'db' represents a mongodb connection
 const db=mongoose.connection;
 
 //step 4: Define event listeners: 
@@ -45,3 +46,8 @@ Finally, you export the db object, which represents the MongoDB connection, so t
 it in other parts of your Node.js application.
 */
 module.exports=db;
+//its imported/used inside 19_myServer.js
+/*
+When this db object is exported in the express/server file you can use it to interact with the database,
+when your server runs, it typically requires or imports this db.js file to establish the database connection before handling HTTP reqiests
+*/
