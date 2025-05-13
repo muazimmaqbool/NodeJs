@@ -37,3 +37,11 @@ db.on('error',(error)=>{
 db.on('disconnected',()=>{
     console.log("MongoDB is disconnected!")
 })
+
+
+//step 5: Export the database connection:
+/*
+Finally, you export the db object, which represents the MongoDB connection, so that you can import and use
+it in other parts of your Node.js application.
+*/
+module.exports=db;
