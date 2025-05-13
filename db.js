@@ -17,7 +17,14 @@ mongoose.connect(mongoDbURL,{
     useUnifiedTopology:true,
 })
 
-//step 3: Access to default connection object
-//mongoose maintains a default connection object representing the mongodb connection
-//its inside db and we got this via mongoose.connection
+//step 3: Access to default connection object:
+/* mongoose maintains a default connection object representing the mongodb connection
+->this object is what you'll use to handle events and interact with the database
+its inside db and we got this via mongoose.connection */
 const db=mongoose.connection;
+
+//step 4: Define event listeners: 
+/* you define event listeners for the databse connection using methods like:
+   .on('connected',..), on('error',...) and .on('disconnected',...) 
+   -> these events allow you to react to different states of the database connection
+*/
