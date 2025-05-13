@@ -17,5 +17,7 @@ mongoose.connect(mongoDbURL,{
     useUnifiedTopology:true,
 })
 
-//step 3:
+//step 3: Access to default connection object
+//mongoose maintains a default connection object representing the mongodb connection
+//its inside db and we got this via mongoose.connection
 const db=mongoose.connection;
