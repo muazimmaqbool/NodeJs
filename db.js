@@ -28,3 +28,12 @@ const db=mongoose.connection;
    .on('connected',..), on('error',...) and .on('disconnected',...) 
    -> these events allow you to react to different states of the database connection
 */
+db.on('connected',()=>{
+    console.log("Connected to MongoDB server!")
+})
+db.on('error',(error)=>{
+    console.log("MongoDB connection error:",error)
+})
+db.on('disconnected',()=>{
+    console.log("MongoDB is disconnected!")
+})
