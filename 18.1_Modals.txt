@@ -1,1 +1,5 @@
 ->What are models or schema ? 
+  - Modal's are like a blueprint of our database
+  - It's a representation of a specific collection in MongoDB. Like a person
+  - Once you have defined a modal, you can create, read, update and delete documnets in the corresponding MongoDB collection
+  - 
