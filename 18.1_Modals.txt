@@ -4,5 +4,13 @@
   - Once you have defined a modal, you can create, read, update and delete documnets in the corresponding MongoDB collection
   - Mongoose allow you to define a schema for your documents. A schema is like a blueprint that defines the structure and
     data types of your documents within a collection.
-    Example a person is a collection(bunch of records) and inside this person collection we are inserting a document, so how this 
-    document will look is defined via schema
+    > Example a person is a collection(bunch of records) and inside this person collection we are inserting a document, so how this 
+      document will look is defined via schema.
+    > Example person's details
+     {
+        "name":"abc",
+         "address":"abc",
+         ...
+         ...
+         ...
+     }
