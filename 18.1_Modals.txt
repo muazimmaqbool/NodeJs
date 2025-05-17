@@ -17,6 +17,8 @@
           "salary": 6000
         }
 
+  >Docs: https://mongoosejs.com/docs/guide.html
+
     > Now we will make blueprint of the data with the help of mongoose:
         Note: To do this we create a folder called modal:
                   >Modal (inside this file for person called preson.js)
