@@ -6,11 +6,18 @@
     data types of your documents within a collection.
     > Example a person is a collection(bunch of records) and inside this person collection we are inserting a document, so how this 
       document will look is defined via schema.
-    > Example person's details
-     {
-        "name":"abc",
-         "address":"abc",
-         ...
-         ...
-         ...
-     }
+    > Each Person's Detail ( like chef, owner, manager, waiter )
+        {
+          "name": "Alice",
+          "age": 28,
+          "work": "Chef",
+          "mobile": "123-456-7890",
+          "email": "alice@example.com",
+          "address": "123 Main St, City",
+          "salary": 6000
+        }
+
+    > Now we will make blueprint of the data with the help of mongoose:
+        Note: To do this we create a folder called modal:
+                  >Modal (inside this file for person called preson.js)
+                    >person.js
