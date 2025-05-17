@@ -34,3 +34,8 @@ const personSchema=new mongoose.Schema({
         required:true
     }
 })
+
+//Now we create model from the schema and we use this model to do all the database operations like (creating,reading, deleting, updating etc)
+const Person=mongoose.model('Person',personSchema);
+module.exports=Person
+//now this Person is used in 19_myServer.js file
