@@ -3,7 +3,9 @@ const app = express()
 //importing database connection
 const db=require('./db')
 
-
+//Learn about this in 20_Body_Parser.txt file
+const bodyParser = require('body-parser');
+app.use(bodyParser.json())
 
 //Model name Person now can be used to do all database work for makeing changes in Person
 const Person=require("./Modals/Person")
