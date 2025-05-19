@@ -23,3 +23,4 @@
         Note: To do this we create a folder called modal:
                   >Modal (inside this file for person called preson.js)
                     >person.js
+
