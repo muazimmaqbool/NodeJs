@@ -25,4 +25,5 @@
     const bodyParser = require('body-parser');
     app.use(bodyParser.json())
 
- ->
+ ->Body parser is a middleware that helps your backend server read and parse the body of incoming HTTP requests, 
+  especially POST and PUT requests — where data is sent from the client (like a form or JSON)
