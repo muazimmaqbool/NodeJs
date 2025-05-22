@@ -6,4 +6,5 @@
 
     >We need a method called POST
      -Now code the POST method to add the person
-     -If we send the random values as well Mongoose will not save random values other than predefined schem
+     -If we send the random values as well Mongoose will not save random values other than predefined schema
+     //See post method written inside myServer.js file
