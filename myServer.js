@@ -22,6 +22,28 @@ app.post('/person',(req,res)=>{
   */
  const data=req.body //Assuming the request body contains the person data
 
+ //Now we want to create new document/data which should of person type (Person is modal/schema of db see above)
+ //Creating a new person document using the mongoose model
+ const newPerson=new Person(data)
+ //or you can save data like this
+//  newPerson.name=data.name,
+//  newPerson.name=data.age
+//  newPerson.work=data.work,
+// newPerson.phone=data.phone,
+// ...
+
+ //-> Now save the newPerson to the database
+ //this .save function returns callBack function which contains error and saved data
+ newPerson.save((error,savedPersonData)=>{
+  if(error){
+    console.error('Error saving person:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }else{
+    console.log('Data saved');
+    res.status(201).json(savedPerson);
+  }
+ })
+
 })
 
 
