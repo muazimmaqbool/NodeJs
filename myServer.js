@@ -15,6 +15,8 @@ app.get('/', (req, res) => {
 })
 
 //Creating POST method:
+//req: (request) contains data which client is sending
+//res: (response) contains data which you want to send back to the client
 app.post('/person',(req,res)=>{
   /*Important:
   here we whoever send data to this route i.e /person , here the data which client sends needs to be saved in the database but before
@@ -45,7 +47,8 @@ app.post('/person',(req,res)=>{
  })
 
 })
-
+//when ever their is a data transfer between client and sever, the server sends a signal called status signal
+//check http status code and their meaning here: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status
 
 app.listen(3000,()=>{
   console.log("Server is listening on port 3000")
