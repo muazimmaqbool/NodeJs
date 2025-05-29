@@ -42,7 +42,7 @@ app.post('/person',(req,res)=>{
     res.status(500).json({ error: 'Internal server error' });
   }else{
     console.log('Data saved');
-    res.status(201).json(savedPerson);
+    res.status(200).json(savedPersonData);
   }
  })
 
