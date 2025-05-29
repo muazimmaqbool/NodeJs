@@ -1,0 +1,54 @@
+HTTP Status Codes and Their Uses:
+
+1xx – Informational:
+These codes indicate that the request has been received and the process is continuing.
+
+100 Continue: The server has received the request headers and the client should proceed to send the body.
+
+101 Switching Protocols: The server is switching protocols, typically used for WebSocket upgrades.
+
+2xx – Success:
+These indicate that the client's request was successfully received, understood, and accepted.
+
+200 OK: The request was successful. Common for GET, POST, PUT, and DELETE.
+
+201 Created: A new resource was successfully created (commonly after POST requests).
+
+202 Accepted: The request has been accepted for processing, but processing is not complete.
+
+204 No Content: The request was successful but there is no content to return (e.g., after a DELETE).
+
+3xx – Redirection:
+These codes indicate that further action is needed to complete the request.
+
+301 Moved Permanently: The resource has been permanently moved to a new URL.
+
+302 Found: Temporary redirect to another URL; used to tell the client to try another location temporarily.
+
+304 Not Modified: Indicates the resource has not been modified since the last request; used with caching.
+
+4xx – Client Errors:
+These codes indicate that there was an error with the request from the client.
+
+400 Bad Request: The server could not understand the request due to malformed syntax.
+
+401 Unauthorized: Authentication is required and has either not been provided or failed.
+
+403 Forbidden: The client is not allowed to access the requested resource.
+
+404 Not Found: The requested resource could not be found on the server.
+
+409 Conflict: The request could not be completed due to a conflict (e.g., duplicate data).
+
+5xx – Server Errors:
+These codes indicate that the server failed to fulfill a valid request.
+
+500 Internal Server Error: A generic error message when the server encounters an unexpected condition.
+
+501 Not Implemented: The server does not recognize the request method.
+
+502 Bad Gateway: The server received an invalid response from an upstream server.
+
+503 Service Unavailable: The server is currently unable to handle the request due to overload or maintenance.
+
+504 Gateway Timeout: The server acting as a gateway did not get a response in time.
