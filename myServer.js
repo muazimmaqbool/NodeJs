@@ -127,7 +127,7 @@ app.get("/person",async(req,res)=>{
     res.status(500).json({ error: 'Internal server error' });
   }
 })
-//now hit this url with GET method in postman: http://localhost:3000/person or in chrome
+//now hit this url with GET method in postman: http://localhost:3000/person or in chrome (browser generally does GET request)
 
 app.listen(3000, () => {
   console.log("Server is listening on port 3000");
