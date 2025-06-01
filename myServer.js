@@ -78,7 +78,7 @@ app.post("/person",async(req,res)=>{
     const data=req.body
     const newPerson=new Person(data)
     const response=await newPerson.save()
-    console.log("Saved Person Data:",response)
+   // console.log("Saved Person Data:",response)
     res.status(200).json(response)
   }catch(err){
     console.error('Error saving person:', err);
@@ -122,7 +122,7 @@ app.get("/person",async(req,res)=>{
   try{
     //here what it will do is that it will return every record/data from "Person" collection
     const data=await Person.find()
-    console.log("Data Fetched:",data)
+    //console.log("Data Fetched:",data)
     res.status(200).json(data)
   }catch(err){
     console.log("Error occured while fetching the data:",err)
@@ -143,6 +143,16 @@ app.post("/menuItem",async(req,res)=>{
   }catch(err){
     console.error('Error saving Menu:', err);
     res.status(500).json({ error: 'Internal server error' });
+  }
+})
+//Getting menu data: http://localhost:3000/menuCard
+app.get("/menuCard",async(req,res)=>{
+  try{
+    const data=await MenuItem.find()
+    res.status(200).json(data)
+  }catch(error){
+    console.log("Error while fetching menu:",error)
+    res.status(500).json({error:"Internal server error"})
   }
 })
 
