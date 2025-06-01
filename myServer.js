@@ -9,6 +9,7 @@ app.use(bodyParser.json()); //here it will convert the json to js object and sav
 
 //Model name Person now can be used to do all database work for makeing changes in Person
 const Person = require("./Modals/Person");
+const MenuItem=require("./Modals/MenuItem")
 
 app.get("/", (req, res) => {
   res.send("Hello Welcome to my hotel!...");
@@ -129,6 +130,21 @@ app.get("/person",async(req,res)=>{
   }
 })
 //now hit this url with GET method in postman: http://localhost:3000/person or in chrome (browser generally does GET request)
+
+//saving menuitems data
+//POST METHOD to save menu item
+app.post("/menuItem",async(req,res)=>{
+  try{
+    const data=req.body
+    const newMenu=new MenuItem(data)
+    const response=await newMenu.save()
+    console.log("Menu Saved:",response)
+    res.status(200).json(response)
+  }catch(err){
+    console.error('Error saving Menu:', err);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+})
 
 app.listen(3000, () => {
   console.log("Server is listening on port 3000");

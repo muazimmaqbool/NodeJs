@@ -19,7 +19,7 @@ const menuItemSchema = new mongoose.Schema({
     default: false,//if this data is not send from client then default value will be false
   },
   ingredients: {
-    type: [String],//should be array of string value
+    type: [String],//should be array of string values
     default: [], //array, default will be empty array if not provided
   },
   num_sales: {
@@ -28,5 +28,5 @@ const menuItemSchema = new mongoose.Schema({
   },
 });
 
-const MenuItem=mongoose.model("Menu",menuItemSchema);
+const MenuItem=mongoose.model("MenuItem",menuItemSchema);
 module.exports=MenuItem
