@@ -119,6 +119,7 @@ Saved Person Data: {
 //Method to get person data (fetching person data from database)
 app.get("/person",async(req,res)=>{
   try{
+    //here what it will do is that it will return every record/data from "Person" collection
     const data=await Person.find()
     console.log("Data Fetched:",data)
     res.status(200).json(data)
