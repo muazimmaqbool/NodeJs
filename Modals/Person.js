@@ -14,7 +14,7 @@ const personSchema=new mongoose.Schema({
     },
     work:{
         type:String,
-        enum:['chef','waiter','manager'], //now work will accept only these three values
+        enum:['chef','waiter','manager'], //value should be from these, otherwise it will show error
         required:true
     },
     phone:{
