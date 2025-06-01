@@ -115,6 +115,20 @@ Saved Person Data: {
 //now you can go to mongoDB compass, refress and you will see "hotels" database inside it will be "people" collection
 //and inside "people" you will find this data
 
+
+//Method to get person data (fetching person data from database)
+app.get("/person",async(req,res)=>{
+  try{
+    const data=await Person.find()
+    console.log("Data Fetched:",data)
+    res.status(200).json(data)
+  }catch(err){
+    console.log("Error occured while fetching the data:",err)
+    res.status(500).json({ error: 'Internal server error' });
+  }
+})
+//now hit this url with GET method in postman: http://localhost:3000/person or in chrome
+
 app.listen(3000, () => {
   console.log("Server is listening on port 3000");
 });
