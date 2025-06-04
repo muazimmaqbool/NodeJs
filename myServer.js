@@ -133,7 +133,7 @@ app.get("/person",async(req,res)=>{
 
 //saving menuitems data
 //POST METHOD to save menu item
-app.post("/menuItem",async(req,res)=>{
+app.post("/menuNew",async(req,res)=>{
   try{
     const data=req.body
     const newMenu=new MenuItem(data)
@@ -146,7 +146,7 @@ app.post("/menuItem",async(req,res)=>{
   }
 })
 //Getting menu data: http://localhost:3000/menuCard
-app.get("/menuCard",async(req,res)=>{
+app.get("/menu",async(req,res)=>{
   try{
     const data=await MenuItem.find()
     res.status(200).json(data)
