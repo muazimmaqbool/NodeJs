@@ -1,7 +1,44 @@
 ->Node.js Routing With Express  (checkout notes of day 6)
 
-1️⃣ What is Routing in Node.js?
+What is Routing in Node.js?
   -Routing in Node.js refers to how an application’s endpoints (URIs) respond to client requests. It defines how the server handles different 
    HTTP requests like GET, POST, PUT, DELETE, etc., for specific paths.
   -In Node.js, especially when using frameworks like Express.js, routing is used to build web applications and APIs by associating URLs with 
    the correct controller logic.
+
+📦 Without Express (Core Node.js)
+   You can manually handle routing like this:
+    const http = require('http');
+    const server = http.createServer((req, res) => {
+    if (req.url === '/' && req.method === 'GET') {
+        res.end('Home Page');
+    } else if (req.url === '/about' && req.method === 'GET') {
+        res.end('About Page');
+    } else {
+        res.statusCode = 404;
+        res.end('Page Not Found');
+    }
+    });
+
+    server.listen(3000, () => console.log('Server running on port 3000'));
+
+⚙️ With Express.js (Easier & More Common)
+    const express = require('express');
+    const app = express();
+
+    // GET route
+    app.get('/', (req, res) => {
+    res.send('Welcome to the Home Page');
+    });
+
+    // POST route
+    app.post('/login', (req, res) => {
+    res.send('Login endpoint');
+    });
+
+    // Dynamic route
+    app.get('/user/:id', (req, res) => {
+    res.send(`User ID: ${req.params.id}`);
+    });
+
+    app.listen(3000, () => console.log('Server started on port 3000'));
