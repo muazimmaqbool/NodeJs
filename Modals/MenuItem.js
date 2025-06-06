@@ -12,7 +12,6 @@ const menuItemSchema = new mongoose.Schema({
   },
   taste: {
     type: String,
-    enum: ["Sweet", "Spicy", "Sour"],//value should be from these, otherwise it will show error
     required:true
   },
   is_drink: {
