@@ -145,7 +145,7 @@ app.post("/menuNew",async(req,res)=>{
     res.status(500).json({ error: 'Internal server error' });
   }
 })
-//Getting menu data: http://localhost:3000/menuCard
+//Getting menu data: http://localhost:3000/menu
 app.get("/menu",async(req,res)=>{
   try{
     const data=await MenuItem.find()
