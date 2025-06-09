@@ -16,6 +16,7 @@ Note:But this is not the correct method to create as many functions/endpoints He
     localhost:3000/person/:work
     → work = [ “chef”, “waiter”, “manager” ]
 
+//see code in myServer.js
 app.get('/person/:work', async (req, res) => {
  try {
    const workType = req.params.work; // Extract the work type from the URL parameter
