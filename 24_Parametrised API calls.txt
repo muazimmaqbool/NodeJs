@@ -1,0 +1,30 @@
+->What are Parameterized API Calls in Node.js?
+    Parameterized API calls allow you to pass dynamic values (parameters) in the URL, so the server can
+    respond based on the data provided.
+    This is especially useful when dealing with user-specific or item-specific requests (like fetching a user by ID).
+
+(Important):
+->Now if someone told you to give a list of people who are only waiters
+  Then we can create an endpoint like this:
+    ● /person/chef
+    ● /person/waiter
+    ● /person/manager
+
+Note:But this is not the correct method to create as many functions/endpoints Here we can use parametrized endpoints
+    i.e parametrized url - means passing parameters in url
+ ->It can be dynamically inserted into the URL when making a request to the API.
+    localhost:3000/person/:work
+    → work = [ “chef”, “waiter”, “manager” ]
+
+app.get('/person/:work', async (req, res) => {
+ try {
+   const workType = req.params.work; // Extract the work type from the URL parameter
+    // Assuming you already have a Person model and MongoDB connection set up
+    const persons = await Person.find({ work: workType });
+    // Send the list of persons with the specified work type as a JSON response
+    res.json(persons);
+    } catch (error) {
+    console.error('Error fetching persons:', error);
+    res.status(500).json({ error: 'Internal server error' });
+ }
+});
