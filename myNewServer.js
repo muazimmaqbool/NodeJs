@@ -12,41 +12,18 @@ app.use(bodyParser.json()); //here it will convert the json to js object and sav
 
 //Model name Person now can be used to do all database work for makeing changes in Person
 //const Person = require("./Modals/Person"); //Now used inside personRoutes.js file
-const MenuItem = require("./Modals/MenuItem");
+//const MenuItem = require("./Modals/MenuItem"); //Now used inside menuRoutes.js file
 
 app.get("/", (req, res) => {
   res.send("Hello Welcome to my hotel!...");
 });
 
-
-//saving menuitems data
-//POST METHOD to save menu item
-app.post("/menuNew", async (req, res) => {
-  try {
-    const data = req.body;
-    const newMenu = new MenuItem(data);
-    const response = await newMenu.save();
-    console.log("Menu Saved:", response);
-    res.status(200).json(response);
-  } catch (err) {
-    console.error("Error saving Menu:", err);
-    res.status(500).json({ error: "Internal server error" });
-  }
-});
-//Getting menu data: http://localhost:3000/menu
-app.get("/menu", async (req, res) => {
-  try {
-    const data = await MenuItem.find();
-    res.status(200).json(data);
-  } catch (error) {
-    console.log("Error while fetching menu:", error);
-    res.status(500).json({ error: "Internal server error" });
-  }
-});
-
 //importing router files for person
 const personRoutes=require('./Routes/personRoutes')
 app.use('/person',personRoutes)//using the router
+
+const menuRoutes=require('./Routes/menuRoutes')
+app.use('/menu',menuRoutes)
 
 app.listen(3000, () => {
   console.log("Server is listening on port 3000");
