@@ -19,10 +19,6 @@ app.get("/", (req, res) => {
 });
 
 
-
-
-
-
 //saving menuitems data
 //POST METHOD to save menu item
 app.post("/menuNew", async (req, res) => {
@@ -50,7 +46,7 @@ app.get("/menu", async (req, res) => {
 
 //importing router files for person
 const personRoutes=require('./Routes/personRoutes')
-app.use('/',personRoutes)//using the router
+app.use('/person',personRoutes)//using the router
 
 app.listen(3000, () => {
   console.log("Server is listening on port 3000");

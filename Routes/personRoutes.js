@@ -1,11 +1,18 @@
 const express =require("express")
+//Router is used to manager routes/endpoints
 const router=express.Router()
 
 //this router is exported in bottom and imported in myNewServer.js
 
+/*Note: here i have removed /person in all routes of because we are adding this person in myNewSever.js file like this:
+    //importing router files for person
+    const personRoutes=require('./Routes/personRoutes')
+    app.use('/person',personRoutes)//using the router
+*/
+
 //Post route to add new person
 //here in place of app we have router, i.e previously it was app.post(...)
-router.post("/person", async (req, res) => {
+router.post("/", async (req, res) => {
   /*
     If the promise is resolved, the result of the promise is returned. If the
     promise is rejected, it throws an error that can be caught using
@@ -24,7 +31,7 @@ router.post("/person", async (req, res) => {
 });
 
 //Method to get person data (fetching person data from database)
-router.get("/person", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     //here what it will do is that it will return every record/data from "Person" collection
     const data = await Person.find();
@@ -39,7 +46,7 @@ router.get("/person", async (req, res) => {
 
 //parametrised API call (see file 24_Parametrized_API_Calls.txt) to get person based on work type
 //here using :workType - makes it a variable means anything can be inplace of work
-router.get("/person/:workType", async (req, res) => {
+router.get("/:workType", async (req, res) => {
   try {
     const workType = req.params.workType;
     //checking for workType, so that user enters valid worktype, and only then db validation will be done
@@ -57,6 +64,8 @@ router.get("/person/:workType", async (req, res) => {
   }
 });
 //now test it like this: http://localhost:3000/person/chef, http://localhost:3000/person/manager,...
+
+
 
 
 module.exports=router;
