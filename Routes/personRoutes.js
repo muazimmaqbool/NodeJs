@@ -10,6 +10,8 @@ const router=express.Router()
     app.use('/person',personRoutes)//using the router
 */
 
+const Person = require("../Modals/Person");
+
 //Post route to add new person
 //here in place of app we have router, i.e previously it was app.post(...)
 router.post("/", async (req, res) => {
