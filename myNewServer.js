@@ -18,38 +18,10 @@ app.get("/", (req, res) => {
   res.send("Hello Welcome to my hotel!...");
 });
 
-app.post("/person", async (req, res) => {
-  /*
-    If the promise is resolved, the result of the promise is returned. If the
-    promise is rejected, it throws an error that can be caught using
-    try...catch
-    */
-  try {
-    const data = req.body;
-    const newPerson = new Person(data);
-    const response = await newPerson.save();
-    // console.log("Saved Person Data:",response)
-    res.status(200).json(response);
-  } catch (err) {
-    console.error("Error saving person:", err);
-    res.status(500).json({ error: "Internal server error" });
-  }
-});
 
 
-//Method to get person data (fetching person data from database)
-app.get("/person", async (req, res) => {
-  try {
-    //here what it will do is that it will return every record/data from "Person" collection
-    const data = await Person.find();
-    //console.log("Data Fetched:",data)
-    res.status(200).json(data);
-  } catch (err) {
-    console.log("Error occured while fetching the data:", err);
-    res.status(500).json({ error: "Internal server error" });
-  }
-});
-//now hit this url with GET method in postman: http://localhost:3000/person or in chrome (browser generally does GET request)
+
+
 
 //saving menuitems data
 //POST METHOD to save menu item
@@ -76,26 +48,9 @@ app.get("/menu", async (req, res) => {
   }
 });
 
-//parametrised API call (see file 24_Parametrized_API_Calls.txt) to get person based on work type
-//here using :workType - makes it a variable means anything can be inplace of work
-app.get("/person/:workType", async (req, res) => {
-  try {
-    const workType = req.params.workType;
-    //checking for workType, so that user enters valid worktype, and only then db validation will be done
-    if (workType === "chef" || workType === "manager" || workType === "waiter") {
-      //db operation, it will look for the entered workType in the work field of person
-      const response = await Person.find({ work: workType });
-      //console.log("fetched...");
-      res.status(200).json(response);
-    } else {
-      res.status(404).json({ error: "Invalid work type" });
-    }
-  } catch (err) {
-    console.log("Error while fetching work:", error);
-    res.status(500).json({ error: "Internal server error" });
-  }
-});
-//now test it like this: http://localhost:3000/person/chef, http://localhost:3000/person/manager,...
+//importing router files for person
+const personRoutes=require('./Routes/personRoutes')
+app.use('/',personRoutes)//using the router
 
 app.listen(3000, () => {
   console.log("Server is listening on port 3000");
