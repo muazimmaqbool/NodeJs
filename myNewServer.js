@@ -20,9 +20,9 @@ app.get("/", (req, res) => {
 
 //importing router files for person
 const personRoutes=require('./Routes/personRoutes')
-app.use('/person',personRoutes)//using the router
-
 const menuRoutes=require('./Routes/menuRoutes')
+
+app.use('/person',personRoutes)//using the router
 app.use('/menu',menuRoutes)
 
 app.listen(3000, () => {
