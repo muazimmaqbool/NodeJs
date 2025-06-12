@@ -36,4 +36,16 @@ router.get("/", async (req, res) => {
   }
 });
 
+// http://localhost:3000/menu/Spicy
+router.get("/:tasteType", async (req, res) => {
+  try {
+    const tasteType=req.params.tasteType;
+    const result = await MenuItem.find({taste:tasteType});
+    res.status(200).json(result);
+  } catch (error) {
+    console.log("Error while fetching menu:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
 module.exports=router
