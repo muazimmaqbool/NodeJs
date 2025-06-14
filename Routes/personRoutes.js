@@ -67,9 +67,30 @@ router.get("/:workType", async (req, res) => {
 });
 //now test it like this: http://localhost:3000/person/chef, http://localhost:3000/person/manager,...
 
-//Updating person data via PUT request
+//Updating person data via PUT request:
+//this id is variable it can be any name like person_Id, _id, etc...
+router.put("/:id",async(req,res)=>{
+  try{
+    const personID=req.params.id; //Extracting the id from the URL paramter
+    const updatedPersonData=req.body; //updated given/entered by the user
 
-
+    // .findByIdAndUpdated is predefined method in mongoDb
+    const response=await Person.findByIdAndUpdate(personID,updatedPersonData,{
+      new:true, //means it will return the updated document in response
+      runValidators:true, //means it check for validation which we have put for Person Schema/Modals see Person.js file in inside Modals folder
+    })
+    console.log("response:",response)
+    //if the person to be updated is not found i.e id is wrong and in that case response will be nothing
+    if(!response){
+      return res.status(404).json({error:"Person not found!"})
+    }
+    console.log("Data Updated:",response)
+    res.status("200"),json(response)
+  }catch(error){
+    console.log("Error while updating person data", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+})
 
 
 module.exports=router;
