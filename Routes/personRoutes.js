@@ -79,18 +79,23 @@ router.put("/:id",async(req,res)=>{
       new:true, //means it will return the updated document in response
       runValidators:true, //means it check for validation which we have put for Person Schema/Modals see Person.js file in inside Modals folder
     })
-    console.log("response:",response)
     //if the person to be updated is not found i.e id is wrong and in that case response will be nothing
     if(!response){
       return res.status(404).json({error:"Person not found!"})
     }
-    console.log("Data Updated:",response)
-    res.status("200"),json(response)
+   console.log("response:",response)
+    res.status(200).json(response)
   }catch(error){
     console.log("Error while updating person data", error);
     res.status(500).json({ error: "Internal server error" });
   }
 })
+/*Do this: Put request for this: http://localhost:3000/person/683c2461141180ddb9a43dc4 (copy valid id from /person endpoint)
+ and pass data like this (suppose you want to update the name):
+                                                      {
+                                                        "name": "Sameer Mir"
+                                                    }
+*/
 
 
 module.exports=router;
