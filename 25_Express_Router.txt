@@ -14,3 +14,7 @@ From Now onwords myServer.js file will not be used i will use myNewServer.js
 ->Creating new folder called "Routes"
     -And inside this Routes folder i will add file example: personRoutes.js, etc...
      (now check personRoutes.js file)
+
+     And using it myNewServer.js file like this
+     const personRoutes=require('./Routes/personRoutes')
+      app.use('/person',personRoutes)//using the router
