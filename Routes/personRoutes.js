@@ -67,6 +67,8 @@ router.get("/:workType", async (req, res) => {
 });
 //now test it like this: http://localhost:3000/person/chef, http://localhost:3000/person/manager,...
 
+//Updating person data via PUT request
+
 
 
 

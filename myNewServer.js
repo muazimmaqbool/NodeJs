@@ -1,6 +1,5 @@
 //Note: This serverfile is used after studying 25_Express_Router.txt
 
-
 const express = require("express");
 const app = express();
 //importing database connection
@@ -19,11 +18,12 @@ app.get("/", (req, res) => {
 });
 
 //importing router files for person
-const personRoutes=require('./Routes/personRoutes')
-const menuRoutes=require('./Routes/menuRoutes')
+const personRoutes = require("./Routes/personRoutes");
+const menuRoutes = require("./Routes/menuRoutes");
 
-app.use('/person',personRoutes)//using the router
-app.use('/menu',menuRoutes)
+app.use("/person", personRoutes); //using the router
+app.use("/menu", menuRoutes);
+
 
 app.listen(3000, () => {
   console.log("Server is listening on port 3000");
