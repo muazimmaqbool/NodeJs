@@ -48,4 +48,18 @@ router.get("/:tasteType", async (req, res) => {
   }
 });
 
+//Deleting a menu item by id
+router.delete("/:id",async(req,res)=>{
+  try{
+    const menuId=req.params.id;
+    const response=await MenuItem.findByIdAndDelete(menuId)
+    if(!response){
+      return res.status(400).json({error:"Menu Item Not Found!"})
+    }
+    return res.status(200).json({message:"Menu Item Deleted Successfully!"})
+  }catch{
+     console.log("Error while deleting a menu item record", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+})
 module.exports=router
