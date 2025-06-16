@@ -1,7 +1,7 @@
-const express=require('express')
-const router=express.Router() //this router is exported in bottom and imported in myNewServer.js
+const express = require("express");
+const router = express.Router(); //this router is exported in bottom and imported in myNewServer.js
 
-const MenuItem=require('../Modals/MenuItem')
+const MenuItem = require("../Modals/MenuItem");
 
 /*
 ->Used inside myNewServer.js like this:
@@ -39,8 +39,8 @@ router.get("/", async (req, res) => {
 // http://localhost:3000/menu/Spicy
 router.get("/:tasteType", async (req, res) => {
   try {
-    const tasteType=req.params.tasteType;
-    const result = await MenuItem.find({taste:tasteType});
+    const tasteType = req.params.tasteType;
+    const result = await MenuItem.find({ taste: tasteType });
     res.status(200).json(result);
   } catch (error) {
     console.log("Error while fetching menu:", error);
@@ -49,17 +49,41 @@ router.get("/:tasteType", async (req, res) => {
 });
 
 //Deleting a menu item by id
-router.delete("/:id",async(req,res)=>{
-  try{
-    const menuId=req.params.id;
-    const response=await MenuItem.findByIdAndDelete(menuId)
-    if(!response){
-      return res.status(400).json({error:"Menu Item Not Found!"})
+router.delete("/:id", async (req, res) => {
+  try {
+    const menuId = req.params.id;
+    const response = await MenuItem.findByIdAndDelete(menuId);
+    if (!response) {
+      return res.status(400).json({ error: "Menu Item Not Found!" });
     }
-    return res.status(200).json({message:"Menu Item Deleted Successfully!"})
-  }catch{
-     console.log("Error while deleting a menu item record", error);
+    return res.status(200).json({ message: "Menu Item Deleted Successfully!" });
+  } catch {
+    console.log("Error while deleting a menu item record", error);
     res.status(500).json({ error: "Internal server error" });
   }
-})
-module.exports=router
+});
+
+//Updating Menu Item data via id
+router.put("/:id", async (req, res) => {
+  try {
+    const menuItemId = req.params.id;
+    const updatedMenuItem = req.body;
+    const response = await MenuItem.findByIdAndUpdate(
+      menuItemId,
+      updatedMenuItem,
+      {
+        new: true,
+        runValidators: true,
+      }
+    );
+    if (!response) {
+      return res.status(404).json({ error: "Menu Item not found!" });
+    }
+    res.status(200).json(response);
+  } catch (error) {
+    console.log("Error while updating Menu Item data", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+module.exports = router;
