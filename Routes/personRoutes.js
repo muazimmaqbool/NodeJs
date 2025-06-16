@@ -1,6 +1,6 @@
-const express =require("express")
+const express = require("express");
 //Router is used to manager routes/endpoints
-const router=express.Router()
+const router = express.Router();
 
 //this router is exported in bottom and imported in myNewServer.js
 
@@ -52,7 +52,11 @@ router.get("/:workType", async (req, res) => {
   try {
     const workType = req.params.workType;
     //checking for workType, so that user enters valid worktype, and only then db validation will be done
-    if (workType === "chef" || workType === "manager" || workType === "waiter") {
+    if (
+      workType === "chef" ||
+      workType === "manager" ||
+      workType === "waiter"
+    ) {
       //db operation, it will look for the entered workType in the work field of person
       const response = await Person.find({ work: workType });
       //console.log("fetched...");
@@ -69,27 +73,31 @@ router.get("/:workType", async (req, res) => {
 
 //Updating person data via PUT request:
 //this id is variable it can be any name like person_Id, _id, etc...
-router.put("/:id",async(req,res)=>{
-  try{
-    const personID=req.params.id; //Extracting the id from the URL paramter
-    const updatedPersonData=req.body; //updated given/entered by the user
+router.put("/:id", async (req, res) => {
+  try {
+    const personID = req.params.id; //Extracting the id from the URL paramter
+    const updatedPersonData = req.body; //updated given/entered by the user
 
     // .findByIdAndUpdated is predefined method in mongoDb
-    const response=await Person.findByIdAndUpdate(personID,updatedPersonData,{
-      new:true, //means it will return the updated document in response
-      runValidators:true, //means it check for validation which we have put for Person Schema/Modals see Person.js file in inside Modals folder
-    })
+    const response = await Person.findByIdAndUpdate(
+      personID,
+      updatedPersonData,
+      {
+        new: true, //means it will return the updated document in response
+        runValidators: true, //means it check for validation which we have put for Person Schema/Modals see Person.js file in inside Modals folder
+      }
+    );
     //if the person to be updated is not found i.e id is wrong and in that case response will be nothing
-    if(!response){
-      return res.status(404).json({error:"Person not found!"})
+    if (!response) {
+      return res.status(404).json({ error: "Person not found!" });
     }
-   console.log("response:",response)
-    res.status(200).json(response)
-  }catch(error){
+    console.log("response:", response);
+    res.status(200).json(response);
+  } catch (error) {
     console.log("Error while updating person data", error);
     res.status(500).json({ error: "Internal server error" });
   }
-})
+});
 /*Do this: Put request for this: http://localhost:3000/person/683c2461141180ddb9a43dc4 (copy valid id from /person endpoint)
  and pass data like this (suppose you want to update the name):
                                                       {
@@ -98,21 +106,20 @@ router.put("/:id",async(req,res)=>{
 */
 
 //Delete Operation - deleting a person record by id
-router.delete('/:id',async(req,res)=>{
-  try{
-    const personId=req.params.id; //Extracting the id from the URL paramter
+router.delete("/:id", async (req, res) => {
+  try {
+    const personId = req.params.id; //Extracting the id from the URL paramter
     // .findByIdAndDelete is predefined method in mongoDb, used to delete the record which matches the id
-    const response=Person.findByIdAndDelete(personId)
-    if(!response){
-      return res.status(404).json({error:'Person not found!'})
+    const response = await Person.findByIdAndDelete(personId);
+    if (!response) {
+      return res.status(404).json({ error: "Person not found!" });
     }
-    console.log("Data deleted")
-    return res.status(200).json({message:'Person deleted successfully'})
-  }catch(error){
+    console.log("Data deleted");
+    return res.status(200).json({ message: "Person deleted successfully" });
+  } catch (error) {
     console.log("Error while deleting a person record", error);
     res.status(500).json({ error: "Internal server error" });
   }
-})
+});
 
-
-module.exports=router;
+module.exports = router;
