@@ -110,6 +110,7 @@ router.delete("/:id", async (req, res) => {
   try {
     const personId = req.params.id; //Extracting the id from the URL paramter
     // .findByIdAndDelete is predefined method in mongoDb, used to delete the record which matches the id
+    //Note: As of version 8 there is no more .findByIdAndRemove() in its place you will have to use .findByIdAndDelete()
     const response = await Person.findByIdAndDelete(personId);
     if (!response) {
       return res.status(404).json({ error: "Person not found!" });
