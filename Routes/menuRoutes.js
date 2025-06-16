@@ -86,4 +86,6 @@ router.put("/:id", async (req, res) => {
   }
 });
 
+//Note: to see about update and delete visit files 26 and 27 and personRoutes file
+
 module.exports = router;
