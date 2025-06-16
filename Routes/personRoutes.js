@@ -97,5 +97,22 @@ router.put("/:id",async(req,res)=>{
                                                     }
 */
 
+//Delete Operation - deleting a person record by id
+router.delete('/:id',async(req,res)=>{
+  try{
+    const personId=req.params.id; //Extracting the id from the URL paramter
+    // .findByIdAndDelete is predefined method in mongoDb, used to delete the record which matches the id
+    const response=Person.findByIdAndDelete(personId)
+    if(!response){
+      return res.status(404).json({error:'Person not found!'})
+    }
+    console.log("Data deleted")
+    return res.status(200).json({message:'Person deleted successfully'})
+  }catch(error){
+    console.log("Error while deleting a person record", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+})
+
 
 module.exports=router;
