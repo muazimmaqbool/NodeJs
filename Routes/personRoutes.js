@@ -124,15 +124,18 @@ router.delete("/:id", async (req, res) => {
 });
 
 //getting persons by name:
-// router.get("/:name",async(req,res)=>{
-//   try{
-//     const personNam=req.params.name;
-//     const result=await Person.find({name:personNam})
-//     res.status(200).json(result)
-
-//   }catch(error){
-//      console.log("Error while fetching person:", error);
-//     res.status(500).json({ error: "Internal server error" });
-//   }
-// })
+//http://localhost:3000/person/name/Hilal Ahmad
+router.get("/name/:name",async(req,res)=>{
+  try{
+    const personNam=req.params.name;
+    const result=await Person.find({name:personNam})
+    if(!result.length>0){
+      return res.status(404).json({ error: "Person not found!" });
+    }
+    res.status(200).json(result)
+  }catch(error){
+     console.log("Error while fetching person:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+})
 module.exports = router;
