@@ -124,15 +124,15 @@ router.delete("/:id", async (req, res) => {
 });
 
 //getting persons by name:
-router.get("/:name",async(req,res)=>{
-  try{
-    const personNam=req.params.name;
-    const result=await Person.find({name:personNam})
-    res.status(200).json(result)
+// router.get("/:name",async(req,res)=>{
+//   try{
+//     const personNam=req.params.name;
+//     const result=await Person.find({name:personNam})
+//     res.status(200).json(result)
 
-  }catch(error){
-     console.log("Error while fetching person:", error);
-    res.status(500).json({ error: "Internal server error" });
-  }
-})
+//   }catch(error){
+//      console.log("Error while fetching person:", error);
+//     res.status(500).json({ error: "Internal server error" });
+//   }
+// })
 module.exports = router;
