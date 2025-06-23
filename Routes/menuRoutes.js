@@ -87,6 +87,21 @@ router.put("/:id", async (req, res) => {
   }
 });
 
+//getting menu item by name:
+router.get("/name/:name",async(req,res)=>{
+  try{
+    const menuName=req.params.name;
+    const result=await MenuItem.find({name:menuName})
+    if(!result.length>0){
+      return res.status(404).json({ error: "Menu not found!" });
+    }
+    res.status(200).json(result)
+  }catch(err){
+    console.log("Error while fetching Menu:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+})
+
 //Note: to see about update and delete visit files 26 and 27 and personRoutes file
 
 module.exports = router;

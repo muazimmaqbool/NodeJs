@@ -127,8 +127,8 @@ router.delete("/:id", async (req, res) => {
 //http://localhost:3000/person/name/Hilal Ahmad
 router.get("/name/:name",async(req,res)=>{
   try{
-    const personNam=req.params.name;
-    const result=await Person.find({name:personNam})
+    const personName=req.params.name;
+    const result=await Person.find({name:personName})
     if(!result.length>0){
       return res.status(404).json({ error: "Person not found!" });
     }
