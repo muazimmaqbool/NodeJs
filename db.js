@@ -1,4 +1,5 @@
 const mongoose=require('mongoose') //to download mongoose use this command : npm i mongoose
+require("dotenv").config();
 
 //Note:-> the mongodb server runs on this port: mongodb://localhost:27017/dbName
 
@@ -6,7 +7,8 @@ const mongoose=require('mongoose') //to download mongoose use this command : npm
 //const mongoDbURL='mongodb://localhost:27017/hotels' //here myhotels can be any name
 
 //connecting mongoDB Atlas url here . csebjava is a password, the above mongoDbURL connects with the local db
-const mongoDbURL="mongodb+srv://muazimmaqbool7:csebjava@cluster0.qpktfbi.mongodb.net/"
+//const mongoDbURL="mongodb+srv://muazimmaqbool7:csebjava@cluster0.qpktfbi.mongodb.net/"
+const mongoDbURL=process.env.ONLINE_DB_URL
 
 //step 2: set up the mongodb connection:
 /*using mongoose.connect() : it establishes a connection to the MongoDB database using the URL and some configuration options:

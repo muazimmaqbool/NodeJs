@@ -4,6 +4,8 @@ const express = require("express");
 const app = express();
 //importing database connection
 const db = require("./db");
+require("dotenv").config(); //means server knows that we have .env file
+const PORT=process.env.PORT || 3000
 
 //Learn about this in 20_Body_Parser.txt file
 const bodyParser = require("body-parser");
@@ -25,6 +27,6 @@ app.use("/person", personRoutes); //using the router
 app.use("/menu", menuRoutes);
 
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log("Server is listening on port 3000");
 });

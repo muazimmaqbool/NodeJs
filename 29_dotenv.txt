@@ -6,3 +6,20 @@
         ➡️ Create a .env File
         ➡️ This is where you'll store your environment-specific configuration variables.
         ➡️ format VAR_NAME=value.
+
+    ➡️Inside this .env file you can add your sensitive information like username, password, api key, port
+        example: PORT=3000, etc..
+       
+       🟢 Now use this .env file in server file here we have myNewServer.js like this:
+            require("dotenv").config(); on top,
+            - it means now server kows that we have .env file
+
+        🟢 Now using PORT variable of .env file inside myNewServer.js file:
+            const PORT=process.env.PORT
+                app.listen(PORT, () => {
+                console.log("Server is listening on port 3000");
+            });
+
+        ➡️ Note inside which ever file you use the variable from .env file you have to add 
+           this line on top first:  require("dotenv").config(); 
+
