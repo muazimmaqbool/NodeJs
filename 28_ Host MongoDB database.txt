@@ -10,3 +10,7 @@ The free tier allows developers to explore and experiment with the database with
 -Watch any youtube video how to connect mongoDB atlast or how to use it.
 -When you replace local mongoDBURL with URL provided by mongoDB Atlas you need to add new data
 see in db.js file in line 9
+
+->Now save new data in the database but this will be saved in cloud database i.e in MongoDB Atlas
+->After saving data to see this saved data go to:
+     mongoDB Atlas > cluster > Browser Collections > Collections
