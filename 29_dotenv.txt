@@ -1,0 +1,8 @@
+➡️ Dotenv:
+  🟢 The dotenv module in Node.js is used to manage configuration variables and sensitive information in your applications.
+  🟢 It's particularly useful for keeping sensitive data like API keys, database connection strings, database username and password, and other 
+     environment-specific configurations separate from your code.
+  🟢 To install dotenv: npm install dotenv
+        ➡️ Create a .env File
+        ➡️ This is where you'll store your environment-specific configuration variables.
+        ➡️ format VAR_NAME=value.
