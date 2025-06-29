@@ -23,3 +23,8 @@
         ➡️ Note inside which ever file you use the variable from .env file you have to add 
            this line on top first:  require("dotenv").config(); 
 
+➡️ Note:
+    Remember to keep your .env file secure and never commit it to a public
+    version control system like Git, as it may contain sensitive information.
+    Typically, you should include the .env file in your project's .gitignore file
+    to prevent accidental commits.

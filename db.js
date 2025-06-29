@@ -5,9 +5,11 @@ require("dotenv").config();
 
 //step 1: Defining the MongoDB connection URl:
 //const mongoDbURL='mongodb://localhost:27017/hotels' //here myhotels can be any name
+// or
+//const mongoDBURL=process.env.LOCAL_DB_URL
 
 //connecting mongoDB Atlas url here . csebjava is a password, the above mongoDbURL connects with the local db
-//const mongoDbURL="mongodb+srv://muazimmaqbool7:csebjava@cluster0.qpktfbi.mongodb.net/"
+//const mongoDbURL="mongodb+srv://username:passwprd@cluster0.qpktfbi.mongodb.net/"
 const mongoDbURL=process.env.ONLINE_DB_URL
 
 //step 2: set up the mongodb connection:
