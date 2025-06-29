@@ -1,0 +1,12 @@
+➡️ Hosting Mongodb Online:
+    🟢let’s host our database server and make our DB online presence
+    🟢MongoDB Atlas provides a Free cluster for users where you can host your database for free.
+      ➡️ Note; Database clustering is the process of connecting more than one single database instance or server to your system
+    🟢MongoDB Atlas offers a cloud-based platform for hosting MongoDB databases
+
+The free tier allows developers to explore and experiment with the database without incurring any costs.
+● https://www.mongodb.com/atlas/database
+
+-Watch any youtube video how to connect mongoDB atlast or how to use it.
+-When you replace local mongoDBURL with URL provided by mongoDB Atlas you need to add new data
+see in db.js file in line 9
