@@ -3,7 +3,10 @@ const mongoose=require('mongoose') //to download mongoose use this command : npm
 //Note:-> the mongodb server runs on this port: mongodb://localhost:27017/dbName
 
 //step 1: Defining the MongoDB connection URl:
-const mongoDbURL='mongodb://localhost:27017/hotels' //here myhotels can be any name
+//const mongoDbURL='mongodb://localhost:27017/hotels' //here myhotels can be any name
+
+//connecting mongoDB Atlas url here . csebjava is a password, the above mongoDbURL connects with the local db
+const mongoDbURL="mongodb+srv://muazimmaqbool7:csebjava@cluster0.qpktfbi.mongodb.net/"
 
 //step 2: set up the mongodb connection:
 /*using mongoose.connect() : it establishes a connection to the MongoDB database using the URL and some configuration options:
