@@ -8,8 +8,7 @@ require("dotenv").config();
 // or
 //const mongoDBURL=process.env.LOCAL_DB_URL
 
-//connecting mongoDB Atlas url here . csebjava is a password, the above mongoDbURL connects with the local db
-//const mongoDbURL="mongodb+srv://username:passwprd@cluster0.qpktfbi.mongodb.net/"
+//connecting mongoDB Atlas url, the above mongoDbURL connects with the local db
 const mongoDbURL=process.env.ONLINE_DB_URL
 
 //step 2: set up the mongodb connection:
@@ -19,10 +18,9 @@ const mongoDbURL=process.env.ONLINE_DB_URL
 */
 //at 6:25 of mongoose schema video
 //these two paramters are passed because otherwise you will get some warning, they make sure that you are working with latest versions
-mongoose.connect(mongoDbURL,{
-   // useNewUrlPraser:true, 
-    useUnifiedTopology:true,
-})
+mongoose.connect(mongoDbURL)
+.then(() => console.log("Connected to MongoDB server!"))
+.catch((error) => console.log("MongoDB connection error:", error));
 
 //step 3: Access to default connection object:
 /* mongoose maintains a default connection object representing the mongodb connection
