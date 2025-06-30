@@ -1,0 +1,9 @@
+➡️ Host Node.js Server:
+
+    🟢 Now we are going to host our server so that our Application or Endpoints is accessible to all the users over the Internet.
+    🟢 We have to make it publicly available, so there are lots of company who helps us to make our application run 24*7
+    🟢 Like, AWS, Google Cloud, etc. but these charge too much amount for our application
+    🟢 So we are going to use some free services to host our nodeJS application, which lots of company provides for developer purposes.
+    🟢 Like, Netlify, Render, etc, 
+    🟢 We will use 'Render' to host our nodejs server as it is simple and fast
+        link: https://render.com/
