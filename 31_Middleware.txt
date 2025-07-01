@@ -14,62 +14,12 @@ What is Middleware in Node.js?
                       | (Middleware)  |
                       |_______________|
 
-They run **before** the final request handler and can:
-- Modify req or res
-- End the request-response cycle
-- Call next() to pass control to the next middleware
+
+   -> In simple words middleware is like a phase in which many functions execute and whenever all these functions gets executed
+      then the response of the request is given back to the user by the server
 
 📌 Syntax:
 app.use((req, res, next) => {
   // Middleware logic here
   next();
 });
-
-🔄 Real-Life Example: Logging Middleware
-
-Imagine you're a shop owner. Every time a customer (user request) walks in, your security guard (middleware) notes down:
-- Time of entry
-- Customer name
-- What they asked for
-
-That way, you know what's happening in your shop, even before they reach the counter (main route).
-
-🔧 Example in Code:
-const express = require('express');
-const app = express();
-
-// Custom Logging Middleware
-app.use((req, res, next) => {
-  console.log(`${new Date().toISOString()} - ${req.method} ${req.url}`);
-  next();
-});
-
-app.get('/', (req, res) => {
-  res.send('Welcome to the Home Page');
-});
-
-app.listen(3000, () => {
-  console.log('Server running on http://localhost:3000');
-});
-
-🛡️ Another Use Case: Authentication Middleware
-
-Before allowing access to protected routes, you can verify if the user is logged in.
-
-Example:
-const checkAuth = (req, res, next) => {
-  if (req.headers.authorization === 'secret-token') {
-    next(); // User is authorized
-  } else {
-    res.status(401).send('Unauthorized');
-  }
-};
-
-app.get('/dashboard', checkAuth, (req, res) => {
-  res.send('Welcome to your dashboard!');
-});
-
-✅ Summary:
-- Middleware are building blocks of Express apps
-- Useful for logging, auth, error handling, etc.
-- Run before your actual route logic
