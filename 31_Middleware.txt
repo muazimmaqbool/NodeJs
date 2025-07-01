@@ -8,7 +8,11 @@ What is Middleware in Node.js?
     several stages in the kitchen. Each stage involves different tasks, like chopping vegetables, cooking and adding spices.
     Middleware is a bit like these stages in the kitchen, it's something that happens in between your request and the final
     response in a web application
-
+                       _______________
+                      |               |
+    ----Request------>|     API       |------Response---->
+                      | (Middleware)  |
+                      |_______________|
 
 They run **before** the final request handler and can:
 - Modify req or res
