@@ -9,3 +9,5 @@
 
   Example:
   After you log in, the system checks whether you are allowed to access a specific page, file, or action (like admin panel or deleting users).
+
+->Note: In general, Authentication is applied before Authorization in the security process
