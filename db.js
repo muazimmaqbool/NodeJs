@@ -6,10 +6,10 @@ require("dotenv").config();
 //step 1: Defining the MongoDB connection URl:
 //const mongoDbURL='mongodb://localhost:27017/hotels' //here myhotels can be any name
 // or
-//const mongoDBURL=process.env.LOCAL_DB_URL
+const mongoDbURL=process.env.LOCAL_DB_URL
 
 //connecting mongoDB Atlas url, the above mongoDbURL connects with the local db
-const mongoDbURL=process.env.ONLINE_DB_URL
+//const mongoDbURL=process.env.ONLINE_DB_URL
 
 //step 2: set up the mongodb connection:
 /*using mongoose.connect() : it establishes a connection to the MongoDB database using the URL and some configuration options:
@@ -20,7 +20,7 @@ const mongoDbURL=process.env.ONLINE_DB_URL
 //these two paramters are passed because otherwise you will get some warning, they make sure that you are working with latest versions
 mongoose.connect(mongoDbURL,{
      useNewUrlParser: true,
-    useUnifiedTopology: true,
+   // useUnifiedTopology: true, //when using local DB connnection comment this line
 })
 .then(() => console.log("Connected to MongoDB server!"))
 .catch((error) => console.log("MongoDB connection error:", error));
