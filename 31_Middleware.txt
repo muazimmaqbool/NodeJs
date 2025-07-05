@@ -3,6 +3,9 @@ What is Middleware in Node.js?
   Middleware functions are functions that have access to the request (req), response (res), and the next() function 
   in an Express application.
 
+  -> In simple words middleware is like a phase in which many functions execute and whenever all these functions gets executed
+      then the response of the request is given back to the user by the server
+
   Example:
     Imagine you're at restaurant and you've placed an order. Now before the order/food reaches your tables, it goes through
     several stages in the kitchen. Each stage involves different tasks, like chopping vegetables, cooking and adding spices.
@@ -15,8 +18,6 @@ What is Middleware in Node.js?
                       |_______________|
 
 
-   -> In simple words middleware is like a phase in which many functions execute and whenever all these functions gets executed
-      then the response of the request is given back to the user by the server
 
 📌 Syntax:
 app.use((req, res, next) => {
