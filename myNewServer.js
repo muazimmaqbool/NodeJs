@@ -37,6 +37,22 @@ const logRquest=(req,res,next)=>{
   -----Request---->|  🟢next()->🟢next()->🟢next()->🟢next()->🟢  |--- Response---> 
                    |                                               |
                    |                                               |
+
+
+  -> Middleware Stack:
+    
+                   |                                 |
+                   |                                 |
+  -----Request---->|  🟢 next()->🟢  next()->   🟢  |--- Response---> 
+                   |   |          |              |   |
+                       |          |              |   |  
+                       |          |              |  
+                    Body      Authentication    Router
+                    Parser 
+
+        ->If you got to menuRoutes or personRoutes, you can see router their, router is also a third party middleware
+        ->Bodyparser is also a middleware
+        ->Authentication also
 */
 
 //Track log of / endpoint: o/p: [5/7/2025, 10:48:00 am] Request Made To: /
