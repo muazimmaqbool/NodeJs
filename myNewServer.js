@@ -15,6 +15,12 @@ app.use(bodyParser.json()); //here it will convert the json to js object and sav
 //const Person = require("./Modals/Person"); //Now used inside personRoutes.js file
 //const MenuItem = require("./Modals/MenuItem"); //Now used inside menuRoutes.js file
 
+
+//Middleware function (used to log every request made to our endpoints) 
+const logRquest=(req,res,next)=>{
+  
+}
+
 app.get("/", (req, res) => {
   res.send("Hello Welcome to my hotel!...");
 });

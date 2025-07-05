@@ -102,7 +102,7 @@ router.get("/name/:name",async(req,res)=>{
   }
 })
 
-//Example of middleware (31_MiddleWare.txt), getting menu items by price
+//Getting menu items by price
 // http://localhost:3000/menu/price/1000
 router.get("/price/:price", async (req, res) => {
   try {
