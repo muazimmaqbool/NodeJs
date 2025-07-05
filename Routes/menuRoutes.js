@@ -102,6 +102,22 @@ router.get("/name/:name",async(req,res)=>{
   }
 })
 
+//Example of middleware (31_MiddleWare.txt), getting menu items by price
+// http://localhost:3000/menu/price/1000
+router.get("/price/:price", async (req, res) => {
+  try {
+    const price = req.params.price;
+    const result = await MenuItem.find({ price:price });
+    if(!result.length>0){
+      return res.status(404).json({error:`No Item Found For ${price} RS.`})
+    }
+    res.status(200).json(result);
+  } catch (error) {
+    console.log("Error while fetching menu:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
 //Note: to see about update and delete visit files 26 and 27 and personRoutes file
 
 module.exports = router;

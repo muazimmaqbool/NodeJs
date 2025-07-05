@@ -17,6 +17,9 @@ What is Middleware in Node.js?
                       | (Middleware)  |
                       |_______________|
 
+ Example in menuRoutes.js file:
+  In this example imagine you want to log every request made to your Node application you can use middleware for this.
+    ( getting menu items by price example in MenuRoutes.js)
 
 
 📌 Syntax:
