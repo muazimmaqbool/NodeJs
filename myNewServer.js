@@ -5,6 +5,14 @@ const app = express();
 //importing database connection
 const db = require("./db");
 require("dotenv").config(); //means server knows that we have .env file
+
+//learn about passport in 33_Authentication.txt
+const passport=require("passport")
+//using passport-local strategy, means Authenticating users via username and passport
+const LocalStrategy=require("passport-local").Strategy;
+
+
+
 const PORT=process.env.PORT || 3000
 
 //Learn about this in 20_Body_Parser.txt file

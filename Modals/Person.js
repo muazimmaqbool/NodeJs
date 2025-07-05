@@ -33,6 +33,15 @@ const personSchema=new mongoose.Schema({
     salary:{
         type:Number,
         required:true
+    },
+    //added after learning 33_Authentication.txt
+    username:{
+        type:String,
+        require:true
+    },
+    password:{
+        type:String,
+        require:true
     }
 })
 

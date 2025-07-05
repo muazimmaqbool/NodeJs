@@ -25,4 +25,9 @@ Authentication implementation in Node.js:
     ➡️ To install: npm install passport install passport-local (to use local strategy)
         -> local strategy is basically username and password strategy
 
+
+➡️ Code in myNewServer.js file
+
+  ➡️ we will be adding username and password in person schema
+
         
