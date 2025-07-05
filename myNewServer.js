@@ -23,6 +23,10 @@ const logRquest=(req,res,next)=>{
   //you can execute that and if not then do rest of the things like getting data from server etc 
   next()// moving on to the next phase
 }
+/*➡️ : if we don't call next() in middleware function then it won't go to the next part i.e it won't
+ show the response i.e will not go to the server, it will stuck in the middleware,
+ try after removig next() in logRequest function, you will see time and url in console but now the response in the screen/postman
+*/
 
 //Track log of / endpoint: o/p: [5/7/2025, 10:48:00 am] Request Made To: /
 // app.get("/",logRquest, (req, res) => {
@@ -30,7 +34,7 @@ const logRquest=(req,res,next)=>{
 // });
 
 //Tracking logs in all request:
-app.use(logRquest)
+app.use(logRquest) //generally used this way
 
 app.get("/", (req, res) => {
   res.send("Hello Welcome to my hotel!...");
