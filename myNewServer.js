@@ -29,6 +29,14 @@ const logRquest=(req,res,next)=>{
 
  ->In Express.js the next() is the callback function that signal to Express.js that the current middleware function has
  completed its processing and it's time to move on to the next middleware function or route handler in the chain
+
+  -> Understanding next() function diagram:
+                         (🟢 = represents a middleware function)
+                   | All middleware has access to req,res and next |
+                   |                                               |
+  -----Request---->|  🟢next()->🟢next()->🟢next()->🟢next()->🟢  |--- Response---> 
+                   |                                               |
+                   |                                               |
 */
 
 //Track log of / endpoint: o/p: [5/7/2025, 10:48:00 am] Request Made To: /
