@@ -18,7 +18,10 @@ const mongoDbURL=process.env.ONLINE_DB_URL
 */
 //at 6:25 of mongoose schema video
 //these two paramters are passed because otherwise you will get some warning, they make sure that you are working with latest versions
-mongoose.connect(mongoDbURL)
+mongoose.connect(mongoDbURL,{
+     useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
 .then(() => console.log("Connected to MongoDB server!"))
 .catch((error) => console.log("MongoDB connection error:", error));
 
