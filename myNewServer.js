@@ -23,7 +23,37 @@ const logRquest=(req,res,next)=>{
   //you can execute that and if not then do rest of the things like getting data from server etc 
   next()// moving on to the next phase
 }
-/*➡️ : if we don't call next() in middleware function then it won't go to the next part i.e it won't
+//➡️: Learn about next function below:
+
+//Track log of / endpoint: o/p: [5/7/2025, 10:48:00 am] Request Made To: /
+// app.get("/",logRquest, (req, res) => {
+//   res.send("Hello Welcome to my hotel!...");
+// });
+
+//Tracking logs in all request:
+app.use(logRquest) //generally used this way
+
+app.get("/", (req, res) => {
+  res.send("Hello Welcome to my hotel!...");
+});
+
+//importing router files for person
+const personRoutes = require("./Routes/personRoutes");
+const menuRoutes = require("./Routes/menuRoutes");
+
+app.use("/person", personRoutes); //using the router
+app.use("/menu", menuRoutes);
+//trackig log on menu
+//app.use("/menu",logRquest,menuRoutes)
+
+
+app.listen(PORT, () => {
+  console.log("Server is listening on port 3000");
+});
+
+/* 
+➡️ : Important on Middleware
+if we don't call next() in middleware function then it won't go to the next part i.e it won't
  show the response i.e will not go to the server, it will stuck in the middleware,
  try after removig next() in logRequest function, you will see time and url in console but now the response in the screen/postman
 
@@ -54,29 +84,3 @@ const logRquest=(req,res,next)=>{
         ->Bodyparser is also a middleware
         ->Authentication also
 */
-
-//Track log of / endpoint: o/p: [5/7/2025, 10:48:00 am] Request Made To: /
-// app.get("/",logRquest, (req, res) => {
-//   res.send("Hello Welcome to my hotel!...");
-// });
-
-//Tracking logs in all request:
-app.use(logRquest) //generally used this way
-
-app.get("/", (req, res) => {
-  res.send("Hello Welcome to my hotel!...");
-});
-
-//importing router files for person
-const personRoutes = require("./Routes/personRoutes");
-const menuRoutes = require("./Routes/menuRoutes");
-
-app.use("/person", personRoutes); //using the router
-app.use("/menu", menuRoutes);
-//trackig log on menu
-//app.use("/menu",logRquest,menuRoutes)
-
-
-app.listen(PORT, () => {
-  console.log("Server is listening on port 3000");
-});
