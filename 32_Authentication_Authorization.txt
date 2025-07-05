@@ -1,0 +1,11 @@
+->Authentication:
+  Authentication is the process of verifying who a user is.
+
+  Example:
+  When you log in with your username and password, the system checks if you are really who you say you are.
+
+->Authorization
+  Authorization is the process of checking what a user is allowed to do.
+
+  Example:
+  After you log in, the system checks whether you are allowed to access a specific page, file, or action (like admin panel or deleting users).
