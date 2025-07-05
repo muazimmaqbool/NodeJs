@@ -26,6 +26,9 @@ const logRquest=(req,res,next)=>{
 /*➡️ : if we don't call next() in middleware function then it won't go to the next part i.e it won't
  show the response i.e will not go to the server, it will stuck in the middleware,
  try after removig next() in logRequest function, you will see time and url in console but now the response in the screen/postman
+
+ ->In Express.js the next() is the callback function that signal to Express.js that the current middleware function has
+ completed its processing and it's time to move on to the next middleware function or route handler in the chain
 */
 
 //Track log of / endpoint: o/p: [5/7/2025, 10:48:00 am] Request Made To: /
