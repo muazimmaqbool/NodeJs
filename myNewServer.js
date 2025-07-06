@@ -4,6 +4,14 @@ const express = require("express");
 const app = express();
 //importing database connection
 const db = require("./db");
+
+//Learn about this in 20_Body_Parser.txt file
+const bodyParser = require("body-parser");
+app.use(bodyParser.json()); //here it will convert the json to js object and save it inside: req.body
+
+
+const PORT=process.env.PORT || 3000
+
 require("dotenv").config(); //means server knows that we have .env file
 //importing router files for person
 const personRoutes = require("./Routes/personRoutes");
@@ -17,27 +25,32 @@ const LocalStrategy=require("passport-local").Strategy;
 
 //Authentication code:
 //always written like this: username, password, and done: the names could be different
-// app.use(new LocalStrategy(async(userName,password,done)=>{
-//   //authentication logic
-//   try{
-//     console.log("Received Credentials:",userName, password)
-//     //finding do we have any user/person with this username in person table
-//     const user=Person.findOne({username:userName})
-//     // if(!user){
-//     //   return done()
-//     // }
-//   }catch(error){
+passport.use(new LocalStrategy(async(userName,password,done)=>{
+  //authentication logic
+  try{
+    console.log("Received Credentials:",userName, password)
+    //finding do we have any user/person with this username in person table
+    const user=await Person.findOne({username:userName})
+    if(!user){
+      //done is a callback function provided by passport.js it gives the signal of the completion of an authentication attempt (either success or fail)
+      //done() takes three parameters: error , user, info
+      return done(null, false, {message:"Incorrect Username!"})
+    }
+    const isPasswordMatch=user.password === password?true:false
+    if(isPasswordMatch){
+      return done(null,user)
+    }else{
+      return done(null,false,{message:"Incorrect Password!"})
+    }
+  }catch(error){
+    return done(error)
+  }
+}))
 
-//   }
-// }))
+//initializing authenticating function:
+app.use(passport.initialize())
+const localAuthMiddleware=passport.authenticate('local',{session:false})
 
-
-
-const PORT=process.env.PORT || 3000
-
-//Learn about this in 20_Body_Parser.txt file
-const bodyParser = require("body-parser");
-app.use(bodyParser.json()); //here it will convert the json to js object and save it inside: req.body
 
 //Model name Person now can be used to do all database work for makeing changes in Person
 //const Person = require("./Modals/Person"); //Now used inside personRoutes.js file
