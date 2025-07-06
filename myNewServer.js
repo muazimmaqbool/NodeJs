@@ -5,11 +5,31 @@ const app = express();
 //importing database connection
 const db = require("./db");
 require("dotenv").config(); //means server knows that we have .env file
+//importing router files for person
+const personRoutes = require("./Routes/personRoutes");
+const menuRoutes = require("./Routes/menuRoutes");
+const Person = require("./Modals/Person");
 
 //learn about passport in 33_Authentication.txt
 const passport=require("passport")
 //using passport-local strategy, means Authenticating users via username and passport
 const LocalStrategy=require("passport-local").Strategy;
+
+//Authentication code:
+//always written like this: username, password, and done: the names could be different
+// app.use(new LocalStrategy(async(userName,password,done)=>{
+//   //authentication logic
+//   try{
+//     console.log("Received Credentials:",userName, password)
+//     //finding do we have any user/person with this username in person table
+//     const user=Person.findOne({username:userName})
+//     // if(!user){
+//     //   return done()
+//     // }
+//   }catch(error){
+
+//   }
+// }))
 
 
 
@@ -44,10 +64,6 @@ app.use(logRquest) //generally used this way
 app.get("/", (req, res) => {
   res.send("Hello Welcome to my hotel!...");
 });
-
-//importing router files for person
-const personRoutes = require("./Routes/personRoutes");
-const menuRoutes = require("./Routes/menuRoutes");
 
 app.use("/person", personRoutes); //using the router
 app.use("/menu", menuRoutes);
@@ -91,4 +107,10 @@ if we don't call next() in middleware function then it won't go to the next part
         ->If you got to menuRoutes or personRoutes, you can see router their, router is also a third party middleware
         ->Bodyparser is also a middleware
         ->Authentication also
+
+
+➡️ app.use():
+    The app.use() function in Express.js is a fundamental method used to mount middleware functions to an application's
+    request-processing pipeline. 
+    It enables the application to execute specific functions for all incoming requests or for requests targeting specific paths.
 */
