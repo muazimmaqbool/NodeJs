@@ -74,12 +74,12 @@ const logRquest=(req,res,next)=>{
 //Tracking logs in all request:
 app.use(logRquest) //generally used this way
 
-app.get("/", (req, res) => {
+app.get("/",localAuthMiddleware, (req, res) => {
   res.send("Hello Welcome to my hotel!...");
 });
 
-app.use("/person", personRoutes); //using the router
-app.use("/menu", menuRoutes);
+app.use("/person",localAuthMiddleware, personRoutes); //using the router
+app.use("/menu",localAuthMiddleware, menuRoutes);
 //trackig log on menu
 //app.use("/menu",logRquest,menuRoutes)
 
