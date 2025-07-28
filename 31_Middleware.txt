@@ -4,17 +4,17 @@ What is Middleware in Node.js?
   in an Express application.
 
   -> In simple words middleware is like a phase in which many functions execute and whenever all these functions gets executed
-      then the response of the request is given back to the user by the server
+     then the response of the request is given back to the user by the server
 
-  -> In Summary middleware is like a series of tasks that happen behind the scenes in a web application.
+  -> In Summary middleware is like a series of tasks that happen behind the scenes in an application.
      It's a way to add extra functionality to your application's request-response cycle: such as logging,
      Authentication checks, modifying request data, before it reaches the final destination i.e server
 
   Example:
-    Imagine you're at restaurant and you've placed an order. Now before the order/food reaches your tables, it goes through
+    Imagine you're at restaurant and you've placed an order. Now before the order/food reaches your table, it goes through
     several stages in the kitchen. Each stage involves different tasks, like chopping vegetables, cooking and adding spices.
     Middleware is a bit like these stages in the kitchen, it's something that happens in between your request and the final
-    response in a web application
+    response in an application
                        _______________
                       |               |
     ----Request------>|     API       |------Response---->
