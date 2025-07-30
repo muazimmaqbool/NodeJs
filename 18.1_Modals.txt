@@ -2,8 +2,8 @@
   - Modal's are like a blueprint of our database
   - It's a representation of a specific collection in MongoDB. Like a persons data
   - Once you have defined a modal, you can create, read, update and delete documnets in the corresponding MongoDB collection
-  - Mongoose allow you to define a schema for your documents. A schema is like a blueprint that defines the structure and
-    data types of your documents within a collection.
+  - Mongoose allows you to define a schema for your documents. 
+    > A schema is like a blueprint that defines the structure and data types of your documents within a collection.
     > Example a person is a collection(bunch of records) and inside this person collection we are inserting a document, so how this 
       document will look is defined via schema.
     > Each Person's Detail ( like chef, owner, manager, waiter )
