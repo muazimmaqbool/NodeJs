@@ -1,5 +1,5 @@
 //Important:
-->SendData from Client to Server:
+->Send Data from Client to Server:
     > We need an Endpoint where the client sends data and that data needs to be saved in the database
     > So client will send/request the data to/from the server and server will save/get the data from database
         Client <---------> Server <-----------> Database
