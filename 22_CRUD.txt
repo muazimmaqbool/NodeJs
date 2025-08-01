@@ -8,20 +8,20 @@
 
   ->Breakdown of CRUD Operations:
     1)Create:
-      Adds new data to the database.
-      Example: Adding a new user to a user list.
+        Adds new data to the database.
+        Example: Adding a new user to a user list.
 
     2)Read:
-      Retrieves or displays data from the database.
-      Example: Viewing a user's profile or listing all users.
+        Retrieves or displays data from the database.
+        Example: Viewing a user's profile or listing all users.
 
     3)Update:
-      Modifies existing data.
-      Example: Changing a user's email or password.
+        Modifies existing data.
+        Example: Changing a user's email or password.
 
     4)Delete:
-      Removes data from the database.
-      Example: Deleting a user account.
+        Removes data from the database.
+        Example: Deleting a user account.
 
   ->Where is CRUD used?
       CRUD is used in:
