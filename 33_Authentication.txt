@@ -13,16 +13,16 @@
 
 ->Important and Passport.js :
     ➡️ we will implement Authentication as a middleware function. So that, Routes will be authenticated before reaching out to the server
-    ➡️ implementing authentication as a middleware function is a comman and effective approach
-    ➡️ Passport.js - popular authentication middleware for Node.js, it is a powerful tool which helps developers to handle
+    ➡️ Implementing authentication as a middleware function is a comman and effective approach
+    ➡️ Passport.js is a popular authentication middleware for Node.js, it is a powerful tool which helps developers to handle
         user authentication in node.js.
         🟢 Strategy: Passport.js uses the concept of strategies for handling different authentication methods.
                      A Strategy is a way of authenticating users, Passport.js comes with various builtin strategies
                      You can also create custom strategies
-        🟢 Serialize and Deserialize: Serialization is the process of converting user data intro a format that can be stored, usually
+        🟢 Serialize and Deserialize: Serialization is the process of converting user data into a format that can be stored, usually
                 a unique identifier, Deserialization is the reverse process of converting that unique indefier back to the user data.
-                Serialization and Deserialization is usuallyused with sesssions 
-    ➡️ To install: npm install passport install passport-local (to use local strategy)
+                Serialization and Deserialization are usually used with sesssions 
+    ➡️ To install: npm install passport and install passport-local (to use local strategy)
         -> local strategy is basically username and password strategy
 
 
