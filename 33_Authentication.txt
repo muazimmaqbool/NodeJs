@@ -1,15 +1,15 @@
-Authentication implementation in Node.js:
+->Authentication implementation in Node.js:
     1) Authentication Middleware:
         -In your node.js application, you might use middleware like "Passport.js" to handle the authentication process.
-        -Passport helps verify the identity via provided credentials (Passport is a thirdparty middleware)
+        -Passport helps verify the identity via provided credentials (Passport.js is a thirdparty middleware)
     
     2) User Roles and Permissions:
         -You'll define roles for staff memebers(e.g: chef, waiter, manager)
-        -Authentication middleware will check the role of the authenticated user and grant access accordionly
+        -Authentication middleware will check the role of the authenticated user and grant access accordingly
     
     3)Secure Endpoints:
-        - You'll need protect certain routes(like updating menu items) with authentication checks.
-        - Her in my project, only authenticated and authorixe users(like managers/chefs) will be allowed to access these routes
+        - You'll need to protect certain routes(like updating menu items) with authentication checks.
+        - Her in my project, only authenticated and authorized users(like managers/chefs) will be allowed to access these routes
 
 ->Important and Passport.js :
     ➡️ we will implement Authentication as a middleware function. So that, Routes will be authenticated before reaching out to the server
