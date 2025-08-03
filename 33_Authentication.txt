@@ -20,7 +20,7 @@
                      A Strategy is a way of authenticating users, Passport.js comes with various builtin strategies
                      You can also create custom strategies
         🟢 Serialize and Deserialize: Serialization is the process of converting user data into a format that can be stored, usually
-                a unique identifier, Deserialization is the reverse process of converting that unique indefier back to the user data.
+                a unique identifier, Deserialization is the reverse process of converting that unique identifier back to the user data.
                 Serialization and Deserialization are usually used with sesssions 
     ➡️ To install: npm install passport and install passport-local (to use local strategy)
         -> local strategy is basically username and password strategy
