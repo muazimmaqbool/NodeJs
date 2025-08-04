@@ -14,7 +14,7 @@
   ->Let's focus on syntax and queries of MongoDB:
         -There are two things : 1)MongoDB server , 2) MongoDB shell
 
-        -Commands for start server on Window
+        -Commands to start server on Windows:
            - for start : (net start MongoDB)
            - for stop : (net stop MongoDB)
            - Enter in DataBase 
@@ -22,7 +22,7 @@
            - show database : (show dbs)
 
 
-       ->Show all databases: show dbs
+       ->Show all databases: show dbs (it will show of list of databases)
       
        ->Create/use a database in mongodb : use myDb (here myDb is name of database, it can be anything )
             - use myTestDb                 // Switch to or create the database
