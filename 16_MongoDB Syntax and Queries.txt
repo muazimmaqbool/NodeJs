@@ -91,7 +91,7 @@
 
       Important:
         ->using the above commands via command prompt might be bit hard specially when the data is big
-          so to deal with that and to make it simple we a "MongoDB Compass GUI"
+          so to deal with that and to make it simple we can use a "MongoDB Compass GUI"
           link to download:  https://www.mongodb.com/try/download/compass
 
         ->if you don't want to use mongodb compass you can use "mongodb robo 3t" - download and use them
@@ -111,7 +111,7 @@
                 so when type this command > mongosh and press enter you will get the text and also this:
                   Connecting to: mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.5.0
                   here this the url: mongodb://127.0.0.1:27017/ on this port its running
-                  -> copy and past this in browser and see what is the response
+                  ->copy and past this in browser and see what is the response
 
                   >So past this inside mongodb compass inside url field and click on save and connect button
                   >Now your data will be shown
