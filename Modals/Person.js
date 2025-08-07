@@ -1,5 +1,6 @@
 const mongoose=require('mongoose')
 
+//Learn modal from 18.1_Modals.txt
 //Now here we will define schema(modals), generally called schema
 //here we will define schema for person how will the document look like how the data will look i.e blueprint
 
@@ -7,7 +8,7 @@ const mongoose=require('mongoose')
 const personSchema=new mongoose.Schema({
     name:{
         type:String,
-        required:true, //here required is true now 'name' has be entered in the database
+        required:true, //here required is true now 'name' has to be entered in the database
     },
     age:{
         type:Number
@@ -20,12 +21,12 @@ const personSchema=new mongoose.Schema({
     phone:{
         type:String,
         required:true,
-        unique:true,
+        unique:true, //means the phone has to be unique in the entire database
     },
     email:{
         type:String,
         required:true,
-        unique:true, //means the email has to be unique in the entire database
+        unique:true, 
     },
     address:{
         type:String,
