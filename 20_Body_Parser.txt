@@ -1,5 +1,5 @@
 ->What is body parser?
-    ->command install body parser: npm i body-parser
+    -> use this command to install body parser: npm i body-parser
 
  ● Body parser is a middleware library for Express.js.
     -> middleware refers to software or functions that sit in the middle between the request from a client (like a browser or mobile app) 
