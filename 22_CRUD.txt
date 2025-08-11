@@ -31,12 +31,12 @@
       Admin panels and dashboards
 
   ->Example (User App):
-    Operation	HTTP Method	    Example URL	               Description
+    Operation	 HTTP Method	    Example URL	               Description
     ---------|---------------|-----------------------|-------------------------------
-    Create	     POST	          /users	              Add a new user
-    Read	       GET	          /users or /users/1	  Get users or a specific user
-    Update	    PUT/PATCH	      /users/1	            Update user with ID 1
-    Delete	    DELETE	        /users/1	            Delete user with ID 1
+    Create	    POST	          /users	               Add a new user
+    Read	      GET	            /users or /users/1	   Get all users or a specific user
+    Update	    PUT/PATCH	      /users/1	             Update user with ID 1
+    Delete	    DELETE	        /users/1	             Delete user with ID 1
 
   ->Difference between PUT and PATCH:
       PUT replaces the entire resource with new data.
