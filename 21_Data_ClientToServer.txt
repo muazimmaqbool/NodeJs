@@ -1,10 +1,10 @@
 //Important:
-->Send Data from Client to Server:
-    > We need an Endpoint where the client sends data and that data needs to be saved in the database
-    > So client will send/request the data to/from the server and server will save/get the data from database
+    -> Sending Data from Client to Server:
+    >  We need an Endpoint where the client sends data and that data needs to be saved in the database
+    >  So client will send/request the data to/from the server and server will save/get the data from database
         Client <---------> Server <-----------> Database
 
     >We need a method called POST
-     -Now code the POST method to add the person
-     -If we send the random values as well Mongoose will not save random values other than predefined schema
-     //See post method written inside myServer.js file
+     - Now code the POST method to add the person
+     - If we send the random values as well Mongoose will not save random values other than predefined schema
+     - See post method written inside myServer.js file
