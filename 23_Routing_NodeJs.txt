@@ -1,10 +1,10 @@
 ->Node.js Routing With Express  (checkout notes of day 6)
 
 What is Routing in Node.js?
-  -Routing in Node.js refers to how an application’s endpoints (URIs) respond to client requests. It defines how the server handles different 
-   HTTP requests like GET, POST, PUT, DELETE, etc., for specific paths.
-  -In Node.js, especially when using frameworks like Express.js, routing is used to build web applications and APIs by associating URLs with 
-   the correct controller logic.
+  -Routing in Node.js refers to how an application’s endpoints (URLs) respond to client requests. 
+  -It defines how the server handles different the HTTP requests like GET, POST, PUT, DELETE, etc., for specific paths.
+  -In Node.js, especially when using frameworks like Express.js, routing is used to build web applications and APIs by
+   associating URLs with the correct controller logic.
 
 📦 Without Express (Core Node.js)
    You can manually handle routing like this:
