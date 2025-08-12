@@ -26,19 +26,19 @@ What is Routing in Node.js?
     const express = require('express');
     const app = express();
 
-    // GET route
-    app.get('/', (req, res) => {
-    res.send('Welcome to the Home Page');
-    });
+    -> GET route/method:
+        app.get('/', (req, res) => {
+        res.send('Welcome to the Home Page');
+        });
 
-    // POST route
-    app.post('/login', (req, res) => {
-    res.send('Login endpoint');
-    });
+    -> POST route:
+        app.post('/login', (req, res) => {
+        res.send('Login endpoint');
+        });
 
-    // Dynamic route
-    app.get('/user/:id', (req, res) => {
-    res.send(`User ID: ${req.params.id}`);
-    });
+    -> Dynamic route:
+        app.get('/user/:id', (req, res) => {
+        res.send(`User ID: ${req.params.id}`);
+        });
 
     app.listen(3000, () => console.log('Server started on port 3000'));
