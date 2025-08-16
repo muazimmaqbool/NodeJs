@@ -7,7 +7,8 @@
         Note: We can also use PATCH method to update the data but for now we will use PUT method
     🟢What is a unique identifier in a document in a collection?
     🟢It’s _id which Mongodb itself gives, We will use this to find the particularrecord that we want to update
-    🟢Just like in POST method we give the data here for updating the data we also have to give the data which is basically new data i.e updated
+    🟢Just like in POST method we give the data here for updating the data we also have to give the data which is 
+      basically new data i.e updated data
 
     🟢 Code:
         app.put("/person/:id", async (req, res) => {
