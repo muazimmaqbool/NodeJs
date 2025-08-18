@@ -56,7 +56,7 @@ Finally, you export the db object, which represents the MongoDB connection, so t
 it in other parts of your Node.js application.
 */
 module.exports=db;
-//its imported/used inside myServer.js
+//its imported/used inside myServer.js and also in myNewServer.js
 /*
 When this db object is exported in the express/server file you can use it to interact with the database,
 when your server runs, it typically requires or imports this db.js file to establish the database connection before handling HTTP reqiests
