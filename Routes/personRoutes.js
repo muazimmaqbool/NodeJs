@@ -1,10 +1,10 @@
 const express = require("express");
-//Router is used to manager routes/endpoints
+//Router is used to manage routes/endpoints
 const router = express.Router();
 
 //this router is exported in bottom and imported in myNewServer.js
 
-/*Note: here i have removed /person in all routes of because we are adding this person in myNewSever.js file like this:
+/*Note: here i have removed /person in all routes because we are adding this person in myNewSever.js file like this:
     //importing router files for person
     const personRoutes=require('./Routes/personRoutes')
     app.use('/person',personRoutes)//using the router
