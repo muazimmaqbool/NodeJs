@@ -43,10 +43,10 @@ db.on('connected',()=>{
     console.log("Connected to MongoDB server!")
 })
 db.on('error',(error)=>{
-    console.log("MongoDB connection error:",error)
+    console.log("MongoDB Server connection error:",error)
 })
 db.on('disconnected',()=>{
-    console.log("MongoDB is disconnected!")
+    console.log("MongoDB Server is disconnected!")
 })
 
 
