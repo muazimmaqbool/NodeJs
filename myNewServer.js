@@ -7,12 +7,12 @@ const db = require("./db");
 
 //Learn about this in 20_Body_Parser.txt file
 const bodyParser = require("body-parser");
-app.use(bodyParser.json()); //here it will convert the json to js object and save it inside: req.body
+app.use(bodyParser.json()); //here it will convert the json string/data to js object and save it inside: req.body
 
 
 const PORT=process.env.PORT || 3000
 
-require("dotenv").config(); //means server knows that we have .env file
+require("dotenv").config(); //means server knows that we have a .env file
 //importing router files for person
 const personRoutes = require("./Routes/personRoutes");
 const menuRoutes = require("./Routes/menuRoutes");
@@ -52,7 +52,7 @@ app.use(passport.initialize())
 const localAuthMiddleware=passport.authenticate('local',{session:false})
 
 
-//Model name Person now can be used to do all database work for makeing changes in Person
+//Model name Person now can be used to do all database work for making changes in Person
 //const Person = require("./Modals/Person"); //Now used inside personRoutes.js file
 //const MenuItem = require("./Modals/MenuItem"); //Now used inside menuRoutes.js file
 
