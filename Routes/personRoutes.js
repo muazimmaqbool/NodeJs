@@ -35,7 +35,7 @@ router.post("/", async (req, res) => {
 //Method to get person data (fetching person data from database)
 router.get("/", async (req, res) => {
   try {
-    //here what it will do is that it will return every record/data from "Person" collection
+    //here what it will do is that it will return every record/data from "Person" collection in database
     const data = await Person.find();
     //console.log("Data Fetched:",data)
     res.status(200).json(data);
