@@ -100,8 +100,8 @@ router.put("/:id", async (req, res) => {
 });
 /*Do this: Put request for this: http://localhost:3000/person/683c2461141180ddb9a43dc4 (copy valid id from /person endpoint)
  and pass data like this (suppose you want to update the name):
-                                                      {
-                                                        "name": "Sameer Mir"
+                                                    {
+                                                      "name": "Sameer Mir"
                                                     }
 */
 
