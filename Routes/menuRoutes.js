@@ -25,6 +25,7 @@ router.post("/", async (req, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 });
+
 //Getting menu data: http://localhost:3000/menu
 router.get("/", async (req, res) => {
   try {
