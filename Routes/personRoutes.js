@@ -46,8 +46,8 @@ router.get("/", async (req, res) => {
 });
 //now hit this url with GET method in postman: http://localhost:3000/person or in chrome (browser generally does GET request)
 
-//parametrised API call (see file 24_Parametrized_API_Calls.txt) to get person based on work type
-//here using :workType - makes it a variable means anything can be inplace of work
+//parametrised API call (see file 24_Parametrized_API_Calls.txt) to get person data based on work type
+//here using :workType - makes it a variable means anything can be inplace of workType
 router.get("/:workType", async (req, res) => {
   try {
     const workType = req.params.workType;
