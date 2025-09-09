@@ -51,9 +51,9 @@ app.get("/", (req, res) => {
   res.send("Hello Welcome to my hotel!...");
 });
 
-app.use("/person", personRoutes); //using the router
-//now use like this: http://localhost:3000/menu?username=hashir@123&password=sopore@123
-app.use("/menu",localAuthMiddleware, menuRoutes);
+app.use("/person",localAuthMiddleware, personRoutes); //using the router
+//now use like this: http://localhost:3000/person?username=hashir@123&password=sopore@123
+app.use("/menu", menuRoutes);
 //trackig log on menu
 //app.use("/menu",logRquest,menuRoutes)
 
