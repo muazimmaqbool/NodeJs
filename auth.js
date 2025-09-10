@@ -12,7 +12,7 @@ const LocalStrategy=require("passport-local").Strategy;
 passport.use(new LocalStrategy(async(userName,password,done)=>{
   //authentication logic
   try{
-    console.log("Received Credentials:",userName, password)
+   // console.log("Received Credentials:",userName, password)
     //finding do we have any user/person with this username in person table
     const user=await Person.findOne({username:userName})
     if(!user){
