@@ -1,4 +1,5 @@
 const mongoose=require('mongoose')
+const bycrypt=require("bcrypt")
 
 //Learn modal from 18.1_Modals.txt
 //Now here we will define schema(modals), generally called schema
@@ -43,6 +44,19 @@ const personSchema=new mongoose.Schema({
     password:{
         type:String,
         require:true
+    }
+})
+
+//used to hash the password before saving it (see file 34_Password_Protection)
+// next callback function will tell the mongoose/personSchema that now you can save in database
+personSchema.pre('save',async function(next){
+    
+    try{
+        //hash password generate
+
+        next(); //means we have done processing now you can save in db/do further tasks
+    }catch(err){
+
     }
 })
 
