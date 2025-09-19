@@ -57,6 +57,16 @@ personSchema.pre('save',async function(next){
     try{
         //hash password generate
 
+        //1: generating salt (here genSalt(10) means 10 round salt)
+        const salt=await bycrypt.genSalt(10); // we can also do this: const salt="this is a salt"; but not secure at all
+        // console.log("salt:",salt)
+
+        //2: hashing password
+        const hashedPassword=await bycrypt.hashedPassword(person.password,salt)
+
+        //3: overrides the plan password with the hashed one
+        person.password=hashedPassword
+
         next(); //means we have done processing now you can save in db/do further tasks
     }catch(err){
 
