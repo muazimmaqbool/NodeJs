@@ -50,7 +50,10 @@ const personSchema=new mongoose.Schema({
 //used to hash the password before saving it (see file 34_Password_Protection)
 // next callback function will tell the mongoose/personSchema that now you can save in database
 personSchema.pre('save',async function(next){
-    
+    const person=this; //basically this here is the existing records/schema of the person
+    //first we will check is password being updated or now because it will be running on ever save, so if person is only updating name,address etc
+    //in that case we won't hash password again if it has not being changed
+    if(!person.isModified("password")) return next()
     try{
         //hash password generate
 
