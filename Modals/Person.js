@@ -57,21 +57,30 @@ personSchema.pre('save',async function(next){
     try{
         //hash password generate
 
-        //1: generating salt (here genSalt(10) means 10 round salt)
+        //1: generating salt (here genSalt(10) means 10 round salt, generates random string)
         const salt=await bycrypt.genSalt(10); // we can also do this: const salt="this is a salt"; but not secure at all
         // console.log("salt:",salt)
 
         //2: hashing password
-        const hashedPassword=await bycrypt.hashedPassword(person.password,salt)
+        const hashedPassword=await bycrypt.hash(person.password,salt)
 
         //3: overrides the plan password with the hashed one
         person.password=hashedPassword
 
         next(); //means we have done processing now you can save in db/do further tasks
     }catch(err){
-
+        return next(err)
     }
 })
+//?Note: after hashing password change the password comparision in auth.js
+
+personSchema.methods.comparePassword=async function(candidatePassword){
+    try{
+
+    }catch(err){
+
+    }
+}
 
 //Now we create model from the schema and we use this model to do all the database operations like (creating,reading, deleting, updating etc)
 const Person=mongoose.model('Person',personSchema);
