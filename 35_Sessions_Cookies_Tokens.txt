@@ -72,4 +72,8 @@ Session Tokens and Cookies in Nodejs
                    analytics purposes and personalizing your browser experience.
 
     ->Types of Cookies:
-        1)
+        1)Session Cookies: These cookies are temporary and are deleted when you close the browser. The are often used for maintining 
+                           your login state during a browsing session.
+        2)Persistent Cookies: These cookies are stored on your device for a specified duration, even after your close your browser.
+                              They can be used for purposes such as remembering your preferences or login information across multiple
+                              visits to a website.
