@@ -190,3 +190,28 @@ Session Tokens and Cookies in Nodejs
                                it remains valid until its expiration time.
         Token Size: Since tokens are self-contained, they can be larger than a simple session ID, increasing the size of each request.
         Client Security Risk: If not stored securely on the client, a stolen token can be used by an attacker until it expires.
+
+->Difference between Session and Token:
+    1. State on the Server
+        Session – Server keeps session data (stateful).
+        Token – Server keeps no session data; the token carries user info (stateless).
+
+    2. What the Client Stores
+        Session – A small session ID inside a cookie.
+        Token – The entire signed token (JWT) in localStorage, sessionStorage or a cookie.
+
+    3. How the Server Validates
+        Session – Looks up the session ID in its session store/DB on every request.
+        Token – Verifies token’s signature and expiry; no DB lookup needed.
+
+    4. Scalability
+        Session – Harder to scale; session data must be shared between servers.
+        Token – Easier to scale; each server can verify tokens independently.
+
+    5. Revoking Access
+        Session – Easy; delete the session from the server store.
+        Token – Harder; need token blacklist or wait until it expires.
+
+    6. Typical Usage
+        Session – Traditional web apps with server-rendered pages.
+        Token – APIs, SPAs, and mobile apps.
