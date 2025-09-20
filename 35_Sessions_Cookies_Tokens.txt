@@ -151,3 +151,27 @@ Session Tokens and Cookies in Nodejs
     Working:
 
      
+
+     Client (Browser/App) --------> Server (Login Endpoint) --------> Database (User credentials)
+        |                           |                                |
+   sends login creds          verifies user/pass               checks credentials
+        |                           |                                |
+        | <-------------------------|                                |
+ receives token (JWT)         creates signed JWT token          (no session storage needed)
+ (stored by client)
+
+    (Next request)
+    Client (Browser/App) --------------------------------> Server (Any protected route)
+            |                                                         |
+    sends request + Authorization: Bearer <JWT> header                |
+                                                          verifies JWT signature & expiry
+            | <-------------------------------------------------------|
+    receives response if token is valid
+
+    How it flows:
+        User logs in → credentials go to Server.
+        Server checks credentials with Database.
+        If valid, Server generates a JWT (signed token) and returns it to the client.
+        Client stores the JWT (localStorage, sessionStorage, or memory).
+        On every next request, Client sends the JWT in the Authorization header.
+        Server validates the token signature & expiry → if valid, user is authenticated.
