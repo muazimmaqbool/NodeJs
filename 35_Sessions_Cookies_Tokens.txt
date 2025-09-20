@@ -149,7 +149,10 @@ Session Tokens and Cookies in Nodejs
     This token holds all the necessary user information.
 
     Working:
-
+        1)User sends login request to the server.
+        2)The server authorizes the user and send back the token to the user
+        3)Now user send the new request with the token
+        4)The server will check if the token is valid or not and if the token is valid the server sends the requested pages to the user
      
 
      Client (Browser/App) --------> Server (Login Endpoint) --------> Database (User credentials)
@@ -175,3 +178,15 @@ Session Tokens and Cookies in Nodejs
         Client stores the JWT (localStorage, sessionStorage, or memory).
         On every next request, Client sends the JWT in the Authorization header.
         Server validates the token signature & expiry → if valid, user is authenticated.
+
+    Pros:
+        Scalability: The stateless nature means the server doesn't have to manage session data, making it easy to scale 
+                     across multiple servers and services.
+        Cross-Domain Compatibility: Tokens are sent in the HTTP Authorization header, making them ideal for modern architectures 
+                                    like microservices and APIs that serve multiple clients (web, mobile apps, etc.).
+        Performance: There's no server-side lookup required for each request, which can be faster.
+    Cons:
+        No Instant Revocation: A major drawback is that a token can't be instantly invalidated. Once issued, 
+                               it remains valid until its expiration time.
+        Token Size: Since tokens are self-contained, they can be larger than a simple session ID, increasing the size of each request.
+        Client Security Risk: If not stored securely on the client, a stolen token can be used by an attacker until it expires.
