@@ -1,0 +1,19 @@
+Session Tokens and Cookies in Nodejs
+
+-> Session:
+    A session is a way to maintain user state and authenticate users in web appplication/
+                or
+    A session is a way for a web server to maintain state and track a user's activity across multiple pages during a single visit to 
+    a website. The Hypertext Transfer Protocol (HTTP), the foundation of the web, is stateless. This means that each request a 
+    user makes is treated as an independent event, with no memory of previous requests. 
+    Sessions solve this by providing a "memory" for the server.
+
+    1: User authentication:
+        When you login into any web application/website to access certain features. Sessions or tokens are used to authenticate users,
+        provig that they are who they claim to be. This makes sure only authorized users can access it or can access certain features.
+    
+    2: Maintaining user state:
+        Web apps often needs to track/know user information as they navigate through different pages etc. Sessions or token help maintain
+        the user state also. Example: if you add an item in cart in the shopping website, the website needs to remember those items as you
+        browse other pages/websites. Sessions/token store this information so that it can be accessed later.
+        
