@@ -42,6 +42,9 @@ Session Tokens and Cookies in Nodejs
         2: The server authenticates the users and sends a session to the databases and returns unique session ID (typically in a cookie) to the user's browser.
         3: Now the user send new request with the cookie
         3: The server checks in the db for the ID found in the cookie, if the ID is found it sends the requested page to the user
+
+        Note: The sessionID is the id of the sesssion file(json mostly) which contains user information
+        Note: The cookie is also a small file which contains sessionID mostly
     Pros:
         1: Instant Revocation: Admins can immediately invalidate a session, logging a user out instantly. This is a major security benefit
            for sensitive applications like banking.
@@ -52,3 +55,10 @@ Session Tokens and Cookies in Nodejs
            Scaling requires complex setups like shared session databases.
         2: Cross-Domain Problems: Sessions are tied to cookies, which makes them difficult to use across different domains 
           (e.g., an API on a different domain from the main website).
+
+    ->Cookies:
+        A cookie is a small piece of data that a website stores on a user's computer or device, they are commonly used on websites to remember information
+        about the user browsing activity, preferences and interactions with the site,   
+
+        How cookies work:
+            Creation: 
