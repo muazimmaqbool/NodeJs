@@ -77,3 +77,7 @@ Session Tokens and Cookies in Nodejs
         2)Persistent Cookies: These cookies are stored on your device for a specified duration, even after your close your browser.
                               They can be used for purposes such as remembering your preferences or login information across multiple
                               visits to a website.
+
+    ->Privacy and Security:
+        Cookies can raise privacy concerns because they can be used to track user's browsing behaviour across different websites.
+        However, cookies cannot execute code or transmit virsus, and they can only store information that the webite itself provides.
