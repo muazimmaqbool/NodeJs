@@ -61,4 +61,11 @@ Session Tokens and Cookies in Nodejs
         about the user browsing activity, preferences and interactions with the site,   
 
         How cookies work:
-            Creation: 
+            Creation: Webhen you visit any website for the first time, they website may send a small text file (the cookie) to your browser.
+                      (we often first get a notification to allow cookies to your browser)
+            Storage: Your browser stores cookie on your computer/device. Each cookie is associated with the specific website and contains information such as
+                     unique identifier and any data that the website wants to remember about you.
+            Sending with requests: Your browser automatically includes the cookie in the HTTP requests it sends to ther website's server.
+            Server Processing: The website's server receives the cookie along with the request, it can then read the cookie to retrieve the stored information about you.
+            Usage: Websites use cookies for various purposes, such as remembering your login status, storing your preferences, settings, tracking your activities for
+                   analytics purposes and personalizing your browser experience.
