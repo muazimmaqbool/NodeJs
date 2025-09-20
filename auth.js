@@ -23,7 +23,7 @@ passport.use(new LocalStrategy(async(userName,password,done)=>{
     //const isPasswordMatch=user.password === password?true:false //used before hashing password
 
     //used after hasing password : see like 34_Password_Protection and Person.js
-    const isPasswordMatch=user.comparePassword(password) //this comparePassword function is in Person.js file
+    const isPasswordMatch=await user.comparePassword(password) //this comparePassword function is in Person.js file
     if(isPasswordMatch){
       return done(null,user)
     }else{

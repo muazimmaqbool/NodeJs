@@ -16,7 +16,7 @@ const personSchema=new mongoose.Schema({
     },
     work:{
         type:String,
-        enum:['chef','waiter','manager'], //value should be from these, otherwise it will show error
+        enum:['chef','waiter','manager','owner'], //value should be from these, otherwise it will show error
         required:true
     },
     phone:{
@@ -59,7 +59,7 @@ personSchema.pre('save',async function(next){
 
         //1: generating salt (here genSalt(10) means 10 round salt, generates random string)
         const salt=await bycrypt.genSalt(10); // we can also do this: const salt="this is a salt"; but not secure at all
-        // console.log("salt:",salt)
+        //console.log("salt:",salt) // $2b$10$UjvORRbdKDQVh3aXB3f6wO
 
         //2: hashing password
         const hashedPassword=await bycrypt.hash(person.password,salt)
@@ -95,7 +95,21 @@ personSchema.methods.comparePassword=async function(candidatePassword){
  dfgvdsfbsvfsfydhsfds ------ > extracts salt
  then it will add this salt to entered password: salt+baramulla------>hsydfsvfdshbfds (hash)
  Now it will compare these two hashes 
-
+Now save a new record to person:
+{
+    "name": "Hashir",
+    "age": 32,
+    "work": "owner",
+    "mobile": "234-067-8901",
+    "email": "hashir@example.com",
+    "address": "Qamarwari, Srinagar",
+    "phone": "9123456789",
+    "salary": "160000",
+    "username":"owner@123",
+    "password":"me@123"
+  }
+    Note: Before saving this data remove localAuthMiddleware  from this : app.use("/person",localAuthMiddleware, personRoutes); in myNewServer.js
+    you will se password saved like this:"$2b$10$cuoO9jvUjaTea2HPdvzRKO.4neBRZV8BC14gVPsCubvvG0uVJocqu",
 */
 
 //Now we create model from the schema and we use this model to do all the database operations like (creating,reading, deleting, updating etc)
