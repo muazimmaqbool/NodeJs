@@ -81,3 +81,11 @@ Session Tokens and Cookies in Nodejs
     ->Privacy and Security:
         Cookies can raise privacy concerns because they can be used to track user's browsing behaviour across different websites.
         However, cookies cannot execute code or transmit virsus, and they can only store information that the webite itself provides.
+        they can also be used to show you ads based on your activity.
+
+    Note: In private mode the cookies are session cookies and in normal browsing they are presistent
+
+    In Summary: Cookies are small text files stored on your computer by the website your visit. They help websites to remember informationa about
+                you and enhance your browsing experience. They are used to maintain login status, and tracking your preferences.
+                While cookies are an essential part of web functionality, they also raise privacy considerations, and users can manage
+                their cookie settings in their web browser
