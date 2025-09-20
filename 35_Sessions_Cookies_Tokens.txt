@@ -1,7 +1,7 @@
 Session Tokens and Cookies in Nodejs
 
 -> Session:
-    A session is a way to maintain user state and authenticate users in web appplication/
+    A session is a way to maintain user state and authenticate users in web appplication.
                 or
     A session is a way for a web server to maintain state and track a user's activity across multiple pages during a single visit to 
     a website. The Hypertext Transfer Protocol (HTTP), the foundation of the web, is stateless. This means that each request a 
@@ -55,6 +55,33 @@ Session Tokens and Cookies in Nodejs
            Scaling requires complex setups like shared session databases.
         2: Cross-Domain Problems: Sessions are tied to cookies, which makes them difficult to use across different domains 
           (e.g., an API on a different domain from the main website).
+
+
+    Client (Browser) --------> Server (Login Endpoint) --------> Database (User credentials)
+       |                          |                                |
+   sends login creds       verifies user/pass               checks credentials
+       |                          |                                |
+       | <------------------------|                                |
+ receives Set-Cookie header  creates session ID           stores session ID mapped to user
+ (session ID stored in cookie)
+
+    (Next request)
+    Client (Browser) --------> Server (Any protected route)
+        |                          |
+    sends request + cookie       reads session ID from cookie,
+    (session ID)                 validates with DB/session store
+        |                          |
+        | <------------------------|
+    receives response if session is valid
+
+    Here in diagram:
+    User logs in → credentials go to Server.
+    Server checks credentials with Database.
+    If valid, server generates a session ID, stores it in DB/session store, and sends a cookie with that ID to the client.
+    On every next request, the Client automatically sends that cookie.
+    Server checks the session ID → if valid, user is authenticated.
+
+
 
     ->Cookies:
         A cookie is a small piece of data that a website stores on a user's computer or device, they are commonly used on websites to remember information
@@ -122,5 +149,5 @@ Session Tokens and Cookies in Nodejs
     This token holds all the necessary user information.
 
     Working:
-    
+
      
