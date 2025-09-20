@@ -32,3 +32,22 @@ Session Tokens and Cookies in Nodejs
     In summary, session and token are essential components of web development enabling user authentication, maintaining state, ensuring security,
        personalizing experiences, and supporting scalability. They form the foundation of secure and user-friendly web applications that can provide
        personalized and seamless experiences to users.
+
+
+-> Session based authentication:
+    A session is a server-side method of storing user information. When a user logs in, the server creates a session for them and stores data
+    like their user ID, login time, and other relevant information on the server itself.
+        1: Server-Side Storage: The user's state is maintained on the server.
+        2: Session ID: The server sends a unique session ID (typically in a cookie) to the user's browser.
+        3: Stateful: The server must remember and manage the state of every active user. For each request, the server looks up 
+           the session ID from the cookie to retrieve the user's data.
+    Pros:
+        1: Instant Revocation: Admins can immediately invalidate a session, logging a user out instantly. This is a major security benefit
+           for sensitive applications like banking.
+        2: Data Security: Sensitive data is stored securely on the server, not on the client.
+        3: Simple for Monolithic Apps: It's the traditional approach and works well for web applications where the frontend and backend are tightly coupled.
+    Cons:
+        1: Scalability Issues: Storing sessions for thousands or millions of users on a single server can be resource-intensive. 
+           Scaling requires complex setups like shared session databases.
+        2: Cross-Domain Problems: Sessions are tied to cookies, which makes them difficult to use across different domains 
+          (e.g., an API on a different domain from the main website).
