@@ -191,6 +191,7 @@ Session Tokens and Cookies in Nodejs
         Token Size: Since tokens are self-contained, they can be larger than a simple session ID, increasing the size of each request.
         Client Security Risk: If not stored securely on the client, a stolen token can be used by an attacker until it expires.
 
+(Important)
 ->Difference between Session and Token:
     1. State on the Server
         Session – Server keeps session data (stateful).
