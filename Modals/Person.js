@@ -74,13 +74,29 @@ personSchema.pre('save',async function(next){
 })
 //?Note: after hashing password change the password comparision in auth.js
 
+//method comparePassword used to compare password entered by the user with the hashed password in db
 personSchema.methods.comparePassword=async function(candidatePassword){
     try{
-
+        //using bycrypt to compare provided password with hashed password
+        const isMatch=await bycrypt.compare(candidatePassword,this.password)
+        return isMatch;
     }catch(err){
-
+        throw err;
     }
 }
+/* Important - compare function
+ This compare function internally extracts the salt from the stored hashed password and uses it to hash the entered password
+ for comparison. It can compares the resulting hash with the stored hash. if they match, it indicates the the entered password
+ is correct.
+ Example:
+ Suppose you save password as: sopore -----> dfgvdsfbsvfsfydhsfds (saved in db as hash+salt)
+ Login: supose you entered wrong password as: barammula
+ Now it will first extract salt from the stored hashed password
+ dfgvdsfbsvfsfydhsfds ------ > extracts salt
+ then it will add this salt to entered password: salt+baramulla------>hsydfsvfdshbfds (hash)
+ Now it will compare these two hashes 
+
+*/
 
 //Now we create model from the schema and we use this model to do all the database operations like (creating,reading, deleting, updating etc)
 const Person=mongoose.model('Person',personSchema);
