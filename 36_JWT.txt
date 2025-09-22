@@ -5,6 +5,8 @@ JWT (JSON Web Token)
   1️⃣ Definition:
         A JWT (JSON Web Token) is a compact string used to securely pass information between two parties (like a client and a server).
         It’s most often used for authentication — to prove “who you are” after you log in.
+        It's defined by the JSON web token standard (RFC 7519). It is compact and self-contained means of transmitting information
+        between parties as a JSON object
 
   2️⃣ Structure
         A JWT has 3 parts, separated by dots (.): header.payload.signature
@@ -17,6 +19,7 @@ JWT (JSON Web Token)
   3️⃣ Usage:
         After a user logs in, the server creates a JWT and gives it to the client.
         The client saves it (usually in localStorage, sessionStorage, or a cookie).
+        They can store user claims, such as User Id, roles, permissions and custom data in a secure and portable format.
         For each request to a protected API, the client sends the token in the Authorization header like:
         Authorization: Bearer <your_jwt>
         The server verifies the signature and expiry — if valid, it processes the request.
