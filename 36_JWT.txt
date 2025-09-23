@@ -30,3 +30,22 @@ JWT (JSON Web Token)
         All the needed info is inside the token itself.
         As long as the server has the secret key (or public key) to verify the signature, it can validate any token without looking it up in a database.
         This makes JWTs easy to scale across multiple servers because there’s no shared session store.
+
+  ➡️ Structure of JWT:
+            ┌───────────────────────────────────────────────────────────────────────────┐
+            │                          JWT Token Structure                              │
+            ├───────────────────────────────────────────────────────────────────────────┤
+            │ Header (metadata) │ Payload (claims)   │ Signature                        │
+            ├───────────────────────────────────────────────────────────────────────────┤
+            │ Example:          │ Example:           │ Example:                         │
+            │ {                 │ {                  │ HMACSHA256(                      │
+            │  "alg": "HS256",  │  "sub": "123456",  │  base64UrlEncode(header) + "." + │
+            │  "typ": "JWT"     │  "name": "John",   │   base64UrlEncode(payload),      │
+            │ }                 │  "iat": 1516239022 │   secret )                       │
+            │ Base64URL encoded │ Base64URL encoded  │ Base64URL encoded signature      │
+            ├───────────────────────────────────────────────────────────────────────────┤
+            │ Combined token (3 parts separated by dots):                               │
+            │       header.payload.signature                                            │
+            │ Example:                                                                  │
+            │  xxxxx.yyyyy.zzzzz                                                        │
+            └───────────────────────────────────────────────────────────────────────────┘
