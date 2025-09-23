@@ -62,5 +62,7 @@ JWT (JSON Web Token)
             2️⃣ Public Claims: Custom claims defined by the application developer to convey information about the user
             3️⃣ Private Claims: Custom claims agreed upon by parties that exchange JWTs, not registered or standardized
 
-      -> Signature:
+      -> Signature: Verifies the integrity of the token and ensures that it has not been tampered with during transmission.
+                    It's created by taking the encoded header, encoded payload, a secret key (for HMAC algorithms), and
+                    applying the specified algorithm to generate the signature
 
