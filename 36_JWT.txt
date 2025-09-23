@@ -52,3 +52,15 @@ JWT (JSON Web Token)
             🔹 Header → describes the token type and signing algorithm (e.g. HS256).
             🔹 Payload → contains claims (user ID, roles, expiry time, etc.).
             🔹 Signature → ensures the token hasn’t been tampered with.
+
+      -> The 'alg' in header indicates which algorithm is used to sign the token such as HMAC, SHA256 or RSA
+
+      -> Payload Claims: Contains claims/statements about the user or any other additional data.
+            Claims are categorized into three types:
+            1️⃣ Reserved Claims: Predefined claims standardized by the JWT specification, such as:
+                                 iss (issuer), sub (subject), aud (audience), exp (expiration time), and iat (issued at)
+            2️⃣ Public Claims: Custom claims defined by the application developer to convey information about the user
+            3️⃣ Private Claims: Custom claims agreed upon by parties that exchange JWTs, not registered or standardized
+
+      -> Signature:
+
