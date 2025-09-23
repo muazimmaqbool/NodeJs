@@ -40,8 +40,8 @@ JWT (JSON Web Token)
             │ Example:          │ Example:           │ Example:                         │
             │ {                 │ {                  │ HMACSHA256(                      │
             │  "alg": "HS256",  │  "sub": "123456",  │  base64UrlEncode(header) + "." + │
-            │  "typ": "JWT"     │  "name": "John",   │   base64UrlEncode(payload),      │
-            │ }                 │  "iat": 1516239022 │   secret )                       │
+            │  "typ": "JWT"     │  "name": "John",   │  base64UrlEncode(payload),       │
+            │ }                 │  "iat": 1516239022 │  secret key)                     │
             │ Base64URL encoded │ Base64URL encoded  │ Base64URL encoded signature      │
             ├───────────────────────────────────────────────────────────────────────────┤
             │ Combined token (3 parts separated by dots):                               │
@@ -49,3 +49,6 @@ JWT (JSON Web Token)
             │ Example:                                                                  │
             │  xxxxx.yyyyy.zzzzz                                                        │
             └───────────────────────────────────────────────────────────────────────────┘
+            🔹 Header → describes the token type and signing algorithm (e.g. HS256).
+            🔹 Payload → contains claims (user ID, roles, expiry time, etc.).
+            🔹 Signature → ensures the token hasn’t been tampered with.
