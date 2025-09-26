@@ -34,3 +34,5 @@
 
         3️⃣ Token expiration:
         - When JWT expires, client must log in again to get a new one.
+
+    Check Next File: 38_JWT_Functions.txt
