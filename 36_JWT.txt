@@ -98,6 +98,26 @@ JWT (JSON Web Token)
                                     your-256-bit-secret
                                     )
                           this is Encoded (Base64URL):jhbdsjcdsjkfbdsijufdhfvdsfgbdsf
+            -> Then Combining these three forms JWT.
 
-            Then Combining these three forms JWT
+      ➡️Extra but very very important:
+      Note: Encoded (Base64URL) is a way to convert binary data (like JSON text or images) into a string made of A–Z, a–z, 0–9
+
+      ➡️Base64 vs Base64URL:
+         🔹Base64:
+            A way to convert binary data (like JSON text or images) into a string made of A–Z, a–z, 0–9, + and /.
+            Often ends with = padding.
+            Not safe to put directly in URLs or cookies because + and / have special meanings.
+
+         🔹Base64URL:
+            Same concept as Base64 but modified to be URL-safe:
+            + is replaced with - (dash).
+            / is replaced with _ (underscore).
+            Padding = is removed.
+            This way the encoded string can safely be used in URLs, headers, and cookies.
+
+        🔹Why JWT uses Base64URL:
+            JWT tokens are often sent in HTTP headers and sometimes in URLs.
+            Using normal Base64 could break the URL or require extra escaping.
+            Base64URL avoids these issues.
             
