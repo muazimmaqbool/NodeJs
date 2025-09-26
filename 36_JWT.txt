@@ -121,3 +121,4 @@ JWT (JSON Web Token)
             Using normal Base64 could break the URL or require extra escaping.
             Base64URL avoids these issues.
             
+      Checkout next file : 37_JWT_Auth_Flow.txt

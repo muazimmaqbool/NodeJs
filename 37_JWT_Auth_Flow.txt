@@ -1,0 +1,36 @@
+➡️ Note before reading this file please check previous file: 36_JWT.txt
+
+➡️ Authentication Flow With JWT:
+    ┌───────────────────────────────────────────────────────────────────────┐
+    │                      JWT Authentication Flow                          │
+    └───────────────────────────────────────────────────────────────────────┘
+        1️⃣ User logs in:
+        Client (Browser/App)
+            |
+            |  sends credentials (username/password)
+            v
+        Server (Auth Endpoint) --------> Database (checks credentials)
+            |                                 |
+            |  if valid: creates signed JWT   |
+            |  (header.payload.signature)     |
+            |<--------------------------------|
+            |
+        Client receives JWT (stores in localStorage/sessionStorage or cookie)
+
+        2️⃣ User accesses a protected resource:
+        Client (Browser/App)
+            |
+            |  sends HTTP request
+            |  + Authorization: Bearer <JWT>
+            v
+        Server (Protected Endpoint)
+            |
+            |  verifies JWT signature & expiry
+            |  (no DB lookup needed unless revocation/extra checks)
+            |
+            |  if token valid → process request & respond
+            v
+        Response sent back to Client (data / resource)
+
+        3️⃣ Token expiration:
+        - When JWT expires, client must log in again to get a new one.
