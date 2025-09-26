@@ -65,4 +65,39 @@ JWT (JSON Web Token)
       -> Signature: Verifies the integrity of the token and ensures that it has not been tampered with during transmission.
                     It's created by taking the encoded header, encoded payload, a secret key (for HMAC algorithms), and
                     applying the specified algorithm to generate the signature
+      In short:
+         Header → Metadata (algorithm, type).
+         Payload → Claims (user info, expiry).
+         Signature → Verification to ensure integrity.
 
+
+      ➡️ JWT is like this: gsdfdsbdfkhjdfjdsbfhdsbhfhdsbg.fdvshfvdsfsdfdsfvgsduifbdsudsbg.sdhjfvcsfvdshfbgdshjfvbdsuhvbdfv
+         The first string before first dot  represents 'header', the second string before second dot represents 'payload' and the
+         third string after the second dot represents the signature:
+
+         🔹1. Header: Tells which algorithm is used and that it’s a JWT.
+                        Example: {
+                                    "alg": "HS256",
+                                    "typ": "JWT"
+                              }
+                        this is Encoded (Base64URL):sdfdsbdsfskdfgsbdhskgvdsuygvbdshvdfvdfsvdfsvfdgg
+
+         🔹2. Payload: Contains claims (data about the user + token validity).
+                        Example: {
+                                    "sub": "1234567890",
+                                    "name": "John Doe",
+                                    "admin": true,
+                                    "iat": 1516239022,
+                                    "exp": 1516242622
+                                 }
+                        this is Encoded (Base64URL): jfdsfbsdfhdsjgbdisfbgvdfisogvbdfsiugvhdfsvjdsfhhjvbdfghjvgb sdiufvhbdv
+          🔹3. Signature: Ensures the token wasn’t tampered with:
+                          Example:
+                                    HMACSHA256(
+                                    base64UrlEncode(header) + "." + base64UrlEncode(payload), 
+                                    your-256-bit-secret
+                                    )
+                          this is Encoded (Base64URL):jhbdsjcdsjkfbdsijufdhfvdsfgbdsf
+
+            Then Combining these three forms JWT
+            
