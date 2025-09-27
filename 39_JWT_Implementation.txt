@@ -11,3 +11,5 @@
                     app.use("/person",localAuthMiddleware, personRoutes);
                     We will replace it, because to access the person routes and its sub routes we need to provide username and password
                     which is complicated and to avoid it we will add jwt authentication to it
+
+➡️ Install jsonwebtoken: npm i jsonwebtoken
