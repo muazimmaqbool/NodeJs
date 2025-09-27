@@ -13,3 +13,7 @@
                     which is complicated and to avoid it we will add jwt authentication to it
 
 ➡️ Install jsonwebtoken: npm i jsonwebtoken
+
+➡️ Create JWT Auth middleware (jwtAuthMiddleware):
+    This middleware is responsible for authentication via tokens
+    1️⃣ new file added jwt.js (here jwt auth middleware logic will be written)

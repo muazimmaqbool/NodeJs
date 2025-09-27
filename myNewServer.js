@@ -23,6 +23,7 @@ const passport=require("./auth")
 app.use(passport.initialize())
 const localAuthMiddleware=passport.authenticate('local',{session:false})
 //Now i will have this authentication logic in seperate file auth.js
+//this localAuthMiddleware means you can assess any route in which it is applied only by giving username and password
 
 
 //Model name Person now can be used to do all database work for making changes in Person
