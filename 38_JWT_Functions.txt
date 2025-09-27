@@ -1,4 +1,34 @@
 //First check previous code 36 and 37:
 
 ➡️ JWT Functions:
+    In the context of the JWT, jwt.sign() and jwt.veryify() are the two important functions provided by 'jsonwebtoken' library in Node.js
+     ➡️ json.sign() : used to generate a new JWT token based on the payload and options provided.
+                      It takes three parameters: payload, secret or private key (secret key used to sign the token),
+                                                 options(optional)-> example which algorithm we are using, expiry time etc
     
+    Here are the main “functions” or actions around JSON Web Tokens:
+    🔹1. Create / Sign a JWT:
+        Server takes a header + payload + secret key and signs them with an algorithm (e.g. HS256).
+        This produces the header.payload.signature string.
+        Libraries usually call this sign() or encode().
+        Example (Node.js): jwt.sign(payload, secret, options)
+
+    🔹2. Send / Store the JWT:
+        Server sends the JWT to the client after login.
+        Client stores it (in localStorage, sessionStorage, or cookie).
+        Client sends it back in the Authorization: Bearer <token> header on each request.
+
+    🔹3. Verify a JWT:
+        Server checks the token’s signature to ensure it hasn’t been tampered with.
+        Also checks expiry (exp claim).
+        Libraries call this verify() or decodeAndVerify().
+        Example (Node.js): jwt.verify(token, secret)
+
+    🔹4. Decode a JWT:
+        View the token’s contents (header + payload) without verifying signature.
+        Useful for debugging.
+        Libraries call this decode().
+        Example: jwt.decode(token)
+
+    🔹5. Refresh / Reissue Tokens:
+        If the JWT is about to expire, issue a new token using a refresh token or re-login.
