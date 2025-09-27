@@ -7,3 +7,7 @@
         then when we hit this endpoint and will return JWT token after the person registration is successful.
     2️⃣ Login Route: We need a '/login' this route will handle user login and issue a new jwt token upon successful authentication.
     3️⃣ Protected Routes: The routes which have protection/authentication will be accessed only by providing a valid JWT token.
+                Right now we have added authentication of localAuthMiddleWare to person route in myNewServer.js file like this:          
+                    app.use("/person",localAuthMiddleware, personRoutes);
+                    We will replace it, because to access the person routes and its sub routes we need to provide username and password
+                    which is complicated and to avoid it we will add jwt authentication to it

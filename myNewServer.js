@@ -51,7 +51,9 @@ app.get("/", (req, res) => {
   res.send("Hello Welcome to my hotel!...");
 });
 
-app.use("/person",localAuthMiddleware, personRoutes); //using the router
+//app.use("/person",localAuthMiddleware, personRoutes);
+//Note: localAuthMiddleware removed after jwt see file 39_JWT_Implementation file
+app.use("/person", personRoutes); //using the router
 //now use like this: http://localhost:3000/person?username=hashir@123&password=sopore@123
 app.use("/menu", menuRoutes);
 //trackig log on menu
