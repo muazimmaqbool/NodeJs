@@ -36,4 +36,4 @@ const generateToken=(userData)=>{
     return jwt.sign(userData,process.env.JWT_SECRET_KEY)
 
 }
-module.exports=jwtAuthMiddleware
+module.exports={jwtAuthMiddleware,generateToken}
