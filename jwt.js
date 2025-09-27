@@ -3,7 +3,7 @@ const jwt =require('jsonwebtoken')
 //creating middleware (this middle when passed to any route will make sure that whoever route you are accessing needs a token and then
 //                      verifies the token if token is provided)
 //Note: process.env.JWT_SECRET_KEY is created in .env file
-console.log("process.env.JWT_SECRET_KEY:",process.env.JWT_SECRET_KEY)
+// console.log("process.env.JWT_SECRET_KEY:",process.env.JWT_SECRET_KEY)
 const jwtAuthMiddleware=(req,res,next)=>{
     //1: Extract jwt from request header:
     const token=req.headers.authorization.split(' ')[1]; 

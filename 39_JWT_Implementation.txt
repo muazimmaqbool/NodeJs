@@ -20,4 +20,10 @@
         Inside this file how to verify and how to create jwt is done
     
     2️⃣ using JWT token:
+        ->What we want the endpoint inside personRoutes : '/signup' should also return jwt token after success:
         
+            Import both the files from jwt.js file inside personRoutes.js:
+            const{jwtAuthMiddleware,generateToken}=require("../jwt")
+            and then after getting reponse after saving person data do this:
+             const token=generateToken(response.username) //generating token
+             res.status(200).json({response:response,token:token}) //response and token

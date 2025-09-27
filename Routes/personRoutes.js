@@ -1,6 +1,7 @@
 const express = require("express");
 //Router is used to manage routes/endpoints
 const router = express.Router();
+const{jwtAuthMiddleware,generateToken}=require("../jwt") //check file 39
 
 //this router is exported in bottom and imported in myNewServer.js
 
@@ -26,7 +27,14 @@ router.post("/signup", async (req, res) => {
     const newPerson = new Person(data);
     const response = await newPerson.save();
     // console.log("Saved Person Data:",response)
-    res.status(200).json(response);
+
+    //to checkout about jwt see file 39
+    //getting jwt token (here payload to generateToken can be anything here i am taking username)
+    const token=generateToken(response.username)
+    // console.log("token is:",token)
+
+    // res.status(200).json(response);
+    res.status(200).json({response:response,token:token}) //response and token
   } catch (err) {
     console.error("Error saving person:", err);
     res.status(500).json({ error: "Internal server error" });

@@ -33,7 +33,8 @@ const localAuthMiddleware=passport.authenticate('local',{session:false})
 
 //Middleware function (used to log every request made to our endpoints) 
 const logRquest=(req,res,next)=>{
-  console.log(`[${new Date().toLocaleString()}] Request Made To: ${req.originalUrl}`)
+  // console.log(`[${new Date().toLocaleString()}] Request Made To: ${req.originalUrl}`)
+  
   //Note: the middle will always call the next(), means that we have executed this function you can move to the next phase, if there is another middleware function
   //you can execute that and if not then do rest of the things like getting data from server etc 
   next()// moving on to the next phase
