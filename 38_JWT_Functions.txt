@@ -10,7 +10,8 @@
                         It takes three parameters: token, secret or private key,
                                                    options (optional) -> adding addional options for verifications such as: algorithms, audience, issuer and more
 
-     Note: By default the JWT token don't have a expiry time.
+    Note: By default the JWT token don't have a expiry time.
+
     Here are the main “functions” or actions around JSON Web Tokens:
     🔹1. Create / Sign a JWT:
         Server takes a header + payload + secret key and signs them with an algorithm (e.g. HS256).
@@ -37,3 +38,5 @@
 
     🔹5. Refresh / Reissue Tokens:
         If the JWT is about to expire, issue a new token using a refresh token or re-login.
+
+    Note: see next file : 39_JWT_Implementation.txt
