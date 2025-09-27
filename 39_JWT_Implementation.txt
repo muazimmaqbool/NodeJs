@@ -27,3 +27,11 @@
             and then after getting reponse after saving person data do this:
              const token=generateToken(response.username) //generating token
              res.status(200).json({response:response,token:token}) //response and token
+
+             the token in response can be checked in jwt.io
+
+        ➡️ How to set expiry time of a token:
+            -> inside generateToken function in jwt.js file do this:
+                const generateToken=(userData)=>{
+                    return jwt.sign(userData,process.env.JWT_SECRET_KEY,{expiresIn:30}) //gets expired in 30 seconds
+                }

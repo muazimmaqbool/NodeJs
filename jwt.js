@@ -33,7 +33,10 @@ const jwtAuthMiddleware=(req,res,next)=>{
 //token needs payload i.e userData that's why it takes parameter as user data or anyname
 const generateToken=(userData)=>{
     //1: generating a new jwt token using user data
-    return jwt.sign(userData,process.env.JWT_SECRET_KEY)
+    // return jwt.sign(userData,process.env.JWT_SECRET_KEY)
+    
+    //Token with expiry in 30 seconds:
+    return jwt.sign(userData,process.env.JWT_SECRET_KEY,{expiresIn:30}) //now generate token and check its expiry in jwt.io
 
 }
 module.exports={jwtAuthMiddleware,generateToken}
