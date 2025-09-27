@@ -17,3 +17,7 @@
 ➡️ Create JWT Auth middleware (jwtAuthMiddleware):
     This middleware is responsible for authentication via tokens
     1️⃣ new file added jwt.js (here jwt auth middleware logic will be written)
+        Inside this file how to verify and how to create jwt is done
+    
+    2️⃣ using JWT token:
+        
