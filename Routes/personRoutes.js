@@ -27,11 +27,18 @@ router.post("/signup", async (req, res) => {
     const newPerson = new Person(data);
     const response = await newPerson.save();
     // console.log("Saved Person Data:",response)
-
+    const payload={
+      id:response.id,
+      username:response.username
+    }
+    // console.log("payload",payload)
     //to checkout about jwt see file 39
     //getting jwt token (here payload to generateToken can be anything here i am taking username)
-    const token=generateToken(response.username)
-    // console.log("token is:",token)
+    //const token=generateToken(response.username)
+
+    //taking proper payload
+    const token=generateToken(payload)
+    // console.log("token is:",token) past these token in jwt.io website
 
     // res.status(200).json(response);
     res.status(200).json({response:response,token:token}) //response and token
