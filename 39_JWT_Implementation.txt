@@ -3,4 +3,7 @@
 //JWT token implementation:
 
 ➡️ Changes in existing code:
-    1️⃣
+    1️⃣ Signup Route: First we will replace '/' with '/signup' inside personRoutes.js for saving person data via POST request,
+        then when we hit this endpoint and will return JWT token after the person registration is successful.
+    2️⃣ Login Route: We need a '/login' this route will handle user login and issue a new jwt token upon successful authentication.
+    3️⃣ Protected Routes: The routes which have protection/authentication will be accessed only by providing a valid JWT token.

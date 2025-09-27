@@ -14,7 +14,8 @@ const Person = require("../Modals/Person");
 
 //Post route to add new person
 //here in place of app we have router, i.e previously it was app.post(...)
-router.post("/", async (req, res) => {
+//Note: replace "/" with "/signup" see file 39_JWT_Implementation.txt
+router.post("/signup", async (req, res) => {
   /*
     If the promise is resolved, the result of the promise is returned. If the
     promise is rejected, it throws an error that can be caught using
