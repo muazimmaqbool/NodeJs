@@ -50,7 +50,7 @@ router.post("/signup", async (req, res) => {
 
 
 //Method to get person data (fetching person data from database)
-router.get("/", async (req, res) => {
+router.get("/",jwtAuthMiddleware, async (req, res) => {
   try {
     //here what it will do is that it will return every record/data from "Person" collection in database
     const data = await Person.find();

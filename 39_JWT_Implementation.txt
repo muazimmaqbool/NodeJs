@@ -37,3 +37,8 @@
                 }
 
     3️⃣ Create a '/login' route which will give token in return in personRoutes.js file
+    4️⃣ Protected routes with jwt:
+        -> Here i will be adding jwtAuthMiddleware to the route which is used to get list of person i.e '/' route in personRoutes.js
+            Inside personRoutes.js file on route '/":
+                router.get("/",jwtAuthMiddleware, async (req, res) => {...}
+                Now whenever your hit this endpoint i.e /person you need to pass the token in header
