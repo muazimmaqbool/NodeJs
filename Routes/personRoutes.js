@@ -48,6 +48,7 @@ router.post("/signup", async (req, res) => {
   }
 });
 
+
 //Method to get person data (fetching person data from database)
 router.get("/", async (req, res) => {
   try {
@@ -155,6 +156,35 @@ router.get("/name/:name",async(req,res)=>{
   }
 })
 
+
+//Adding login route 
+router.post('/login',async(req,res)=>{
+  try{
+    //Extract username and password from request body
+    const{username,password}=req.body;
+
+    //checking whether this username exists in your db or not
+    const user=await Person.findOne({username:username});
+    //if user doesn't exists or password is wrong, return error
+    if(!user || !(await user.comparePassword(password))){
+      return res.status(401).json({error:'Invalid username or password'})
+    }
+
+    //generate token:
+    const payload={
+      id:user.id,
+      username:user.username
+    }
+    const token =generateToken(payload)
+
+    //return token in response
+    res.json({token})
+
+  }catch(err){
+    console.log(err)
+    res.status(500).json({error:"Internal server error"})
+  }
+})
 
 
 module.exports = router;

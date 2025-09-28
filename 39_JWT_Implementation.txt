@@ -35,3 +35,5 @@
                 const generateToken=(userData)=>{
                     return jwt.sign(userData,process.env.JWT_SECRET_KEY,{expiresIn:30}) //gets expired in 30 seconds
                 }
+
+    3️⃣ Create a '/login' route which will give token in return in personRoutes.js file
