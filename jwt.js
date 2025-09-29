@@ -40,6 +40,8 @@ const generateToken=(userData)=>{
 
     //Token with expiry in 8h i.e 30000/60=500 minutes then 500/60 = 8.33 hours
     return jwt.sign(userData,process.env.JWT_SECRET_KEY,{expiresIn:30000}) //now generate token and check its expiry in jwt.io
+    //Note make sure the payload i.e userData here in this case is object and if not object then do like this
+    //return jwt.sign({userData},process.env.JWT_SECRET_KEY,{expiresIn:30000})
 
 }
 module.exports={jwtAuthMiddleware,generateToken}

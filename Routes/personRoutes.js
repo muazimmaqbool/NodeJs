@@ -191,7 +191,7 @@ router.post('/login',async(req,res)=>{
 and will return the profile linked with that id, so when we hit 'person/login' route and give it username and password and it returns jwt token and then we pass
 this jwt to the '/person/profile' route it will give you details of the user who logs in
 */
-//http://localhost:3000/person/profile
+//http://localhost:3000/person/profile and pass work in authroization
 router.get('/profile',jwtAuthMiddleware,async(req,res)=>{
   try{
     const userData=req.user //basically payload from jwt token
