@@ -6,7 +6,7 @@ const jwt =require('jsonwebtoken')
 // console.log("process.env.JWT_SECRET_KEY:",process.env.JWT_SECRET_KEY)
 const jwtAuthMiddleware=(req,res,next)=>{
     //0: Check the request header has authorization or not:
-    const authorization=req.header.authorization
+    const authorization=req.headers.authorization
     if(!authorization) return res.status(401).json({error:"Token Not Found!"})
     //1: Extract jwt from request header:
     const token=req.headers.authorization.split(' ')[1]; 
@@ -36,10 +36,10 @@ const jwtAuthMiddleware=(req,res,next)=>{
 //token needs payload i.e userData that's why it takes parameter as user data or anyname
 const generateToken=(userData)=>{
     //1: generating a new jwt token using user data
-    return jwt.sign(userData,process.env.JWT_SECRET_KEY)
+   // return jwt.sign(userData,process.env.JWT_SECRET_KEY)
 
-    //Token with expiry in 30 seconds:
-    //return jwt.sign(userData,process.env.JWT_SECRET_KEY,{expiresIn:30}) //now generate token and check its expiry in jwt.io
+    //Token with expiry in 8h i.e 30000/60=500 minutes then 500/60 = 8.33 hours
+    return jwt.sign(userData,process.env.JWT_SECRET_KEY,{expiresIn:30000}) //now generate token and check its expiry in jwt.io
 
 }
 module.exports={jwtAuthMiddleware,generateToken}
