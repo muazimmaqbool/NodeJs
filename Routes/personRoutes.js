@@ -65,7 +65,7 @@ router.get("/",jwtAuthMiddleware, async (req, res) => {
 
 //parametrised API call (see file 24_Parametrized_API_Calls.txt) to get person data based on work type
 //here using :workType - makes it a variable means anything can be inplace of workType
-router.get("/:workType", async (req, res) => {
+router.get("/worktype/:workType", async (req, res) => {
   try {
     const workType = req.params.workType;
     //checking for workType, so that user enters valid worktype, and only then db validation will be done
@@ -86,7 +86,7 @@ router.get("/:workType", async (req, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 });
-//now test it like this: http://localhost:3000/person/chef, http://localhost:3000/person/manager,...
+//now test it like this: http://localhost:3000/person/workType/chef, http://localhost:3000/person/workType/manager,...
 
 //Updating person data via PUT request:
 //this id is variable it can be any name like person_Id, _id, etc...
@@ -157,7 +157,7 @@ router.get("/name/:name",async(req,res)=>{
 })
 
 
-//Adding login route 
+//Adding login route : http://localhost:3000/person/login
 router.post('/login',async(req,res)=>{
   try{
     //Extract username and password from request body
@@ -186,5 +186,29 @@ router.post('/login',async(req,res)=>{
   }
 })
 
+//Profile route
+/*what this route will do is that when ever we hit '/person/profile' and pass it a jwt token this route will get the id from the jwt token
+and will return the profile linked with that id, so when we hit 'person/login' route and give it username and password and it returns jwt token and then we pass
+this jwt to the '/person/profile' route it will give you details of the user who logs in
+*/
+//http://localhost:3000/person/profile
+router.get('/profile',jwtAuthMiddleware,async(req,res)=>{
+  try{
+    const userData=req.user //basically payload from jwt token
+    //console.log("userData:",userData)
+    /*
+    UserData is like this: userData: {
+      id: '68d81928c6293a9f0c4b37de',
+      username: 'shahid',
+      iat: 1759163777,
+      exp: 1759193777
+    } //depends on payload we pass in 'login' route also see jwt.js
+    */
+
+  }catch(err){
+    console.log(err)
+    res.status(500).json({error:"Internal server error"})
+  }
+})
 
 module.exports = router;
