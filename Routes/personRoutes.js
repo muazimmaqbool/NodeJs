@@ -205,6 +205,11 @@ router.get('/profile',jwtAuthMiddleware,async(req,res)=>{
     } //depends on payload we pass in 'login' route also see jwt.js
     */
 
+    //getting id
+    const userId=userData.id;
+    //getting user details
+    const user=await Person.findById(userId)
+    res.status(200).json({userProfile:user})
   }catch(err){
     console.log(err)
     res.status(500).json({error:"Internal server error"})
