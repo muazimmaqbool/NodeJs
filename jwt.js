@@ -5,6 +5,9 @@ const jwt =require('jsonwebtoken')
 //Note: process.env.JWT_SECRET_KEY is created in .env file
 // console.log("process.env.JWT_SECRET_KEY:",process.env.JWT_SECRET_KEY)
 const jwtAuthMiddleware=(req,res,next)=>{
+    //0: Check the request header has authorization or not:
+    const authorization=req.header.authorization
+    if(!authorization) return res.status(401).json({error:"Token Not Found!"})
     //1: Extract jwt from request header:
     const token=req.headers.authorization.split(' ')[1]; 
     //here token is passed like this in authorization/header: Bearer dsfdhsvfhg...dsghs i.e why we use split(' ') will will split it on space
