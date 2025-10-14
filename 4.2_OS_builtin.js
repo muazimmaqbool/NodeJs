@@ -1,4 +1,4 @@
-//we can also use writeFile to make new file
+//we can also use writeFile of fs package to make new file
 const fs=require("fs");
 
 const a="This text is added via writeFile and Asynchronous";
@@ -23,6 +23,7 @@ console.log("i am printed first")
 //there are many method of file system(fs) you can see them on docs in nodejs website
 
 //PATH : there are many more things like path
+console.log("************Path builtin module*****************")
 const path=require("path");
 
 //it returns extension of the file
@@ -31,10 +32,10 @@ console.log("extension of current file:",val); // o/p: .js
 
 //returns basename of basefolder in which you are currently
 const b=path.basename("E:/Web Development/NodeJs>");
-console.log(b); //o/p: base folder name, here NodeJs>
+console.log("base filename:",b); //o/p: base folder name, here NodeJs>
 
 //joind two url/strings
-const str="Hello";
+const str="Hello Nodejs";
 const strJoin=path.join("This is "+str)
 console.log(strJoin); // o/p: This is Hello
 
