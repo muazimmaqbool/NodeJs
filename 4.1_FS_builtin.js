@@ -10,7 +10,7 @@ Build In: modules which didn't need to be downloaded to use them, they are alrea
 */
 const fs=require("fs"); //fs module is used to read any file
 //or import like this const {readFile,...} from = require("fs");
-// the we can write like this const a= readFile("path","utf-8",callbackfunction)  
+// then we can write like this const a= readFile("path","utf-8",callbackfunction)  
 //console.log(fs); // long o/p
 
 //to check lets read a sample file test.txt from this
