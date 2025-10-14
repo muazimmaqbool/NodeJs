@@ -40,18 +40,17 @@ const strJoin=path.join("This is "+str)
 console.log(strJoin); // o/p: This is Hello
 
 //OS: another builtin : it gives information about machine
+console.log("************* OS builtin module*************")
 const os=require("os");
 console.log(os.freemem()); //shows total free memory in your pc i.e RAM
 console.log("Desktop Name:",os.hostname()); //gives desktop name
 console.log("OS Type:",os.type()); // type of os
 console.log(os.uptime());
 console.log("User Info:",os.userInfo());
-console.log(os.totalmem()); //8GB
+console.log("Username:",os.userInfo().username)
+console.log(os.totalmem()); 
 console.log(os.networkInterfaces()); 
 const user=os.userInfo()
-console.log("User info:",user)
-console.log("user name:",user.username)
-
 //now lets sending greetings to the username via fs
 fs.appendFile("greeting.txt","Aslamualikum "+user.username+"!\n",()=>{
     console.log("greeting file is added");
