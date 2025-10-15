@@ -17,3 +17,11 @@ myServer.listen(PORT,hostname,()=>{
 })
 //important press ctrl+c to close the server
 //now see in next code 5.2server.js
+
+//another server
+const serverTwo=http.createServer((req,res)=>{
+    res.end("This is second server in same file")
+})
+serverTwo.listen(5000,hostname,()=>{
+    console.log(`second server running on: http://${hostname}:5000`)
+})
