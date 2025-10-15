@@ -4,7 +4,7 @@
     ->Example of best thrid party modules: express, gulp, lodash, async, scoket.io, mongoose, 
                                            pokemon, underscore, pm2, bower, q, debug, react, mocha etc
 */
-//as an example we will use pokemon third paty module:
+//as an example we will use pokemon third party module:
 //first download it : npm i pokemon
 const pokemon=require("pokemon");
 console.log(pokemon.random()); //generates any random pokemon name
