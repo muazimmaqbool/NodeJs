@@ -1,6 +1,6 @@
 //first see previous codes: 5.0server.js, 5.1server.js and 5.2server.js
 
-//here we will load file on display:
+//here we will load file and display:
 //Creating html pages for home, about and contact to display them using file system and server on web browser
 //These files are inside HtmlPages folder
 
@@ -10,7 +10,7 @@ const fs=require("fs"); //used to work with files
 const port = 5000;
 const hostname = "localhost";
 //reading html files in synchronous mode 
-//in synchronous mode because i want the files to load first
+//in synchronous mode because i want the files to load first then display
 const home=fs.readFileSync('./HtmlPages/home.html',"utf-8");
 const about=fs.readFileSync('./HtmlPages/about.html',"utf-8");
 const contact=fs.readFileSync('./HtmlPages/contact.html',"utf-8");
