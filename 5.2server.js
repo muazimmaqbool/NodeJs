@@ -29,7 +29,7 @@ const server = http.createServer((req, res) => {
     return res.end("<h1>404 Page Not Found!</h1>");
     //for other urls this will be shown
   }
-  //so when page loads it shows localhost:4000 and o/p: Home page
+  //so when page loads it shows the url is localhost:4000 and o/p ia Home page
   //then type manually localhost:4000/about and o/p: About Page
   // lly for all
 });
