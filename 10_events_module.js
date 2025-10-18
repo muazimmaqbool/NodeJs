@@ -2,7 +2,7 @@
 Event Module in Node.js:
     ->Node.js has a built-in module, called "Events", where you can create, fire and listen your own events.
     ->The event module allows us to work with events in node.js
-        {event: its an action or occurrence that has happened in our application that we can respond to}
+      {event: its an action or occurrence that has happened in our application that we can respond to}
     ->using Event Module, we can dispatch our own custom events and respond to those custom events in a non-blocking manner
 
     Example: Event Module Scenario:
@@ -25,7 +25,7 @@ Event Module in Node.js:
 const EventEmitter = require("node:events"); //import built-in module: events
 
 const emitter = new EventEmitter();
-//using this "emitter" object we can emit events. (to emit and event we use .emit method of emitter)
+//using this "emitter" object we can emit events. (to emit an event we use .emit method of emitter)
 //to respond to the event to use .on method of emitter
 /*emitter.on(); accepts two paramters:
  1)event name i.e order-pizza here, and 2)listern (callback fuction, gets executed when the event is emitted)
@@ -83,3 +83,13 @@ emitter.on("getDept", (branch) => {
 });
 
 emitter.emit("getDept", "cse");
+
+//Another example
+console.log("A")
+emitter.on("test",()=>{
+  console.log("B")
+})
+console.log("C")
+emitter.emit("test")
+console.log("D")
+//o/p: A,C,B,D
