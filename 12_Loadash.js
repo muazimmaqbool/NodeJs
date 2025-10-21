@@ -30,4 +30,9 @@ console.log("isString:",_.isString("Hi"))
 
 console.log("isString:",_.isString(66))
 
+console.log("head of data:",_.head(data)) // o/p: Laptop
+
+//getting difference between two arrays
+console.log("difference between two arrays:",_.difference([1,2,3],[4,5,2,3])) // o/p : [1]
+
 //See more its methods from its docs : https://lodash.com/docs/4.17.15
