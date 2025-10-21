@@ -61,16 +61,16 @@ Buffers:
                 (watch at 5:01 from #24)
  */
 //Node.js provides Buffer as a global feature so it's not required to import it
-const bufferValue=new Buffer.from("Muazim"); // or new Buffer.from("Muazim","utf-8"); utf-8 is optional
-
-
+const bufferValue=new Buffer.from("Muazim"); 
+// or
+// const bufferValue = new Buffer.from("Muazim","utf-8"); utf-8 is optional
 
 console.log("raw bufferValue:",bufferValue)
 // o/p : bufferValue: <Buffer 4d 75 61 7a 69 6d> //buffer contains raw binary data
 
 /* this is the raw binary data, but node.js prints the hexidecimal/base16 notation of the binary number as printing
   8 bits binary of every character can flood your terminal
-  if you past 4d in hexidecimal to binary converter: you will get 
+  if you past '4d' in hexidecimal to binary converter: you will get 
   4d to binary is: 01001101 and to decimal number is 77 and 77 is the unicode of M
 */
 
@@ -84,6 +84,7 @@ console.log("bufferValue to string:",bufferValue.toString())
 
 //can also write to buffers
 bufferValue.write("CSE") // or "javascript"
+// or bufferValue.write("javascript")
 
 console.log("new bufferValue:",bufferValue.toString())
 // o/p: new bufferValue: CSEzim
