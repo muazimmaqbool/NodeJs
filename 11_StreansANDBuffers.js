@@ -24,9 +24,9 @@ Buffers:
         - 30 : seating capacity
         (we don't know the pace at which people come)
         Scenario 1:
-        - if 100 : people arrive
+        - if 100 : people arrive at the same time
         - only 30 : people are accommodated
-        - 70 : people in queue (waiting)
+        - 70 : people are in queue (waiting)
 
         Scenario 2:
         - if only 1 : person arrives
