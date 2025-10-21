@@ -1,4 +1,4 @@
-/*
+ /*
 Streams:
     A stream is a sequence of data that is being movied from one point to another over time
     Examples:
@@ -17,7 +17,7 @@ Streams:
         
     ->This (processing data in chunks) prevents unnecessary data downloads and memory usage.
 
-    ?Note: the question is how exactly is that sequence of data moved ? for that we will have to look at bufferes
+    ?Note: the question is how exactly is that sequence of data being moved ? for that we will have to look at bufferes
 
 Buffers:
     Lets understand buffers with the example of a bus with seating capacity of 30.
