@@ -13,19 +13,20 @@ const express = require('express')
 //the blue print of express() is now inside 'app' its like instance of express
 const app = express() //'app' can be any name but generally all developers use 'app'
 
-/* ->app.get takes to parameters:
+/* ->app.get takes two parameters:
       (app.get() is a method in Express used to define a route that listens for GET requests on a specific URL or endpoint.)
-      1)to which endpoint it needs to be shown  kon se endpoint pei ye show hona chahiye) 
+      1)to which endpoint it needs to be shown  (kon se endpoint pei ye show hona chahiye) 
         here endpoint is "/", i.e after address when the user types this "/", the user will get data
 
       2)a callback function that handles the request and response (req, res)
-          request->request
+          req->request
           res->response: what response you want to send here it's "Hello Express"
 
 */
 //app.get(path, callback)
 //localhost:3000 or localhost:3000/
 app.get('/', (req, res) => {
+  // res.send("hello express") //if you use this as well then only this will be shown in response of tha api, it will return first res.send
   res.send('Hello Welcome to my hotel!')
 })
 
