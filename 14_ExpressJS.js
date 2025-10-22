@@ -40,6 +40,7 @@ app.get('/sunday_special',(req,res)=>{
   res.send('Sunday Special is: Chicken Pizza + 2 burgers @499 only')
 })
 
+//return object
 app.get("/pizza",(req,res)=>{
   const pizzaInfo={
     name:"Chick Pizza",
@@ -50,6 +51,15 @@ app.get("/pizza",(req,res)=>{
   res.send(pizzaInfo) //o/p will be json string
 })
 
+app.get("/fridaySpecial",(req,res)=>{
+  const biryani={
+    name:"Wazwan biryani",
+    size:"Large",
+    price:699,
+    extraRice:true,
+  }
+  res.send(biryani)
+})
 
 
 //3000 is port, telling that server is active on port 3000
