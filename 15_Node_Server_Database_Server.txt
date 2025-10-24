@@ -8,7 +8,7 @@ Nodejs Server and Database Server
     - Database server is a special programs which helps to keep the database up (ready for use)
 
 ->Node.js server:
-    - Nodejs server is responsible for handling HTTP requests from clients(like web browsers) and returns responses
+    - Nodejs server is responsible for handling HTTP requests from clients (like web browsers) and returns responses
     - It processes these requests and communicates with the database server and sends data to the clients
 
 
@@ -16,4 +16,4 @@ Example of basic Architecture of web app:
           Reactjs(web) <--> Node.js/Express.js(server) <--> MongoDB (database)
                         |                                |
                         |                                |
-                    REST API Calls                  MongoDB Driver
+                      API Calls                  MongoDB Driver

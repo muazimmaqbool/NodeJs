@@ -78,3 +78,5 @@ app.post('/order',(req,res)=>{
 })
 //Now it this endpoint : http://localhost:3000/order but with POST Request and for now send any json data or empty data
 //it will give "Order Received!" as o/p in postman
+
+//Note: To run this file do this in terminal: node --watch 14_ExpressJS.js (--watch is optional)
