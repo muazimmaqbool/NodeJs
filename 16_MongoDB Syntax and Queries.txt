@@ -23,8 +23,8 @@
 
        ->Show all databases: show dbs (it will show of list of databases)
       
-       ->Create/use a database in mongodb : use myDb (here myDb is name of database, it can be anything )
-            - use myTestDb                 // Switch to or create the database
+       ->Create/use a database in mongodb : use myDb (here 'myDb' is name of the database, it can be anything )
+            -  use myTestDb                 // Switch to or create the database
             -  db.createCollection("users") // Create a collection named 'users'
             -  db.users.insertOne({ name: "Muazim", age: 25}) // Add data
             -  db.users.find()  // gives you data inside 'users' collection
