@@ -1,5 +1,4 @@
 const mongoose=require('mongoose')
-const { on } = require('./Person')
 
 const onlineItems=new mongoose.Schema({
     name:{

@@ -1,5 +1,5 @@
 ->What is body parser?
-    -> use this command to install body parser: npm i body-parser
+  -> to install body parser: npm i body-parser
 
  ● Body parser is a middleware library for Express.js.
     -> Middleware refers to software or functions that sit in the middle between the request from a client (like a browser or mobile app) 
@@ -10,8 +10,7 @@
  ● When a client (e.g., a web browser or a mobile app) sends data to a server,
    it typically includes that data in the body of an HTTP request.
 
- ● This data can be in various formats, such as JSON, form data, or
-   URL-encoded data. bodyParser helps parse and extract this data from
+ ● This data can be in various formats, such as JSON, form data, or URL-encoded data. bodyParser helps parse and extract this data from
    the request so that you can work with it in your Express.js application.
 
  ● bodyParser processes the request body before it reaches your route
