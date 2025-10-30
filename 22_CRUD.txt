@@ -1,6 +1,6 @@
-->What is CRUD?
-  CRUD stands for Create, Read, Update, and Delete — the four basic operations that can be performed on data in most 
-  applications, especially in databases and RESTful APIs.
+  ->What is CRUD?
+    CRUD stands for Create, Read, Update, and Delete — the four basic operations that can be performed on data in most 
+    applications, especially in databases and RESTful APIs.
 
   ->A RESTful API is a way for two systems (like a frontend and a backend) to communicate over the internet using simple rules.
     REST stands for Representational State Transfer.
