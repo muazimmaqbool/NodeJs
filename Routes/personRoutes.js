@@ -33,7 +33,7 @@ router.post("/signup", async (req, res) => {
     }
     // console.log("payload",payload)
     //to checkout about jwt see file 39
-    //getting jwt token (here payload to generateToken can be anything here i am taking username)
+    //getting jwt token (here payload to generateToken can be anything here i am taking id and username)
     //const token=generateToken(response.username)
 
     //taking proper payload
