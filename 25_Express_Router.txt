@@ -11,7 +11,7 @@ From Now onwords myServer.js file will not be used we will be using myNewServer.
   for different types of tasks.
 
 ->Creating new folder called "Routes"
-    -And inside this Routes folder i will add file example: personRoutes.js, etc...
+    -And inside this Routes folder i will add files example: personRoutes.js, etc...
      (now check personRoutes.js file)
 
      And using it inside myNewServer.js file like this
