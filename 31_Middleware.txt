@@ -22,10 +22,10 @@ What is Middleware in Node.js?
                       |_______________|
 
   -> Let's say we want to log every request which is made to our node application:
-      Step 1: inside server file here it's myNewServer.js file create a middleware function
+      -> inside server file here it's myNewServer.js file create a middleware function
 
 
-  Note: logging means that at which time and date which user enters or you can hit the particular endpoint/ website
+  Note: logging means that at which time and date which user enters or user hits the particular endpoint/website
         generally its called log request in companies, usually logging is done in every big product and it's an important feature
 
 Example:
@@ -40,7 +40,7 @@ Example:
  show the response i.e will not go to the server, it will stuck in the middleware,
  try after removig next() in logRequest function, you will see time and url in console but now the response in the screen/postman
 
- ->In Express.js the next() is the callback function that signal to Express.js that the current middleware function has
+ ->In Express.js the next() is the callback function that signals to Express.js that the current middleware function has
  completed its processing and it's time to move on to the next middleware function or route handler in the chain
 
   -> Understanding next() function diagram:

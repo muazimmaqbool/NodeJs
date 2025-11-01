@@ -41,7 +41,7 @@ const logRquest=(req,res,next)=>{
 }
 //➡️: Learn about next function below:
 
-//Track log of / endpoint: o/p: [5/7/2025, 10:48:00 am] Request Made To: /
+//Tracks log of '/' endpoint: o/p: [5/7/2025, 10:48:00 am] Request Made To: /
 // app.get("/",logRquest, (req, res) => {
 //   res.send("Hello Welcome to my hotel!...");
 // });
