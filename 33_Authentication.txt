@@ -1,15 +1,15 @@
 ->Authentication implementation in Node.js:
     1) Authentication Middleware:
         -In your node.js application, you might use middleware like "Passport.js" to handle the authentication process.
-        -Passport helps verify the identity via provided credentials (Passport.js is a thirdparty middleware)
+        -Passport.js helps verify the identity via provided credentials (Passport.js is a thirdparty middleware)
     
     2) User Roles and Permissions:
         -You'll define roles for staff memebers(e.g: chef, waiter, manager)
-        -Authentication middleware will check the role of the authenticated user and grant access accordingly
+        -Authentication middleware will also check the role of the authenticated user and grant access accordingly
     
     3)Secure Endpoints:
         - You'll need to protect certain routes(like updating menu items) with authentication checks.
-        - Her in my project, only authenticated and authorized users(like managers/chefs) will be allowed to access these routes
+        - Here in my project, only authenticated and authorized users(like managers/chefs) will be allowed to access these routes
 
 ->Important and Passport.js :
     ➡️ we will implement Authentication as a middleware function. So that, Routes will be authenticated before reaching out to the server
@@ -19,8 +19,9 @@
         🟢 Strategy: Passport.js uses the concept of strategies for handling different authentication methods.
                      A Strategy is a way of authenticating users, Passport.js comes with various builtin strategies
                      You can also create custom strategies
-        🟢 Serialize and Deserialize: Serialization is the process of converting user data into a format that can be stored, usually
-                a unique identifier, Deserialization is the reverse process of converting that unique identifier back to the user data.
+        🟢 Serialize and Deserialize: 
+                Serialization is the process of converting user data into a format that can be stored, usually a unique identifier.
+                Deserialization is the reverse process of converting that unique identifier back to the user data.
                 Serialization and Deserialization are usually used with sesssions 
     ➡️ To install: npm install passport and install passport-local (to use local strategy)
         -> local strategy is basically username and password strategy
