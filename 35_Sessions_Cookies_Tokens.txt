@@ -63,7 +63,7 @@ Session Tokens and Cookies in Nodejs
    sends login creds       verifies user/pass               checks credentials
        |                          |                                |
        | <------------------------|                                |
- receives Set-Cookie header  creates session ID           stores session ID mapped to user
+ receives a cookie header  creates session ID           stores session ID mapped to user
  (session ID stored in cookie)
 
     (Next request)
@@ -81,8 +81,6 @@ Session Tokens and Cookies in Nodejs
     If valid, server generates a session ID, stores it in DB/session store, and sends a cookie with that ID to the client.
     On every next request, the Client automatically sends that cookie.
     Server checks the session ID → if valid, user is authenticated.
-
-
 
     ->Cookies:
         A cookie is a small piece of data that a website stores on a user's computer or device, they are commonly used on websites to remember information
