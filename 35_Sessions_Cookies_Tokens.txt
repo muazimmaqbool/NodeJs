@@ -87,7 +87,7 @@ Session Tokens and Cookies in Nodejs
         about the user browsing activity, preferences and interactions with the site,   
 
         How cookies work:
-            Creation: Webhen you visit any website for the first time, they website may send a small text file (the cookie) to your browser.
+            Creation: When you visit any website for the first time, the website may send a small text file (the cookie) to your browser.
                       (we often first get a notification to allow cookies to your browser)
             Storage: Your browser stores cookie on your computer/device. Each cookie is associated with the specific website and contains information such as
                      unique identifier and any data that the website wants to remember about you.
@@ -100,7 +100,7 @@ Session Tokens and Cookies in Nodejs
     ->Types of Cookies:
         1)Session Cookies: These cookies are temporary and are deleted when you close the browser. The are often used for maintining 
                            your login state during a browsing session.
-        2)Persistent Cookies: These cookies are stored on your device for a specified duration, even after your close your browser.
+        2)Persistent Cookies: These cookies are stored on your device for a specified duration, even after you close your browser.
                               They can be used for purposes such as remembering your preferences or login information across multiple
                               visits to a website.
 
@@ -111,7 +111,7 @@ Session Tokens and Cookies in Nodejs
 
     Note: In private mode the cookies are session cookies and in normal browsing they are presistent
 
-    In Summary: Cookies are small text files stored on your computer by the website your visit. They help websites to remember informationa about
+    In Summary: Cookies are small text files stored on your computer by the website your visit. They help websites to remember information about
                 you and enhance your browsing experience. They are used to maintain login status, and tracking your preferences.
                 While cookies are an essential part of web functionality, they also raise privacy considerations, and users can manage
                 their cookie settings in their web browser
