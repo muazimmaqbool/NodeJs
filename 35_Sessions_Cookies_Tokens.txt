@@ -13,8 +13,8 @@ Session Tokens and Cookies in Nodejs
         provig that they are who they claim to be. This makes sure only authorized users can access it or can access certain features.
     
     2: Maintaining user state:
-        Web apps often needs to track/know user information as they navigate through different pages etc. Sessions or token help maintain
-        the user state also. Example: if you add an item in cart in the shopping website, the website needs to remember those items as you
+        Web apps often needs to track/know users information as they navigate through different pages etc. Sessions or token help maintain
+        the users state also. Example: if you add an item in cart in the shopping website, the website needs to remember those items as you
         browse other pages/websites. Sessions/token store this information so that it can be accessed later.
       
     3: Security:
@@ -22,12 +22,12 @@ Session Tokens and Cookies in Nodejs
         session hijacking or cross site request forgery(CSRF) attacks.
     
     4: Personalization and customization:
-        They allow web apps to provide personalization experience to the use by storing information abour users's preferences,
-         settings, search, themes etc...
+        They allow web apps to provide personalization experience to the user by storing information abour users's preferences,
+        settings, search, themes etc...
     
     5: Scalability:
         They are designed to scale with the size and complexity of the web applications. They provide flexible and efficient way to manage
-        user authentication and state even though number of users or requests increase. This help web app to handle growing traffic and users
+        user authentication and state even though number of users or requests increase. This help web apps to handle growing traffic and users
     
     In summary, session and token are essential components of web development enabling user authentication, maintaining state, ensuring security,
        personalizing experiences, and supporting scalability. They form the foundation of secure and user-friendly web applications that can provide
