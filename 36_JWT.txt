@@ -1,20 +1,20 @@
 JWT (JSON Web Token)
     
--> As, you know that token are used to authenticate users/give access to the resources in web applications
+-> As, you know that token sare used to authenticate users/give access to the resources in web applications
  
   1️⃣ Definition:
         A JWT (JSON Web Token) is a compact string used to securely pass information between two parties (like a client and a server).
         It’s most often used for authentication — to prove “who you are” after you log in.
-        It's defined by the JSON web token standard (RFC 7519). It is compact and self-contained means of transmitting information
-        between parties as a JSON object
+        It's defined by the JSON web token standard (RFC 7519). 
+        It is compact and self-contained means of transmitting information between two parties as a JSON object
 
   2️⃣ Structure
         A JWT has 3 parts, separated by dots (.): header.payload.signature
         ➡️Header – says what type of token it is and what algorithm is used to sign it (e.g., HS256).
         ➡️Payload – contains the actual data (user ID, roles, expiry time, etc.).
         ➡️Signature – a cryptographic signature created by the server to prove the token wasn’t changed.
-        ➡️Example (shortened):
-            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMyIsIm5hbWUiOiJKb2huIn0.XYZ123abc
+        ➡️JWT Token Example (shortened):
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMyIsIm5hbWUiOiJKb2huIn0.XYZ123abchjvxcbhjx
 
   3️⃣ Usage:
         After a user logs in, the server creates a JWT and gives it to the client.
@@ -25,7 +25,7 @@ JWT (JSON Web Token)
         The server verifies the signature and expiry — if valid, it processes the request.
 
   4️⃣ Statelessness:
-        JWTs are stateless.
+        JWT tokens are stateless.
         The server does not store anything about the user session.
         All the needed info is inside the token itself.
         As long as the server has the secret key (or public key) to verify the signature, it can validate any token without looking it up in a database.
