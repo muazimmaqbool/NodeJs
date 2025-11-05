@@ -20,17 +20,17 @@
         2️⃣ User accesses a protected resource:
         Client (Browser/App)
             |
-            |  sends HTTP request
-            |  + Authorization: Bearer <JWT>
+            |  sends HTTP request + jwt token (Authorization: Bearer <JWT>)
+            |  
             v
         Server (Protected Endpoint)
             |
             |  verifies JWT signature & expiry
             |  (no DB lookup needed unless revocation/extra checks)
             |
-            |  if token valid → process request & respond
+            |  if token is valid → process request & responds
             v
-        Response sent back to Client (data / resource)
+        Response sent back to Client with (data / resource)
 
         3️⃣ Token expiration:
         - When JWT expires, client must log in again to get a new one.
