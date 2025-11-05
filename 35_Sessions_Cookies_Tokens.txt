@@ -155,10 +155,10 @@ Session Tokens and Cookies in Nodejs
      
 
      Client (Browser/App) --------> Server (Login Endpoint) --------> Database (User credentials)
-        |                           |                                |
-   sends login creds          verifies user/pass               checks credentials
-        |                           |                                |
-        | <-------------------------|                                |
+        |                           |                                     |
+   sends login creds          verifies user/pass                    checks credentials
+        |                           |                                     |
+        | <-------------------------|                                     |
  receives token (JWT)         creates signed JWT token          (no session storage needed)
  (stored by client)
 
