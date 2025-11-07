@@ -1,14 +1,15 @@
 //First check previous code 36 and 37:
 
 ➡️ JWT Functions:
-    In the context of the JWT, jwt.sign() and jwt.veryify() are the two important functions provided by 'jsonwebtoken' library in Node.js
-     ➡️ jwt.sign() : used to generate a new JWT token based on the payload and options provided.
-                      It takes three parameters: payload, secret or private key (secret key used to sign the token),
-                                                 options(optional)-> example which algorithm we are using, expiry time etc
+    In the context of the JWT: jwt.sign() and jwt.veryify() are the two important functions provided 
+    by 'jsonwebtoken' library in Node.js
+    ➡️ jwt.sign() : used to generate a new JWT token based on the payload and options provided.
+                    It takes three parameters: payload, secret or private key (secret key used to sign the token),
+                        and options(optional)-> example which algorithm we are using, expiry time etc
      
-     ➡️ jwt.veryify() : used to veryify and decode a JWT token to retrieve the orginal payload.
+    ➡️ jwt.veryify() : used to veryify and decode a JWT token to retrieve the orginal payload.
                         It takes three parameters: token, secret or private key,
-                                                   options (optional) -> adding addional options for verifications such as: algorithms, audience, issuer and more
+                            and options (optional) -> adding addional options for verifications such as: algorithms, audience, issuer and more
 
     Note: By default the JWT token don't have a expiry time.
 
