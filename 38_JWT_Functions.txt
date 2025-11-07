@@ -38,6 +38,6 @@
         Example: jwt.decode(token)
 
     🔹5. Refresh / Reissue Tokens:
-        If the JWT is about to expire, issue a new token using a refresh token or re-login.
+        The JWT is about to expire, issue a new token using a refresh token or re-login.
 
     Note: see next file : 39_JWT_Implementation.txt
